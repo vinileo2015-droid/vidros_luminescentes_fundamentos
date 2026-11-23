@@ -3,6 +3,13 @@ const loaders = {
   timeline: () => import('./sections/timeline.js'),
   definition: () => import('./sections/definition.js'),
   zachariasen: () => import('./sections/zachariasen.js'),
+  zachrules: () => import('./sections/zachrules.js'),
+  criteria: () => import('./sections/criteria.js'),
+  phillips: () => import('./sections/phillips.js'),
+  complab: () => import('./sections/complab.js'),
+  kinetics: () => import('./sections/kinetics.js'),
+  hetero: () => import('./sections/hetero.js'),
+  glassceramic: () => import('./sections/glassceramic.js'),
   network2d: () => import('./sections/network2d.js'),
   deborah: () => import('./sections/deborah.js'),
   md: () => import('./sections/md.js'),
@@ -38,6 +45,9 @@ if (document.getElementById('hero-canvas')) import('./sections/hero.js').then((m
   console.error('[hero]', err);
   document.getElementById('hero-hint').textContent = 'A cena 3D precisa de WebGL, que não está disponível neste navegador.';
 });
+
+// Hero da Parte 2
+if (document.getElementById('p2-hero-canvas')) import('./sections/p2hero.js').then((m) => m.init()).catch((e) => console.error(e));
 
 // Próxima parte: pequeno brilho luminescente
 if (document.getElementById('next-canvas')) import('./sections/next.js').then((m) => m.init()).catch((e) => console.error(e));

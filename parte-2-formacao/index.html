@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formação de vidros · Vidros &amp; Luminescência</title>
+<meta name="description" content="Teorias estruturais e cinéticas da formação de vidros: Zachariasen, Sun, Dietzel, Phillips–Thorpe, formadores, modificadores, intermediários, formadores condicionais, cátions polivalentes, nucleação, crescimento, curvas TTT e agentes nucleantes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="../" title="Voltar à capa do projeto"><span class="brand-mark" aria-hidden="true"></span><span>Vidros <span class="long">&amp; Luminescência</span></span></a>
+  <nav class="chapters" aria-label="Capítulos">
+    <a href="#estrutural">Teorias estruturais</a>
+    <a href="#topologia">Restrições topológicas</a>
+    <a href="#papeis">Formadores e modificadores</a>
+    <a href="#cinetica">Teoria cinética</a>
+    <a href="#nucleantes">Agentes nucleantes</a>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero p2-hero" id="topo">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">Vidros &amp; Luminescência · Parte 2: Formação de vidros</div>
+      <h1>Por que alguns líquidos viram vidro e outros não</h1>
+      <p class="lede">Duas perguntas guiam este capítulo. A estrutural: que tipo de ligação e de poliedro permite montar uma rede desordenada estável? A cinética: com que rapidez é preciso resfriar para que os cristais não tenham tempo de nascer e crescer?</p>
+      <div class="hero-meta">
+        <a class="primary" href="#papeis">Abrir o laboratório de composição</a>
+        <a href="#cinetica">Ir para a teoria cinética</a>
+      </div>
+    </div>
+    <div class="hero-stage">
+      <canvas id="p2-hero-canvas" aria-label="Animação: curvas de resfriamento rápidas passam à esquerda do nariz da curva TTT e formam vidro; curvas lentas cruzam o nariz e cristalizam."></canvas>
+    </div>
+  </div>
+</section>
+
+<div class="layout with-rail">
+  <aside class="rail" aria-label="Índice">
+    <div class="rail-t">Parte 2</div>
+    <ol>
+      <li><a href="#estrutural">1. Teorias estruturais</a></li>
+      <li><a href="#topologia">2. Restrições topológicas</a></li>
+      <li><a href="#papeis">3. Formadores, modificadores e companhia</a></li>
+      <li><a href="#cinetica">4. Teoria cinética</a></li>
+      <li><a href="#nucleantes">5. Agentes nucleantes e vitrocerâmicas</a></li>
+      <li><a href="#referencias">Referências</a></li>
+      <li><a href="../parte-1-fundamentos/">← Parte 1</a></li>
+    </ol>
+  </aside>
+
+  <main>
+  <!-- ===================== 1. ESTRUTURAL ===================== -->
+  <section class="chapter" id="estrutural">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 1</div>
+      <h2>Teorias estruturais: da razão de raios às regras de Zachariasen</h2>
+      <p class="ch-lede">As primeiras teorias tentaram prever quais óxidos formam vidro olhando para o tamanho dos íons, a coordenação, o tipo e a força das ligações. Funcionam bem para óxidos simples e ainda organizam o vocabulário da área.</p>
+    </div>
+
+    <div class="prose">
+      <p>O Varshneya divide as teorias de formação de vidro em duas famílias: as <span class="term">estruturais</span>, que procuram características da substância que favorecem a vitrificação, e as <span class="term">cinéticas</span>, que perguntam com que taxa um líquido precisa ser resfriado para não cristalizar. As estruturais incluem o critério de razão de raios de Goldschmidt e a rede aleatória de Zachariasen (baseados na coordenação), as regras de ligação mista de Smekal e de eletronegatividade de Stanworth (baseadas no tipo de ligação), o critério de força de ligação simples de Sun e o modelo de restrições topológicas de Phillips. Várias delas hoje têm interesse histórico, mas o raciocínio por trás de cada uma reaparece até hoje na escolha de composições.</p>
+
+      <h3>Goldschmidt: o tamanho relativo dos íons (1926)</h3>
+      <p>Goldschmidt notou que os óxidos AₘOₙ que formam vidro têm razão de raios r<sub>A</sub>/r<sub>O</sub> entre 0,2 e 0,4. Pela geometria do empacotamento de esferas, essa faixa corresponde a cátions cercados por quatro oxigênios, num tetraedro. A ideia é boa como primeira pista, mas não basta: o BeO, por exemplo, cai na faixa e não forma vidro. A razão de raios diz qual poliedro o cátion prefere, mas não como os poliedros se conectam.</p>
+
+      <h3>Zachariasen: a rede aleatória contínua (1932)</h3>
+      <p>O argumento de Zachariasen tem três passos. Primeiro, as propriedades mecânicas de um vidro são parecidas com as do cristal correspondente, logo as forças entre átomos devem ser da mesma ordem. Segundo, os difratogramas de raios X difusos indicam que o vidro não tem célula unitária finita: é uma rede tridimensional sem periodicidade. Terceiro, a energia interna do vidro deve ser só um pouco maior que a do cristal. Se fosse muito maior, haveria força motriz demais para cristalizar. Essa pequena diferença de energia exige uma estrutura aberta e flexível, em que poliedros rígidos se unam pelos vértices e toda a liberdade fique nos ângulos das pontes A–O–A. Daí as quatro regras para um óxido AₘOₙ:</p>
+      <ol>
+        <li>Um oxigênio se liga a no máximo dois cátions A.</li>
+        <li>O número de oxigênios em torno de A é pequeno: 3 ou 4.</li>
+        <li>Os poliedros compartilham vértices, não arestas ou faces.</li>
+        <li>Ao menos três vértices de cada poliedro são compartilhados.</li>
+      </ol>
+      <p>Óxidos A₂O e AO (grupos 1 e 2) violam várias regras: no MgO, por exemplo, octaedros compartilham arestas e cada oxigênio é dividido por seis cátions. Óxidos A₂O₃ com triângulos (B₂O₃) e AO₂ ou A₂O₅ com tetraedros (SiO₂, GeO₂, P₂O₅) satisfazem todas. Óxidos AO₃ com octaedros, como o MoO₃, satisfazem as regras 1, 3 e 4, mas violam a 2. Teste você mesmo:</p>
+    </div>
+
+    <figure class="figure" data-module="zachrules">
+      <div class="fig-head">
+        <h4>As quatro regras de Zachariasen, óxido por óxido</h4>
+        <span class="cap">A coordenação do oxigênio (quantos cátions A dividem cada O) vale c·m/n, em que c é a coordenação do cátion. É ela que decide as regras 1, 3 e 4.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="zr-tabs" role="group" aria-label="Óxido" style="margin-bottom:14px"></div>
+        <div id="zr-card" aria-live="polite"></div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>As regras falham em casos interessantes. O V₂O₅ e o MoO₃ não vitrificam sozinhos, mas formam rede quando um modificador "estabilizante" é adicionado, e nesses vidros o cátion formador costuma ter coordenação 6 a 8. É daí que vem a categoria dos <span class="term">formadores condicionais</span>, que o Varshneya lista separadamente: TeO₂, SeO₂, MoO₃, WO₃, Bi₂O₃, Al₂O₃, V₂O₅ e SO₃.</p>
+
+      <h3>A crítica russa: cristalitos ou rede aleatória?</h3>
+      <p>O maior desafio à rede aleatória veio de Lebedev, Valenkov, Porai-Koshits e colegas, que questionaram o quanto "aleatória" a rede realmente é. Para Lebedev, um vidro de silicato seria um acúmulo de <span class="term">cristalitos</span>: regiões submicroscópicas com a química dos compostos do diagrama de fases, deformadas e separadas por camadas desordenadas. A microscopia eletrônica de réplicas mostrou que muitos vidros têm, de fato, heterogeneidades em escala nanométrica, mas nunca na sílica pura. A disputa só se resolveu quando se entenderam a teoria cinética e a <span class="term">separação de fases</span> (imiscibilidade líquida): o grau de desordem varia de vidro para vidro conforme a composição e o resfriamento. A confirmação mais direta da visão de Zachariasen veio em 2012, quando Huang e colaboradores fotografaram, átomo a átomo, uma bicamada de sílica vítrea 2D sobre grafeno. A imagem é praticamente o desenho de 1932.</p>
+
+      <h3>Critérios de força de ligação: Sun, Rawson e Dietzel</h3>
+      <p>Uma segunda linha de raciocínio olha para a <span class="term">energia</span> das ligações. Se a reorganização dos átomos durante o resfriamento exige quebrar ligações fortes, o líquido terá dificuldade em cristalizar.</p>
+    </div>
+
+    <div class="eqx">
+      <div class="eq">B<sub>M–O</sub> = E<sub>d</sub> / NC<span class="lbl">Sun (1947): energia de dissociação do óxido (por mol de M) dividida pelo número de coordenação</span></div>
+      <p class="means"><b>O que mede:</b> a energia média de uma única ligação M–O. <b>Por que importa:</b> para que um cristal se forme, ligações precisam ser quebradas e refeitas; ligações fortes tornam essa reorganização lenta. Sun classificou os óxidos em formadores (B &gt; 80 kcal/mol), intermediários (60–80) e modificadores (&lt; 60). Rawson refinou a ideia dividindo B pela temperatura de fusão: o que importa é a força da ligação comparada à energia térmica disponível. Isso explica por que o B₂O₃, que funde a baixa temperatura, é um formador excepcional.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">F = Z / a²<span class="lbl">Dietzel: carga do cátion sobre o quadrado da distância cátion–oxigênio (Å)</span></div>
+      <p class="means"><b>O que mede:</b> a intensidade do campo elétrico que o cátion exerce sobre os oxigênios vizinhos, ou seja, o quanto ele "disputa" o oxigênio. <b>Sentido físico:</b> cátions de campo alto (F ≈ 1,4–2,0: Si, B, P) prendem o oxigênio em poliedros rígidos e direcionais e formam a rede. Cátions de campo baixo (F ≈ 0,1–0,4: álcalis, alcalinoterrosos grandes) só ocupam os vazios e modificam a rede. Os de campo médio (F ≈ 0,5–1,0: Al, Ti, Zr, Fe³⁺) ficam no meio e podem fazer as duas coisas conforme a composição. O Handbook usa a mesma ideia como Z/r² ("ionic field strength"): o Si⁴⁺ tem 59 Å⁻², e cátions abaixo de ~8 Å⁻² não entram como formadores.</p>
+    </div>
+    <div class="prose">
+      <p>Smekal acrescentou que os bons formadores têm ligações <span class="term">mistas</span>, nem puramente iônicas (não direcionais, que favorecem empacotamentos densos e cristalização) nem puramente covalentes (rígidas demais para acomodar desordem). Stanworth quantificou isso pela eletronegatividade: ligações com cerca de 50 % de caráter iônico são as melhores. No mapa abaixo, os dois critérios de energia separam praticamente os mesmos grupos.</p>
+    </div>
+
+    <figure class="figure" data-module="criteria">
+      <div class="fig-head">
+        <h4>Força de campo (Dietzel) × força de ligação simples (Sun)</h4>
+        <span class="cap">Valores clássicos: distâncias de Dietzel compiladas por Vogel e energias de Sun (1947). As faixas coloridas no eixo horizontal marcam os intervalos de Dietzel. Passe o mouse sobre os pontos.</span>
+      </div>
+      <div class="fig-body">
+        <div class="canvas-box ratio-wide"><canvas id="crit-canvas" aria-label="Gráfico de força de campo contra força de ligação simples para vários cátions"></canvas></div>
+        <p class="note" id="crit-out" aria-live="polite" style="margin:10px 0 0"></p>
+      </div>
+    </figure>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Peças de montar</b>Para fazer uma rede desordenada que não desabe, você precisa de peças pequenas e rígidas (triângulos ou tetraedros) que se encaixem só pelas pontas. Encaixadas pelos lados, como no MgO, elas só cabem de um jeito, e esse jeito é o cristal.</p>
+        <p class="analogy"><b>Quem segura o oxigênio</b>Pense no oxigênio como uma bola disputada. O silício a segura com força e não solta: forma a rede. O sódio mal encosta: fica nos buracos e, ao chegar, "corta" algumas ligações da rede. O alumínio fica no meio: dependendo de quem está por perto, joga de um lado ou de outro.</p>
+        <p>As teorias estruturais respondem "que tipo de material tem facilidade para formar vidro". Elas não dizem quanto tempo o vidro leva para cristalizar: isso é assunto da teoria cinética (capítulo 4).</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 2. TOPOLOGIA ===================== -->
+  <section class="chapter" id="topologia">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 2</div>
+      <h2>Restrições topológicas: contando ligações como um engenheiro de estruturas</h2>
+      <p class="ch-lede">Phillips propôs em 1979 que a facilidade de formar vidro é máxima quando o número de restrições mecânicas por átomo iguala o número de graus de liberdade. É a mesma pergunta que se faz para saber se uma treliça é frouxa, rígida ou exatamente travada.</p>
+    </div>
+
+    <div class="prose">
+      <p>Enquanto Zachariasen pensava em óxidos, Phillips desenvolveu sua teoria para vidros covalentes, como os calcogenetos. Num sólido covalente, a coordenação de cada átomo segue a regra do octeto (regra "8 − N", de Mott): m = 8 − N, em que N é o número de elétrons de valência. Assim, S, Se e Te têm m = 2; As e Sb, m = 3; Si e Ge, m = 4.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">⟨m⟩ = (a·m<sub>A</sub> + b·m<sub>B</sub> + c·m<sub>C</sub>) / (a + b + c)<span class="lbl">Varshneya, eq. 3.1</span></div>
+      <p class="means"><b>O que mede:</b> a coordenação média, isto é, quantas ligações tem, em média, um "pseudoátomo" do material. Para As₂Se₃, ⟨m⟩ = 2,4; aplicada à SiO₂, a regra dá 2,67.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">U = ½ α Δr² + ½ β r₀² Δθ²<span class="lbl">campo de força de valência, eq. 3.2</span></div>
+      <p class="means"><b>O que mede:</b> a energia para esticar uma ligação (constante α) e para dobrar um ângulo entre ligações (constante β). <b>Por que importa:</b> cada termo é uma restrição mecânica. Se ele for "duro", aquela coordenada fica travada.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">N<sub>c</sub> = ⟨m⟩/2 + (2⟨m⟩ − 3) = 5⟨m⟩/2 − 3<span class="lbl">restrições por átomo, eq. 3.3</span></div>
+      <p class="means"><b>Sentido físico:</b> ⟨m⟩/2 restrições de estiramento (divide-se por 2 porque cada ligação é compartilhada por dois átomos) mais 2⟨m⟩ − 3 restrições de flexão angular, as necessárias para travar um átomo com m vizinhos. Em 3D, cada átomo tem N<sub>d</sub> = 3 graus de liberdade.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">N<sub>c</sub> = N<sub>d</sub> = 3 &nbsp;⇒&nbsp; ⟨m⟩<sub>c</sub> = 2,4<span class="lbl">condição isostática, eq. 3.4</span></div>
+      <p class="means"><b>Por que importa:</b> com menos restrições que graus de liberdade (⟨m⟩ &lt; 2,4), a rede é <span class="term">flexível</span> ("floppy"): tem modos de deformação que não custam energia, e os átomos se rearranjam com facilidade até cristalizar. Com mais restrições (⟨m⟩ &gt; 2,4), a rede é <span class="term">rígida</span> e sobrerrestrita: acumula tensões internas que também favorecem a cristalização. No ponto isostático, a rede é rígida o bastante para não se reorganizar e livre o bastante para não acumular tensões: o melhor formador de vidro.</p>
+    </div>
+    <div class="prose">
+      <p>Para Ge<sub>y</sub>Se<sub>1−y</sub>, a condição dá y = 0,2; para As<sub>x</sub>Se<sub>1−x</sub>, x = 0,4, ou seja, o próprio As₂Se₃. Phillips comparou isso com a "dificuldade de formar vidro" medida no sistema Ge–Se (a taxa mínima de têmpera necessária) e encontrou o mínimo perto de 20 % de Ge. A curva experimental tem, além da parábola principal, picos secundários em Se puro e em GeSe₂, atribuídos à ordem química próxima dos compostos cristalinos.</p>
+    </div>
+
+    <figure class="figure" data-module="phillips">
+      <div class="fig-head">
+        <h4>Contador de restrições de Phillips–Thorpe</h4>
+        <span class="cap">À esquerda, N<sub>c</sub> contra ⟨m⟩. À direita, um esquema da dificuldade de formar vidro, proporcional a (N<sub>c</sub> − 3)², como a parábola tracejada da Fig. 3.3 do Varshneya.</span>
+      </div>
+      <div class="fig-body">
+        <div class="canvas-box" style="aspect-ratio: 21 / 8; min-height: 300px"><canvas id="ph-canvas" aria-label="Gráficos de restrições por átomo e de dificuldade de formar vidro"></canvas></div>
+        <div class="fig-grid even" style="margin-top:16px">
+          <div class="controls">
+            <div class="ctl"><span class="lab">Sistema</span>
+              <div class="seg" id="ph-sys" role="group" aria-label="Sistema">
+                <button type="button" data-v="gese" aria-pressed="true">GeₓSe₁₋ₓ</button>
+                <button type="button" data-v="asse" aria-pressed="false">AsₓSe₁₋ₓ</button>
+              </div>
+            </div>
+            <div class="ctl">
+              <label for="ph-x">Composição <output id="ph-x-v"></output></label>
+              <input type="range" id="ph-x" min="0" max="45" value="20">
+            </div>
+            <div class="readouts">
+              <div class="readout"><div class="k">⟨m⟩</div><div class="v" id="ph-m">–</div></div>
+              <div class="readout"><div class="k">N<sub>c</sub></div><div class="v" id="ph-nc">–</div></div>
+              <div class="readout"><div class="k">modos flexíveis (3 − N<sub>c</sub>)</div><div class="v" id="ph-f">–</div></div>
+            </div>
+            <p class="verdict-line" id="ph-state"></p>
+          </div>
+          <div class="table-wrap" id="ph-table"></div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Aplicada a óxidos, a contagem ingênua falha: para a sílica, o Si dá 2 + 5 = 7 restrições e cada O dá 1 + 1 = 2, o que resulta em (7 + 2·2)/3 ≈ 3,67 por átomo, uma rede sobrerrestrita. O ângulo Si–O–Si, porém, é muito macio (é exatamente a liberdade de que Zachariasen precisava). Sem contar essa restrição, a conta cai para (7 + 2·1)/3 = 3: a sílica fica isostática. Esse refinamento, contar só as restrições que estão de fato ativas à temperatura considerada, é a base da teoria de restrições topológicas dependente da temperatura, desenvolvida por Mauro e colaboradores e usada hoje para prever Tg, dureza e outras propriedades de composições industriais (seção 21.7 do Varshneya).</p>
+    </div>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>A treliça de varetas</b>Monte uma estrutura com varetas e conectores. Com poucas varetas, ela fica bamba e muda de forma sozinha: os átomos escorregam para o arranjo do cristal. Com varetas demais, ela fica tensionada e qualquer empurrão faz algo estalar. Com o número exato, ela fica firme sem tensão: é o ponto ideal para um vidro.</p>
+        <p>A conta é simples: 2,4 ligações por átomo, em média. O selênio puro tem 2 (bambo); acrescentar germânio, que faz 4 ligações, vai enrijecendo a rede até o ponto ideal, perto de 20 % de Ge.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 3. PAPÉIS ===================== -->
+  <section class="chapter" id="papeis">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 3</div>
+      <h2>Formadores, modificadores, intermediários e companhia</h2>
+      <p class="ch-lede">Classificar cada óxido pelo papel que ele assume na rede é a ferramenta mais prática do vidreiro. Neste capítulo, você monta um vidro hipotético, óxido por óxido, e vê a rede responder.</p>
+    </div>
+
+    <div class="prose">
+      <h3>As classes</h3>
+      <p><span class="term s-glass">Formadores de rede</span> (SiO₂, B₂O₃, GeO₂, P₂O₅, As₂O₃) são o esqueleto: cátions de alta força de campo e ligações fortes, em poliedros rígidos unidos por <span class="term">oxigênios ponteantes</span> (BO). A maioria forma vidro sozinha.</p>
+      <p><span class="term s-scl">Modificadores</span> (Li₂O, Na₂O, K₂O, MgO, CaO, BaO) não formam o esqueleto: trazem O²⁻ "extra", que rompe pontes e cria <span class="term">oxigênios não ponteantes</span> (NBO, Si–O⁻), e cátions que se alojam nos vazios para compensar essas cargas. Reduzem a conectividade da rede.</p>
+      <p><span class="term s-cryst">Intermediários</span> (Al₂O₃, TiO₂, ZnO, PbO, ZrO₂, BeO) ficam no meio: sozinhos não vitrificam, mas dentro de um vidro podem entrar na rede (como o AlO₄⁻ compensado por um modificador) ou agir como modificadores. O Varshneya usa o ferro como exemplo: o FeO se comporta como modificador, e o Fe₂O₃, como formador.</p>
+      <p><span class="term" style="color:var(--cond)">Formadores condicionais</span> (TeO₂, Bi₂O₃, V₂O₅, MoO₃, WO₃…) formam rede só na presença de um "parceiro": um modificador ou outro óxido que estabiliza a estrutura.</p>
+      <p><span class="term" style="color:var(--nuc)">Agentes nucleantes</span> (TiO₂, ZrO₂, P₂O₅ e metais coloidais como Pt, Ag e Au) são adicionados de propósito para que, num tratamento térmico posterior, o vidro cristalize de forma controlada em todo o volume (capítulo 5).</p>
+      <p><span class="term s-liq">Cátions polivalentes</span> (Fe²⁺/Fe³⁺, Eu²⁺/Eu³⁺, Ce³⁺/Ce⁴⁺, Cu⁺/Cu²⁺…) existem em mais de um estado de oxidação, e cada estado tem raio, força de campo e papel estrutural próprios. A proporção entre eles é fixada pelo redox do fundido.</p>
+
+      <h3>Medindo a polimerização: Qⁿ e NBO/T</h3>
+      <p>Cada tetraedro é rotulado Qⁿ, em que n é o número de oxigênios ponteantes: a sílica pura é só Q⁴; um vidro com 25 % molar de Na₂O tem, em média, metade dos tetraedros como Q³. Medidas de RMN de ²⁹Si e de Raman mostram que a distribuição real fica entre o <span class="term">modelo binário</span> (só duas espécies vizinhas coexistem, como Q⁴ e Q³) e o <span class="term">modelo aleatório</span>. Ela é controlada pelo equilíbrio de desproporcionamento 2Qⁿ ⇌ Qⁿ⁻¹ + Qⁿ⁺¹, que se desloca para a direita quanto maior a força de campo do modificador (Li &gt; Na &gt; K) e quanto mais alta a temperatura fictícia.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">NBO/T = (2·O − 4·T) / T = Σ (4 − n)·x<sub>Qⁿ</sub><span class="lbl">Handbook, eqs. 13.2–13.3</span></div>
+      <p class="means"><b>O que mede:</b> quantos oxigênios não ponteantes há, em média, por cátion formador tetraédrico T. Vai de 0 (rede totalmente conectada, como a sílica) a 4 (tetraedros isolados, como nos ortossilicatos). <b>Por que importa:</b> é o principal descritor da conectividade, e por isso correlaciona com viscosidade, Tg, expansão térmica, difusão iônica e até com o estado redox dos íons polivalentes. Cada carga positiva de modificador "livre" gera um NBO.</p>
+    </div>
+    <div class="prose">
+      <p>A compensação de carga muda tudo. Quando o Al³⁺ substitui o Si⁴⁺ num tetraedro, o AlO₄⁻ fica com carga negativa, e um cátion modificador passa a compensá-la em vez de criar NBO. Assim, a razão Al/M decide a estrutura: com Al/M &lt; 1 (<span class="term">peralcalino</span>), sobram modificadores para criar NBOs; com Al/M = 1 (<span class="term">tectossilicato</span>), a rede fica idealmente toda Q⁴; com Al/M &gt; 1 (<span class="term">peraluminoso</span>), falta compensação e surge Al em coordenação 5 e 6. No boro acontece algo parecido: os primeiros modificadores convertem triângulos BO₃ em tetraedros BO₄⁻ em vez de criar NBOs, e a conectividade aumenta antes de cair (a "anomalia do boro").</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">Λ = Σ X<sub>O,i</sub> · Λ<sub>i</sub><span class="lbl">basicidade óptica do vidro, Handbook eq. 13.11 (ex.: CaSiO₃ = ⅓·1 + ⅔·0,48 = 0,65)</span></div>
+      <p class="means"><b>O que mede:</b> a capacidade dos oxigênios do vidro de "doar" elétrons, ou seja, sua basicidade no sentido de Lewis. X<sub>O,i</sub> é a fração dos oxigênios que vem do óxido i, e Λ<sub>i</sub> a basicidade óptica desse óxido. <b>Por que importa:</b> modificadores têm Λ alto (K₂O ≈ 1,4) e formadores, baixo (SiO₂ ≈ 0,48). A basicidade controla em que estado de oxidação e em que coordenação os íons polivalentes e os dopantes se estabilizam. É a ponte entre a química do vidro e a luminescência.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">log ([M<sup>(m−n)+</sup>]/[M<sup>m+</sup>]) = −(n/4)·log f<sub>O₂</sub> + k<span class="lbl">equilíbrio redox, Handbook eq. 13.24 (inclinação de −¼ para Fe²⁺/Fe³⁺)</span></div>
+      <p class="means"><b>O que mede:</b> como a razão entre a forma reduzida e a oxidada de um íon depende da pressão parcial de oxigênio da atmosfera de fusão. <b>Sentido físico:</b> o oxigênio é o "carregador" dos elétrons no fundido. Atmosfera redutora (pouco O₂, carbono, CO) favorece Fe²⁺, Eu²⁺ e Cu⁺. Temperatura mais alta também desloca para o reduzido (o termo de van't Hoff, eq. 13.23), e a composição (basicidade) desloca o equilíbrio de forma específica para cada par redox.</p>
+    </div>
+
+    <figure class="figure" data-module="complab">
+      <div class="fig-head">
+        <h4>Laboratório de composição: monte um vidro e veja a rede responder</h4>
+        <span class="cap">Projeção 2D de uma rede de silicato (o quarto oxigênio de cada tetraedro fica fora do plano). Clique em um ou mais compostos; clique de novo para ver detalhes ou remover. Contabilidade estrutural simplificada e didática.</span>
+      </div>
+      <div class="fig-body lab">
+        <div class="presets" id="lab-presets"><span class="lab-gh">Composições prontas:</span></div>
+        <div class="lab-palette" id="lab-palette"></div>
+        <div class="lab-main">
+          <div class="lab-stage">
+            <div class="lab-bar" id="lab-bar" aria-hidden="true"></div>
+            <div class="canvas-box" style="aspect-ratio: 17 / 10.6"><canvas id="lab-canvas" aria-label="Rede vítrea bidimensional com os cátions escolhidos"></canvas></div>
+            <div class="lab-legend">
+              <span><i style="background:var(--panel)"></i>O ponteante (BO)</span>
+              <span><i style="background:var(--liq)"></i>O não ponteante (NBO)</span>
+              <span><i style="background:var(--ink);width:8px;height:8px;border:0"></i>Si</span>
+              <span><i style="border-style:dashed;background:transparent"></i>tetraedro com carga, compensado</span>
+              <span>⬡ octaedro</span>
+              <span>·· par isolado</span>
+              <span>=O ligação terminal</span>
+            </div>
+            <div class="lab-heat">
+              <button class="btn" type="button" id="lab-heat">Aplicar tratamento térmico</button>
+              <p class="note"></p>
+            </div>
+            <div class="lab-info" id="lab-info" aria-live="polite"></div>
+          </div>
+          <div class="lab-side">
+            <div>
+              <div class="lab-gh">Composição (mol, normalizada)</div>
+              <div class="lab-comp" id="lab-comp"></div>
+            </div>
+            <div class="lab-redox" id="lab-redox" hidden>
+              <div class="ctl">
+                <label for="lab-fo2">Atmosfera de fusão <output id="lab-fo2-v"></output></label>
+                <input type="range" id="lab-fo2" min="-12" max="0" step="0.1" value="-0.68">
+              </div>
+              <div class="rr" id="lab-redox-r"></div>
+            </div>
+            <div class="readouts">
+              <div class="readout"><div class="k">NBO/T</div><div class="v" id="lab-nbo">–</div></div>
+              <div class="readout"><div class="k">Basicidade Λ</div><div class="v" id="lab-lam">–</div></div>
+              <div class="readout"><div class="k">Forma vidro?</div><div class="v" id="lab-gf">–</div></div>
+            </div>
+            <div><div class="lab-gh">Distribuição Qⁿ (modelo binário)</div><div class="lab-q" id="lab-q"></div></div>
+            <ul class="lab-notes" id="lab-notes"></ul>
+          </div>
+        </div>
+        <div>
+          <div class="lab-gh">Tendências típicas de cada composto selecionado (qualitativas)</div>
+          <div class="table-wrap" id="lab-trends"></div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Alguns experimentos para fazer no laboratório:</p>
+      <ul>
+        <li><b>Despolimerização:</b> parta da sílica pura e adicione Na₂O aos poucos. Veja as pontes se romperem, o NBO/T subir e a distribuição migrar de Q⁴ para Q³ e Q².</li>
+        <li><b>Estabilização:</b> no sodo-cálcico, compare o Na⁺ (um NBO por íon) com o Ca²⁺, que fica entre dois NBOs e "amarra" os dois tetraedros. A força de campo e a durabilidade aparecem no cartão de cada um.</li>
+        <li><b>Compensação de carga:</b> adicione Al₂O₃ ao sodo-cálcico até Al/M ≈ 1. Os NBOs desaparecem, os Na⁺ migram para junto dos AlO₄⁻, e acima disso surgem octaedros de Al.</li>
+        <li><b>Redox:</b> escolha "Verde de garrafa" e mova a atmosfera para redutora. O Fe³⁺, que estava em tetraedros compensados, vira Fe²⁺ modificador, e o NBO/T sobe. Faça o mesmo com Eu: a fração de Eu²⁺, a espécie de emissão azul, cresce.</li>
+        <li><b>Formador condicional:</b> remova a SiO₂ e deixe só TeO₂. O laboratório avisa que não vitrifica. Acrescente ZnO e Na₂O (ou use "Telurito TZN").</li>
+        <li><b>Nucleação:</b> use "Base de vitrocerâmica LAS" e aplique o tratamento térmico; depois remova TiO₂ e ZrO₂ e repita.</li>
+      </ul>
+      <p class="note">Sobre o modelo: os sítios são distribuídos proporcionalmente à composição, numa rede 2D fixa; a ordem de "gasto" das cargas dos modificadores (Al, B, Fe³⁺, Zr, Zn) é uma simplificação didática; a razão Fe³⁺/Fe²⁺ segue a inclinação de ¼ da eq. 13.24 com constantes ilustrativas; Λ só é calculada quando todos os óxidos têm valor tabelado.</p>
+    </div>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>A rede de pesca</b>Os formadores são os nós e os fios de uma rede de pesca. Cada modificador que chega corta um fio e pendura uma "bolinha" nas duas pontas soltas. A rede fica mais mole e escorrega mais quando aquecida, que é exatamente o que se quer para fundir o vidro a uma temperatura menor.</p>
+        <p class="analogy"><b>Quem estabiliza</b>O sódio corta e deixa as pontas soltas. O cálcio corta, mas segura as duas pontas com as duas mãos (é bivalente), e a rede fica mais resistente à água. O alumínio faz o contrário dos modificadores: com a ajuda deles, costura de volta.</p>
+        <p class="analogy"><b>Polivalentes são camaleões</b>O mesmo ferro é "construtor" quando é Fe³⁺ e "cortador" quando é Fe²⁺. Quem decide é a atmosfera do forno. No európio, a troca muda a cor da luz emitida: vermelho (Eu³⁺) ou azul (Eu²⁺).</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 4. CINÉTICA ===================== -->
+  <section class="chapter" id="cinetica">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 4</div>
+      <h2>Teoria cinética: uma corrida contra a cristalização</h2>
+      <p class="ch-lede">"Quais substâncias formam vidro?" é uma pergunta acadêmica. A pergunta real, diz o Varshneya, é: com que taxa um líquido precisa ser resfriado para virar vidro? Todos os líquidos vitrificam se forem resfriados rápido o bastante, inclusive água e metais.</p>
+    </div>
+
+    <div class="prose">
+      <p>Cristalizar exige duas coisas, nesta ordem: formar um número mensurável de <span class="term">núcleos</span> e depois fazê-los <span class="term">crescer</span> a uma taxa mensurável. Para saber se um sistema forma vidro, a receita do Varshneya tem três passos: calcular a taxa de nucleação I(T), calcular a taxa de crescimento u(T) e combinar as duas na equação de Johnson–Mehl–Avrami para obter a fração cristalizada, construindo o diagrama TTT (tempo–temperatura–transformação).</p>
+
+      <h3>Nucleação: o custo de criar uma interface</h3>
+    </div>
+    <div class="eqx">
+      <div class="eq">W(r) = (4/3)πr³·ΔG<sub>x</sub> + 4πr²·σ<span class="lbl">eq. 3.8</span></div>
+      <p class="means"><b>O que mede:</b> a variação de energia livre ao reunir átomos num aglomerado cristalino esférico de raio r. O primeiro termo é negativo abaixo de Tm (o cristal é mais estável, e o ganho cresce com o volume); o segundo é positivo (custo de criar a interface cristal–líquido, de energia σ por área). <b>Sentido físico:</b> para r pequeno, a superfície domina e o aglomerado (embrião) tende a se dissolver; para r grande, o volume domina e ele cresce.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">r* = −2σ / ΔG<sub>x</sub> &nbsp;&nbsp; W* = 16πσ³ / (3·ΔG<sub>x</sub>²)<span class="lbl">eqs. 3.9–3.10</span></div>
+      <p class="means"><b>O que mede:</b> o raio crítico (o topo da "colina" de energia, onde o embrião tem ~50 % de chance de sobreviver e vira núcleo) e a altura dessa barreira, o <span class="term">trabalho de nucleação</span>. <b>Por que importa:</b> W* depende de σ³ e de 1/ΔG<sub>x</sub>²; pequenas mudanças na energia de interface ou no superresfriamento mudam a barreira em ordens de grandeza.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">ΔG<sub>x</sub> = ΔH<sub>f</sub> · (T − Tm) / Tm<span class="lbl">força motriz, eq. 3.21</span></div>
+      <p class="means"><b>Sentido físico:</b> em Tm, líquido e cristal têm a mesma energia livre e não há força motriz. Ela cresce linearmente com o superresfriamento Tm − T, na proporção do calor de fusão.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">I = nν · exp(−N·W*/RT) · exp(−ΔE<sub>D</sub>/RT)<span class="lbl">taxa de nucleação, eqs. 3.7 e 3.22</span></div>
+      <p class="means"><b>O que mede:</b> núcleos formados por volume e por segundo. nν é o máximo teórico (cada vibração atômica tentando formar um núcleo); o primeiro exponencial é a barreira <span class="term">termodinâmica</span> (W*), e o segundo, a barreira <span class="term">cinética</span> (ΔE<sub>D</sub>, energia para um átomo atravessar a interface). <b>Por que importa:</b> logo abaixo de Tm, W* é enorme e I ≈ 0 (zona metaestável); a baixa temperatura, a mobilidade some e I volta a zero. Resultado: uma curva em sino assimétrica, com máximo em T<sub>N</sub>. No Handbook, a mobilidade é escrita pela viscosidade (relação de Stokes–Einstein, D = k<sub>B</sub>T/6πηl), que é o que o simulador abaixo usa.</p>
+    </div>
+    <div class="prose">
+      <h3>Crescimento: átomos atravessando a interface</h3>
+    </div>
+    <div class="eqx">
+      <div class="eq">u = (D/a) · [1 − exp(ΔG<sub>x</sub>/RT)] = f·RT / (3Nπa²η) · [1 − exp(ΔG<sub>x</sub>/RT)]<span class="lbl">Wilson–Frenkel, eqs. 3.26–3.27</span></div>
+      <p class="means"><b>O que mede:</b> a velocidade com que a frente do cristal avança. Vem do saldo entre saltos líquido → cristal e cristal → líquido (eqs. 3.23–3.25). O fator D/a, ou 1/η, é a <span class="term">mobilidade</span>; o colchete é a <span class="term">força motriz</span>; f é a fração da interface com sítios de crescimento (≈ 1 em interfaces rugosas, como em SiO₂ e GeO₂; ΔT/2πTm em interfaces lisas, eq. 3.28). <b>Por que importa:</b> u é zero em Tm (definição de Tm) e acima dela fica negativo (o cristal dissolve). Líquidos muito viscosos no ponto de fusão crescem cristais devagar. É o caso da sílica: 10<sup>7,4</sup> poise em Tm e u máximo de apenas ~2×10⁻⁷ cm/s (Tab. 3.2).</p>
+    </div>
+    <div class="prose">
+      <p>O máximo de I fica a temperatura mais baixa que o de u. Como a nucleação precisa vir antes do crescimento, <b>a área de sobreposição entre as duas curvas mede a tendência a cristalizar</b>: quanto menor, mais fácil formar vidro. Essa separação também é o que permite fazer vitrocerâmicas (capítulo 5).</p>
+
+      <h3>Do I e do u ao diagrama TTT</h3>
+    </div>
+    <div class="eqx">
+      <div class="eq">X = V<sub>x</sub>/V₀ = 1 − exp(−(π/3)·I·u³·t⁴) ≈ (π/3)·I·u³·t⁴<span class="lbl">Johnson–Mehl–Avrami, eq. 3.29</span></div>
+      <p class="means"><b>O que mede:</b> a fração de volume cristalizada após um tempo t numa temperatura fixa, somando núcleos que nascem a uma taxa I e crescem em três dimensões com velocidade u. <b>Por que importa:</b> fixando X = 10⁻⁶ (o limite típico de detecção de cristais), resolve-se t(T) para cada temperatura. A curva resultante tem forma de nariz: tempo infinito perto de Tm (sem força motriz) e a baixa T (sem mobilidade), com um mínimo t<sub>n</sub> na temperatura do nariz T<sub>n</sub>.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">(dT/dt)<sub>c</sub> ≈ (Tm − T<sub>n</sub>) / t<sub>n</sub> &nbsp;&nbsp; Y<sub>c</sub> ≈ √(κ·t<sub>n</sub>)<span class="lbl">taxa crítica e espessura máxima, eqs. 3.30–3.31</span></div>
+      <p class="means"><b>O que mede:</b> a taxa mínima de resfriamento que passa à esquerda do nariz (o critério central da teoria cinética) e a maior espessura que pode ser vitrificada, limitada pela rapidez com que o calor sai do interior da peça (κ é a difusividade térmica). <b>Por que importa:</b> transforma a cinética em números de engenharia. Ar resfria a 1–10 °C/s, líquidos chegam a ~10³ °C/s, e técnicas como "splat cooling" e "melt spinning" alcançam 10⁵–10⁸ °C/s.</p>
+    </div>
+
+    <figure class="figure" data-module="kinetics">
+      <div class="fig-head">
+        <h4>Simulador de nucleação, crescimento e TTT</h4>
+        <span class="cap">Teoria clássica (eqs. 3.21–3.31) com viscosidade MYEGA. A energia de interface de cada material foi calibrada para reproduzir as taxas críticas homogêneas da Tab. 3.3 do Varshneya; as demais grandezas são da ordem de grandeza correta, não valores exatos.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="kin-preset" role="group" aria-label="Material" style="margin-bottom:14px"></div>
+        <div class="fig-grid even">
+          <div class="canvas-box h-320"><canvas id="kin-iu" aria-label="Taxas de nucleação e crescimento contra a temperatura"></canvas></div>
+          <div class="canvas-box h-320"><canvas id="kin-ttt" aria-label="Diagrama TTT com curva de resfriamento"></canvas></div>
+        </div>
+        <div class="fig-grid" style="margin-top:16px">
+          <div class="controls">
+            <div class="ctl"><label for="kin-q">Taxa de resfriamento <output id="kin-q-v"></output></label><input type="range" id="kin-q" min="-8" max="13" step="0.1" value="-1"></div>
+            <div class="ctl"><label for="kin-theta">Ângulo de contato θ <output id="kin-theta-v"></output></label><input type="range" id="kin-theta" min="20" max="180" step="1" value="180"></div>
+            <div class="ctl"><label for="kin-sigma">Energia de interface σ <output id="kin-sigma-v"></output></label><input type="range" id="kin-sigma" min="0.85" max="1.15" step="0.01" value="1"></div>
+            <div class="ctl"><label for="kin-eta-s">Viscosidade (mobilidade⁻¹) <output id="kin-eta-v"></output></label><input type="range" id="kin-eta-s" min="-2" max="2" step="0.1" value="0"></div>
+          </div>
+          <div class="controls">
+            <div class="readouts">
+              <div class="readout"><div class="k">Taxa crítica R<sub>c</sub></div><div class="v" id="kin-rc">–</div></div>
+              <div class="readout"><div class="k">Nariz (T<sub>n</sub>, t<sub>n</sub>)</div><div class="v" id="kin-tn" style="font-size:17px">–</div></div>
+              <div class="readout"><div class="k">Espessura máx. Y<sub>c</sub></div><div class="v" id="kin-yc">–</div></div>
+              <div class="readout"><div class="k">T<sub>g</sub>/T<sub>m</sub></div><div class="v" id="kin-trg">–</div></div>
+            </div>
+            <p class="verdict-line" id="kin-verdict"></p>
+            <p class="note" id="kin-note"></p>
+            <div class="canvas-box h-200"><canvas id="kin-eta" aria-label="Viscosidade contra temperatura"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Repare em três coisas no simulador. Primeiro, a <b>viscosidade</b> é a variável que mais pesa: tornar o líquido duas décadas mais viscoso baixa a taxa crítica em ordens de grandeza, porque I e u são ambos proporcionais a 1/η. Segundo, a <b>energia de interface</b> aparece ao cubo em W*: ±10 % em σ desloca o nariz dramaticamente, e é por isso que a teoria clássica erra a taxa de nucleação absoluta por muitas ordens de grandeza, embora acerte a forma das curvas. Terceiro, diminuir o <b>ângulo de contato</b> (nucleação heterogênea) puxa o nariz para tempos mais curtos e aumenta a taxa crítica, como na Tab. 3.3.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Material</th><th class="num">R<sub>c</sub> homogênea (°C/s)</th><th class="num">θ = 100°</th><th class="num">θ = 60°</th><th class="num">θ = 40°</th></tr></thead>
+        <tbody>
+          <tr><td>SiO₂</td><td class="num">9×10⁻⁶</td><td class="num">10⁻⁵</td><td class="num">8×10⁻³</td><td class="num">2×10⁻¹</td></tr>
+          <tr><td>GeO₂</td><td class="num">3×10⁻³</td><td class="num">3×10⁻³</td><td class="num">1</td><td class="num">20</td></tr>
+          <tr><td>Na₂O·2SiO₂</td><td class="num">6×10⁻³</td><td class="num">8×10⁻³</td><td class="num">10</td><td class="num">3×10²</td></tr>
+          <tr><td>Salol</td><td class="num">10</td><td></td><td></td><td></td></tr>
+          <tr><td>Água</td><td class="num">10⁷</td><td></td><td></td><td></td></tr>
+          <tr><td>Ag</td><td class="num">10¹⁰</td><td></td><td></td><td></td></tr>
+          <tr><td>Metal típico</td><td class="num">9×10⁸</td><td class="num">9×10⁹</td><td class="num">10¹⁰</td><td class="num">5×10¹⁰</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Taxas críticas de resfriamento (Varshneya, Tab. 3.3, a partir de Onorato e Uhlmann, 1976). Colunas θ: nucleação heterogênea com o ângulo de contato indicado.</p>
+    </div>
+
+    <div class="prose">
+      <h3>Critérios práticos: Tg/Tm, Trg e o coeficiente de Hrubý</h3>
+      <p>Como a nucleação depende do quanto o líquido já está viscoso quando a força motriz aparece, a <span class="term">temperatura reduzida</span> T<sub>gr</sub> = T<sub>g</sub>/T<sub>m</sub> (ou T<sub>g</sub>/T<sub>liquidus</sub>) é um bom indicador. Turnbull mostrou que T<sub>gr</sub> ≥ ⅔ dificulta muito a nucleação. O Handbook registra a regra empírica correspondente: vidros com T<sub>gr</sub> &lt; 0,58–0,60 mostram nucleação homogênea interna; acima disso, predomina a nucleação na superfície. Cerca de 90 % dos vidros de silicato têm T<sub>gr</sub> &gt; 0,60, enquanto a maioria das ligas metálicas fica abaixo, o que ajuda a explicar por que estas são más formadoras de vidro.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">k<sub>gl</sub> = (T<sub>x</sub> − T<sub>g</sub>) / (T<sub>m</sub> − T<sub>x</sub>)<span class="lbl">coeficiente de Hrubý, eq. 3.33</span></div>
+      <p class="means"><b>O que mede:</b> a estabilidade do vidro contra a cristalização no reaquecimento, a partir de três temperaturas lidas num DSC: Tg, o início do pico de cristalização T<sub>x</sub> e o início da fusão T<sub>m</sub>. <b>Por que importa:</b> uma janela T<sub>x</sub> − T<sub>g</sub> larga significa que dá para aquecer o vidro acima de Tg (para puxar fibras, moldar, prensar) sem cristalizar. Valores de ~0,7 a mais de 1 indicam vidros relativamente estáveis.</p>
+    </div>
+    <div class="prose">
+      <h3>Limites da teoria clássica</h3>
+      <p>O Varshneya é franco: a concordância quantitativa entre a taxa de nucleação prevista e a medida só foi obtida em poucos casos, e em outros a diferença é de várias ordens de grandeza. As causas listadas no Handbook incluem tratar o núcleo de poucos átomos com propriedades macroscópicas (mesma composição e estrutura do cristal, energia de interface que não depende da curvatura), usar a viscosidade para descrever a difusão perto de Tg, onde as duas se desacoplam, e supor um líquido homogêneo. Além disso, o sistema muitas vezes não vai direto à fase mais estável, mas passa por fases metaestáveis intermediárias (regra de Ostwald). Teorias de interface difusa e de funcional de densidade tentam corrigir essas limitações.</p>
+    </div>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>A festa que precisa de líderes</b>Para os átomos se organizarem num cristal, primeiro alguém precisa começar a fila (nucleação) e depois os outros precisam ir se juntando (crescimento). Logo abaixo de Tm, ninguém tem motivo para começar a fila. Bem frio, todos estão "colados" (viscosidade alta) e ninguém consegue andar até ela. O perigo está no meio do caminho.</p>
+        <p class="analogy"><b>O nariz é um pedágio</b>Resfriar o líquido é atravessar uma estrada que passa perto de um pedágio em forma de nariz. Se você passa rápido, por fora, chega do outro lado como vidro. Se passa devagar, cai no pedágio e sai cristal. A taxa crítica é a velocidade mínima para não ser parado.</p>
+        <p>Por isso a sílica (muito viscosa) vira vidro até esfriando devagar, e um metal puro (fluido como água) precisa de milhões ou bilhões de graus por segundo.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 5. NUCLEANTES ===================== -->
+  <section class="chapter" id="nucleantes">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 5</div>
+      <h2>Agentes nucleantes e vitrocerâmicas: cristalizar de propósito</h2>
+      <p class="ch-lede">O mesmo conhecimento que evita cristais permite produzi-los sob controle: muitos núcleos pequenos e uniformes, em todo o volume, em vez de poucos cristais grossos crescendo da superfície.</p>
+    </div>
+
+    <div class="prose">
+      <p>Na <span class="term">nucleação heterogênea</span>, o núcleo se forma sobre uma superfície "estranha": parede do cadinho, inclusão, bolha ou uma partícula colocada ali de propósito. Em vez de uma esfera, o núcleo é uma calota esférica apoiada no substrato, com ângulo de contato θ dado pelo equilíbrio de tensões interfaciais (eq. 3.13: σ<sub>Ls</sub> = σ<sub>xs</sub> + σ<sub>Lx</sub>·cos θ).</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">W*<sub>het</sub> = W*<sub>hom</sub> · f(θ), &nbsp; f(θ) = (2 + cos θ)(1 − cos θ)² / 4<span class="lbl">Varshneya eqs. 3.15–3.16; Handbook eq. 4.14</span></div>
+      <p class="means"><b>O que mede:</b> o quanto o substrato reduz a barreira de nucleação. O raio crítico r* é o mesmo da nucleação homogênea; o que muda é o volume da calota, e com ele o número de átomos que precisam se organizar. <b>Sentido físico:</b> θ = 180° (sem molhamento) equivale a não ter substrato; θ = 90° corta a barreira pela metade; θ = 0° (molhamento perfeito) elimina a barreira termodinâmica, e sobra só a cinética. Para funcionar bem, a rede do substrato deve "casar" com a do cristal: desajustes de até ~10 % ainda permitem crescimento epitaxial.</p>
+    </div>
+
+    <figure class="figure" data-module="hetero">
+      <div class="fig-head">
+        <h4>O núcleo sobre o substrato: ângulo de contato e barreira</h4>
+        <span class="cap">Arraste o ângulo de contato. A curva mostra f(θ), a fração da barreira homogênea que sobra.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div class="canvas-box ratio-wide"><canvas id="het-canvas" aria-label="Calota cristalina sobre substrato e curva f(θ)"></canvas></div>
+          <div class="controls">
+            <div class="ctl"><label for="het-theta">Ângulo de contato θ <output id="het-theta-v"></output></label><input type="range" id="het-theta" min="0" max="180" value="60"></div>
+            <div class="readouts">
+              <div class="readout"><div class="k">f(θ) = W*het/W*hom</div><div class="v" id="het-f">–</div></div>
+              <div class="readout"><div class="k">volume do núcleo vs. esfera</div><div class="v" id="het-v">–</div></div>
+            </div>
+            <p class="note" id="het-txt" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Os agentes nucleantes</h3>
+      <p>Segundo o Handbook, os agentes nucleantes usados pela indústria são de dois tipos: <span class="term">metais coloidais</span> (Au, Ag, Pt, Pd…), em teores abaixo de 1 % molar, e <span class="term">óxidos simples</span> (TiO₂, ZrO₂, P₂O₅, Ta₂O₅, WO₃, MoO₃…), tipicamente de 2 a 8 % molar. Stookey foi o primeiro a usá-los, ao cristalizar um vidro de silicato de lítio com partículas de prata. A técnica levou às vitrocerâmicas.</p>
+      <p>O mecanismo raramente é o desenho simples de uma partícula com θ pequeno. Estudos de microscopia eletrônica de Höche e Patzig mostraram, num vidro SiO₂–MgO–Al₂O₃–ZrO₂, cristais de ZrO₂ em forma de estrela que deixam ao redor uma zona empobrecida em Zr; é nessa zona que a solução sólida de quartzo começa a crescer. Em vidros de aluminossilicato de lítio com TiO₂ e ZrO₂, primeiro se separam gotas amorfas, depois precipitam nanocristais de ZrTiO₄ cercados por uma barreira rica em alumina, e só então nucleia a fase de quartzo-β. Outra rota é a <span class="term">separação de fases</span> induzida por fluoretos ou fosfatos: as gotas da fase separada limitam o tamanho dos cristais, o que permite vitrocerâmicas transparentes.</p>
+      <p>O processo clássico tem duas etapas. Primeiro, um patamar perto do máximo da nucleação, T<sub>N</sub>, onde se formam muitos núcleos; depois, um patamar mais quente, T<sub>C</sub>, perto do máximo do crescimento, onde eles crescem até a microestrutura desejada. Só funciona porque as curvas I(T) e u(T) estão separadas em temperatura (capítulo 4). O mesmo princípio explica o "striking" dos vidros rubi: fundidos com Cu ou Au em condições redutoras, saem incolores do primeiro resfriamento e ficam vermelhos após o reaquecimento, quando precipitam as partículas metálicas.</p>
+    </div>
+
+    <figure class="figure" data-module="glassceramic">
+      <div class="fig-head">
+        <h4>Tratamento térmico em duas etapas, com e sem agente nucleante</h4>
+        <span class="cap">Esquemático. No topo, o perfil de temperatura sobre as faixas de nucleação e de crescimento; embaixo, a microestrutura de duas amostras.</span>
+      </div>
+      <div class="fig-body">
+        <div class="clip" id="gc-clip">
+          <div class="canvas-box" style="aspect-ratio: 16 / 10"><canvas id="gc-canvas" aria-label="Animação do tratamento térmico e da microestrutura"></canvas></div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>A vitrocerâmica de aluminossilicato de lítio (LAS) dos cooktops é o exemplo clássico. A nucleação homogênea não basta para obter a nanocristalização intensa necessária, então adiciona-se ZrTiO₄ (via TiO₂ + ZrO₂). Um tratamento em duas etapas gera muitos nanocristais de quartzo-β, com expansão térmica quase nula e transparência preservada. O Handbook nota, porém, que a ação dos nucleantes "está longe de ser previsível e universal": cada sistema precisa ser estudado.</p>
+    </div>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>A gota no vidro da janela</b>A água se condensa mais fácil num vidro sujo do que no ar limpo: as partículas de sujeira dão um ponto de apoio. O agente nucleante é essa "sujeira" proposital: partículas espalhadas pelo vidro onde os cristais acham fácil começar.</p>
+        <p class="analogy"><b>Plantar e depois regar</b>O tratamento em duas etapas é como semear e cultivar. Primeiro, numa temperatura boa para "germinar", aparecem milhões de sementes. Depois, numa temperatura boa para "crescer", elas viram cristais, todos pequenos e parecidos, porque começaram juntos.</p>
+        <p>Sem nucleante, os cristais nascem só nas bordas e crescem grossos para dentro. Com nucleante, o material todo cristaliza por igual. É assim que se faz o cooktop de vitrocerâmica.</p>
+      </div>
+    </aside>
+
+    <section id="referencias" style="margin-top:56px">
+      <h3>Referências principais</h3>
+      <ol class="refs">
+        <li>Varshneya, A. K.; Mauro, J. C. <em>Fundamentals of Inorganic Glasses</em>, 3ª ed. Elsevier (2019), cap. 3, "Glass formation principles" (eqs. 3.1–3.33, Tabs. 3.1–3.3).</li>
+        <li>Musgraves, J. D.; Hu, J.; Calvez, L. (eds.) <em>Springer Handbook of Glass</em>. Springer (2019): cap. 4, Allix &amp; Cormier, "Crystallization and Glass-Ceramics"; cap. 9, de Ligny &amp; Möncke, "Colors in Glasses"; cap. 13, Le Losq, Cicconi, Greaves &amp; Neuville, "Silicate Glasses".</li>
+        <li>Zachariasen, W. H. The atomic arrangement in glass. <em>J. Am. Chem. Soc.</em> 54, 3841 (1932).</li>
+        <li>Sun, K.-H. Fundamental condition of glass formation. <em>J. Am. Ceram. Soc.</em> 30, 277 (1947).</li>
+        <li>Rawson, H. <em>Inorganic Glass-Forming Systems</em>. Academic Press (1967).</li>
+        <li>Dietzel, A. Die Kationenfeldstärken und ihre Beziehungen zu Entglasungsvorgängen, zur Verbindungsbildung und zu den Schmelzpunkten von Silicaten. <em>Z. Elektrochem.</em> 48, 9 (1942). Valores de F compilados em Vogel, W. <em>Glass Chemistry</em>, Springer (1994).</li>
+        <li>Phillips, J. C. Topology of covalent non-crystalline solids I. <em>J. Non-Cryst. Solids</em> 34, 153 (1979); Thorpe, M. F. <em>J. Non-Cryst. Solids</em> 57, 355 (1983).</li>
+        <li>Huang, P. Y. et al. Direct imaging of a two-dimensional silica glass on graphene. <em>Nano Lett.</em> 12, 1081 (2012).</li>
+        <li>Onorato, P. I. K.; Uhlmann, D. R. Nucleating heterogeneities and glass formation. <em>J. Non-Cryst. Solids</em> 22, 367 (1976); Uhlmann, D. R. <em>J. Non-Cryst. Solids</em> 7, 337 (1972).</li>
+        <li>Turnbull, D. Under what conditions can a glass be formed? <em>Contemp. Phys.</em> 10, 473 (1969).</li>
+        <li>Hrubý, A. Evaluation of glass-forming tendency by means of DTA. <em>Czech. J. Phys. B</em> 22, 1187 (1972).</li>
+        <li>Duffy, J. A.; Ingram, M. D. Establishment of an optical scale for Lewis basicity in inorganic oxyacids, molten salts, and glasses. <em>J. Am. Chem. Soc.</em> 93, 6448 (1971).</li>
+        <li>Shannon, R. D. Revised effective ionic radii. <em>Acta Cryst. A</em> 32, 751 (1976).</li>
+        <li>Mauro, J. C. et al. Viscosity of glass-forming liquids. <em>PNAS</em> 106, 19780 (2009) (modelo MYEGA).</li>
+      </ol>
+    </section>
+
+    <div class="next">
+      <div>
+        <h3>Próxima parte: luz em vidro</h3>
+        <p>Com a estrutura, o redox e a basicidade em mãos, dá para entender por que um mesmo íon terra-rara brilha diferente em cada matriz: níveis de energia, fônons e eficiência quântica.</p>
+      </div>
+      <canvas id="next-canvas" aria-hidden="true"></canvas>
+    </div>
+  </section>
+  </main>
+</div>
+
+<footer>
+  Vidros &amp; Luminescência · Parte 2: Formação de vidros. Simulações didáticas: os modelos são simplificados e os valores numéricos são típicos ou ilustrativos, salvo quando a fonte é indicada.
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

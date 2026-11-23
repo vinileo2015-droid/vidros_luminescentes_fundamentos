@@ -5,7 +5,8 @@ Site didático e interativo sobre ciência do vidro e luminescência em vidros, 
 | Parte | Pasta | Estado |
 |---|---|---|
 | 1. Fundamentos do vidro | `parte-1-fundamentos/` | publicada |
-| 2. Luminescência em vidros | `parte-2-luminescencia/` | em preparação |
+| 2. Formação de vidros | `parte-2-formacao/` | publicada |
+| 3. Luminescência em vidros | `parte-3-luminescencia/` | em preparação |
 
 **Parte 1: Fundamentos do vidro**
 
@@ -16,6 +17,14 @@ Site didático e interativo sobre ciência do vidro e luminescência em vidros, 
 5. **Vidro × outros amorfos × polímeros.** Viga aquecida sob carga com curvas de módulo e DSC (vidro de óxido, polímero amorfo, reticulado, semicristalino e a-Si), gráfico de Angell e diferenças menos triviais.
 
 Cada capítulo traz um texto técnico seguido de uma versão simplificada, com analogias.
+
+**Parte 2: Formação de vidros** (base: Varshneya & Mauro, cap. 3; Springer Handbook of Glass, caps. 4, 9 e 13)
+
+1. **Teorias estruturais.** Goldschmidt, Zachariasen (verificador interativo das quatro regras), crítica dos cristalitos, critérios de Sun, Rawson e Dietzel (mapa força de campo × força de ligação), Smekal e Stanworth.
+2. **Restrições topológicas.** Phillips–Thorpe: contador de restrições para Ge–Se e As–Se, regime flexível/isostático/rígido.
+3. **Formadores, modificadores e companhia.** Laboratório de composição: rede 2D que responde a ~30 compostos (formadores, modificadores, intermediários, condicionais, nucleantes e polivalentes Fe, Eu, Ce, Cu com controle de redox), com NBO/T, Qⁿ, basicidade óptica e tratamento térmico.
+4. **Teoria cinética.** Nucleação e crescimento clássicos com viscosidade MYEGA, diagrama TTT, taxa crítica e espessura máxima, calibrados na Tab. 3.3 do Varshneya.
+5. **Agentes nucleantes e vitrocerâmicas.** Ângulo de contato e f(θ); clipe de tratamento térmico em duas etapas.
 
 ## Como rodar
 
@@ -44,6 +53,8 @@ O arquivo `.nojekyll` evita que o GitHub Pages processe o site com Jekyll.
 index.html              capa do projeto, com a lista de partes
 parte-1-fundamentos/
   index.html            conteúdo e estrutura dos capítulos da Parte 1
+parte-2-formacao/
+  index.html            conteúdo da Parte 2
 css/style.css           tema (claro/escuro), layout e componentes (compartilhado)
 js/main.js              carrega cada módulo quando ele se aproxima da tela
 js/lib/
@@ -52,6 +63,10 @@ js/lib/
   md-engine.js          dinâmica molecular 2D (Lennard-Jones, células, termostato)
   tnm-engine.js         relaxação estrutural TNM + cristalização (TTT, Avrami)
   visc.js               viscosidade pelo modelo MYEGA
+  cnt-engine.js         nucleação e crescimento clássicos, TTT, taxa crítica (Parte 2)
+  oxides.js             banco de dados dos óxidos do laboratório de composição
+  complab-model.js      contabilidade estrutural (NBO/T, Qⁿ, compensação de carga, Λ, redox)
+  crn.js                gerador de rede aleatória contínua 2D
 js/sections/            um módulo por figura interativa
 vendor/                 three.module.js, OrbitControls, RoomEnvironment, d3-delaunay
 assets/                 favicon
@@ -73,8 +88,8 @@ As simulações são didáticas. Os números de propriedades são típicos de li
 
 ## Próximas partes
 
-- Parte 2: luminescência em vidros (terras-raras, níveis de energia, fônons, eficiência quântica)
-- Parte 3: …
+- Parte 3: luminescência em vidros (terras-raras, níveis de energia, fônons, eficiência quântica)
+- Parte 4: …
 
 ## Referência principal
 
