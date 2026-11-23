@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fundamentos do vidro · Vidros &amp; Luminescência</title>
+<meta name="description" content="Fundamentos do vidro: definições, estados da matéria, diagrama volume/entalpia versus temperatura, famílias de vidros e diferenças entre vidros e outros materiais amorfos. Primeiro capítulo do projeto Vidros & Luminescência.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="../" title="Voltar à capa do projeto"><span class="brand-mark" aria-hidden="true"></span><span>Vidros <span class="long">&amp; Luminescência</span></span></a>
+  <nav class="chapters" aria-label="Capítulos">
+    <a href="#definicao">O que é vidro</a>
+    <a href="#estados">Sólido, líquido, vidro</a>
+    <a href="#diagrama">Diagrama H–T e Tg</a>
+    <a href="#familias">Famílias</a>
+    <a href="#amorfos">Vidro × amorfos</a>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="topo">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">Vidros &amp; Luminescência · Parte 1: Fundamentos</div>
+      <h1>Um líquido que parou no meio do caminho</h1>
+      <p class="lede">O vidro parece sólido, quebra como sólido, e mesmo assim guarda a estrutura desordenada do líquido de onde veio. Esta página percorre o que é um vidro, como ele se forma, como a história térmica o define e em que ele difere de outros materiais sem cristais.</p>
+      <div class="hero-meta">
+        <a class="primary" href="#definicao">Começar pela definição</a>
+        <a href="#diagrama">Ir direto ao diagrama H–T</a>
+      </div>
+    </div>
+    <div class="hero-stage" id="hero-stage">
+      <canvas id="hero-canvas" aria-label="Gota de vidro em 3D. Use o controle de temperatura para resfriá-la ou aquecê-la; arraste para girar."></canvas>
+      <div class="hero-readout">
+        <div class="row">
+          <span class="temp" id="hero-temp">1400 °C</span>
+          <span class="state" id="hero-state">Líquido</span>
+        </div>
+        <input type="range" id="hero-slider" min="20" max="1500" value="1400" step="1" aria-label="Temperatura da gota (°C)">
+        <div class="hint" id="hero-hint">Vidro sodo-cálcico: arraste para resfriar. Arraste a gota para girar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="layout with-rail">
+  <aside class="rail" aria-label="Índice">
+    <div class="rail-t">Nesta página</div>
+    <ol>
+      <li><a href="#definicao">1. O que é vidro</a></li>
+      <li><a href="#estados">2. Sólido, líquido, líquido super-resfriado e vidro</a></li>
+      <li><a href="#diagrama">3. Diagrama V–T / H–T e a Tg</a></li>
+      <li><a href="#familias">4. Óxidos, metálicos, haletos e calcogenetos</a></li>
+      <li><a href="#amorfos">5. Vidros, outros amorfos e polímeros</a></li>
+      <li><a href="#referencias">Referências</a></li>
+    </ol>
+  </aside>
+
+  <main>
+  <!-- ===================== 1. DEFINIÇÃO ===================== -->
+  <section class="chapter" id="definicao">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 1</div>
+      <h2>O que é vidro? Das receitas de forno à definição de Zanotto e Mauro</h2>
+      <p class="ch-lede">Cada definição de vidro reflete os materiais que se conheciam na época. Quando surgiram vidros que não eram de silicato, nem inorgânicos, nem feitos por fusão, as definições antigas deixaram de servir.</p>
+    </div>
+
+    <div class="prose">
+      <p>Vidros naturais, como a obsidiana, foram usados como ferramenta muito antes de existir vidro sintético, e a fabricação de vidro por fusão tem milhares de anos. Por quase toda essa história, "vidro" significou um silicato fundido e resfriado. As primeiras definições científicas descreviam exatamente isso: uma <span class="term">composição</span> (inorgânica, quase sempre silicática), um <span class="term">processo</span> (fusão seguida de resfriamento) e um <span class="term">resultado</span> (um corpo rígido que não cristalizou).</p>
+      <p>No século XX, esse retrato se desfez por três lados. Em 1932, Zachariasen mostrou que o critério relevante é <em>estrutural</em>: o vidro é uma rede tridimensional sem periodicidade, com energia comparável à do cristal correspondente. Depois vieram materiais que nenhuma definição de "silicato fundido" contempla: vidros metálicos (1960), vidros de fluoretos (1974), vidros calcogenetos, vidros orgânicos e poliméricos, além de vidros obtidos sem passar pelo líquido (sol-gel, deposição a partir do vapor). As definições passaram a privilegiar duas características que todos os vidros compartilham: a <span class="term">ausência de ordem periódica de longo alcance</span> e a <span class="term">transição vítrea</span>.</p>
+      <p>A linha do tempo abaixo reúne as definições mais citadas. Para cada uma, indico o que ela acerta e onde falha diante do que se sabe hoje. Os critérios no rodapé de cada cartão mostram quais exigências a definição impõe; os riscados são os que não se sustentam para todos os vidros conhecidos.</p>
+    </div>
+
+    <figure class="figure" data-module="timeline">
+      <div class="fig-head">
+        <h4>Como a definição de vidro evoluiu</h4>
+        <span class="cap">Selecione um ano. Traduções livres; o original está logo abaixo da tradução.</span>
+      </div>
+      <div class="fig-body"><div class="tl" id="tl"></div></div>
+    </figure>
+
+    <div class="prose">
+      <h3>A definição de Zanotto e Mauro (2017)</h3>
+      <p>Em 2017, Edgar D. Zanotto (UFSCar) e John C. Mauro (Penn State) publicaram no <em>Journal of Non-Crystalline Solids</em> uma revisão crítica do problema. O ponto de partida foi separar com cuidado quatro estados ligados à vitrificação: o <span class="s-liq">líquido estável</span>, o <span class="s-scl">líquido super-resfriado metaestável</span>, o <span class="s-glass">vidro instável, fora do equilíbrio</span>, e o <span class="s-cryst">cristal estável</span>. A partir disso, eles mostram por que chamar o vidro simplesmente de "sólido" é impreciso: o vidro <em>relaxa</em> continuamente em direção ao líquido super-resfriado, e o destino final de ambos, em tempo infinito, é cristalizar.</p>
+      <p>Os autores propuseram a definição em duas versões: uma intuitiva, para o público geral, e outra mais completa, para estudantes avançados e pesquisadores. É hoje a formulação mais aceita e citada na comunidade de vidros. Clique nos termos destacados para ver o que cada um significa e por que está ali.</p>
+    </div>
+
+    <div class="defbox" data-module="definition">
+      <div class="defs">
+        <div>
+          <div class="lvl">Definição para o público geral</div>
+          <div class="def-text">Vidro é um estado da matéria <span class="hl" role="button" tabindex="0" data-k="neq">fora do equilíbrio</span> e <span class="hl" role="button" tabindex="0" data-k="nc">não cristalino</span>, que <span class="hl" role="button" tabindex="0" data-k="appears">parece sólido em escalas de tempo curtas</span>, mas <span class="hl" role="button" tabindex="0" data-k="relax">relaxa continuamente em direção ao estado líquido</span>.</div>
+          <div class="def-en">"Glass is a nonequilibrium, non-crystalline state of matter that appears solid on a short time scale but continuously relaxes towards the liquid state."</div>
+        </div>
+        <div>
+          <div class="lvl">Definição para especialistas</div>
+          <div class="def-text">Vidro é um <span class="hl" role="button" tabindex="0" data-k="cond">estado condensado</span> da matéria, fora do equilíbrio e não cristalino, que <span class="hl" role="button" tabindex="0" data-k="gt">exibe transição vítrea</span>. A estrutura dos vidros é <span class="hl" role="button" tabindex="0" data-k="struct">semelhante à de seus líquidos super-resfriados de origem</span>, e eles <span class="hl" role="button" tabindex="0" data-k="spont">relaxam espontaneamente em direção ao estado de líquido super-resfriado</span>. Seu <span class="hl" role="button" tabindex="0" data-k="fate">destino final, no limite de tempo infinito, é cristalizar</span>.</div>
+          <div class="def-en">"Glass is a nonequilibrium, non-crystalline condensed state of matter that exhibits a glass transition. The structure of glasses is similar to that of their parent supercooled liquids (SCL), and they spontaneously relax toward the SCL state. Their ultimate fate, in the limit of infinite time, is to crystallize."</div>
+        </div>
+      </div>
+      <div class="hl-explain" id="hl-explain" aria-live="polite"><b>Clique em um termo destacado.</b> Cada trecho da definição resolve uma falha de definições anteriores.</div>
+    </div>
+
+    <div class="prose">
+      <p>Repare no que a definição <em>não</em> exige: composição (óxido, metal, polímero, tudo serve), rota de preparo (fusão, sol-gel, vapor, nada disso entra) e isotropia (fibras e vidros estirados podem ser anisotrópicos). E repare no que ela exige: falta de equilíbrio, falta de cristalinidade, a transição vítrea como assinatura experimental e uma relação explícita com o líquido super-resfriado.</p>
+
+      <h3>Ordem de curto alcance sem ordem de longo alcance</h3>
+      <p>"Não cristalino" não quer dizer "totalmente aleatório". No vidro de sílica, cada silício continua rodeado por quatro oxigênios em um tetraedro SiO<sub>4</sub> praticamente idêntico ao do quartzo. Essa é a <span class="term">ordem de curto alcance</span> (primeiros vizinhos, ~0,16 nm para Si–O). O que se perde é a repetição: os ângulos Si–O–Si variam, os anéis de tetraedros têm tamanhos diferentes (5, 6, 7, 8 membros…) e não há uma célula unitária que, repetida, reconstrua o material. Entre esses extremos existe a <span class="term">ordem de médio alcance</span> (~0,5 a 2 nm): estatística de anéis, empacotamento de poliedros e correlações que aparecem no primeiro pico agudo de difração.</p>
+      <p>Zachariasen ilustrou essa ideia com um desenho que até hoje abre os livros de vidro: um óxido hipotético A<sub>2</sub>O<sub>3</sub> em duas dimensões, em que cada átomo A fica no centro de um triângulo de três oxigênios. No cristal e no vidro, o triângulo AO<sub>3</sub> é o mesmo: mesma distância A–O, mesmo ângulo O–A–O de 120°. A diferença está em como os triângulos se ligam pelos vértices. No cristal, o ângulo da ponte A–O–A é sempre o mesmo e todos os anéis têm seis triângulos. No vidro, esse ângulo varia de ponte para ponte, aparecem anéis de cinco, sete, oito membros, e a rede deixa de se repetir. Foi a partir desse raciocínio que Zachariasen formulou suas regras: a energia do vidro só fica próxima à do cristal se os poliedros forem preservados e a flexibilidade estiver toda nas pontes.</p>
+    </div>
+
+    <figure class="figure" data-module="zachariasen">
+      <div class="fig-head">
+        <h4>O esquema de Zachariasen: mesmos triângulos, pontes diferentes</h4>
+        <span class="cap">A₂O₃ hipotético em 2D, como no artigo de 1932. Círculos abertos: oxigênio; pontos: átomo A. Passe o mouse ou toque em um oxigênio para medir a ponte.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid even">
+          <div>
+            <div class="zach-title s-cryst">Cristalino</div>
+            <div class="canvas-box ratio-sq"><canvas id="zach-cryst" aria-label="Rede cristalina de triângulos AO3 com anéis hexagonais"></canvas></div>
+            <p class="note zach-out" id="zach-cryst-v" aria-live="polite"></p>
+          </div>
+          <div>
+            <div class="zach-title s-glass">Vítreo</div>
+            <div class="canvas-box ratio-sq"><canvas id="zach-glass" aria-label="Rede vítrea de triângulos AO3 com anéis de tamanhos variados"></canvas></div>
+            <p class="note zach-out" id="zach-glass-v" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="fig-grid even" style="margin-top:4px">
+          <div class="canvas-box h-200"><canvas id="zach-h1" aria-label="Histograma do ângulo O–A–O"></canvas></div>
+          <div class="canvas-box h-200"><canvas id="zach-h2" aria-label="Histograma do ângulo A–O–A"></canvas></div>
+        </div>
+        <div class="btns" style="margin-top:14px;align-items:center;gap:18px">
+          <label class="check"><input type="checkbox" id="zach-rings"> Colorir anéis por tamanho</label>
+          <button class="btn" type="button" id="zach-new">Gerar outro vidro</button>
+        </div>
+        <p class="note" style="margin:10px 0 0">Nos histogramas, a barra índigo é o cristal (um único valor) e as barras azul-petróleo são o vidro. O ângulo dentro do triângulo quase não muda: é a ordem de curto alcance. O ângulo da ponte se espalha por dezenas de graus: é aí que mora a desordem.</p>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>A figura seguinte leva a mesma ideia a uma rede maior e mostra o que acontece na transição: arraste a desordem e acompanhe a função de distribuição radial <em>g(r)</em>. Os anéis deixam de ser todos hexagonais, e a <em>g(r)</em> perde os picos distantes enquanto o primeiro pico, que corresponde à distância de ligação, quase não muda.</p>
+    </div>
+
+    <figure class="figure" data-module="network2d">
+      <div class="fig-head">
+        <h4>Rede cristalina × rede aleatória contínua (2D)</h4>
+        <span class="cap">Anéis coloridos pelo número de membros. Ao lado, a g(r) calculada ao vivo sobre os átomos formadores.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div class="clip" id="net-clip">
+            <div class="canvas-box ratio-43"><canvas id="net-canvas" aria-label="Rede bidimensional de átomos formadores e pontes de oxigênio"></canvas></div>
+          </div>
+          <div class="controls">
+            <div class="ctl">
+              <label for="net-dis">Desordem topológica <output id="net-dis-v">0 %</output></label>
+              <input type="range" id="net-dis" min="0" max="100" value="0">
+            </div>
+            <div class="canvas-box h-200"><canvas id="net-gr" aria-label="Função de distribuição radial g(r)"></canvas></div>
+            <div class="legend" id="net-legend"></div>
+            <label class="check"><input type="checkbox" id="net-rings" checked> Colorir anéis por tamanho</label>
+            <label class="check"><input type="checkbox" id="net-o" checked> Mostrar oxigênios (pontes)</label>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p>Um <b>cristal</b> é como uma banda marcial em formação: cada músico tem lugar marcado, e a formação se repete pelo campo todo. Um <b>líquido</b> é a mesma multidão depois do desfile, todos andando e trocando de lugar. Um <b>vidro</b> é uma fotografia dessa multidão: ninguém se mexe na foto, mas a arrumação é a da multidão, não a da banda.</p>
+        <p class="analogy"><b>Mesmos tijolos, juntas diferentes</b>No esquema de Zachariasen, cristal e vidro usam exatamente o mesmo "tijolo" (um triângulo de oxigênios com um átomo no meio). No cristal, as juntas entre tijolos têm sempre o mesmo ângulo, e a parede fica regular. No vidro, cada junta tem um ângulo um pouco diferente, e a parede fica torta, mas cada tijolo continua inteiro.</p>
+        <p class="analogy"><b>Ordem de curto alcance</b>Mesmo na multidão, cada pessoa tem mais ou menos o mesmo espaço ao redor e segura a mão de dois ou três vizinhos. Olhando de perto, tudo parece organizado. Olhando o campo inteiro, não há padrão que se repita.</p>
+        <p>A definição moderna (Zanotto e Mauro, 2017) diz em linguagem simples: <b>vidro é um material desordenado, fora do equilíbrio, que parece sólido no nosso tempo, mas continua se acomodando lentamente na direção do líquido</b>. E, se pudéssemos esperar para sempre, ele acabaria cristalizando.</p>
+        <p>Não importa do que o vidro é feito (areia, metal, plástico, açúcar) nem como foi feito. Importa como ele se comporta.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 2. ESTADOS ===================== -->
+  <section class="chapter" id="estados">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 2</div>
+      <h2>Sólido, líquido, líquido super-resfriado e vidro</h2>
+      <p class="ch-lede">"Sólido" e "líquido" não são propriedades absolutas: dependem de quanto tempo você observa o material em relação a quanto tempo ele leva para se rearranjar.</p>
+    </div>
+
+    <div class="prose">
+      <h3>Duas perguntas diferentes: equilíbrio e escala de tempo</h3>
+      <p>Para classificar um material, é útil separar duas perguntas. A primeira é <span class="term">termodinâmica</span>: o sistema está em equilíbrio (estável ou metaestável) ou fora dele? A segunda é <span class="term">cinética</span>: o tempo de relaxação estrutural <em>τ</em>, isto é, o tempo típico para os átomos trocarem de vizinhos, é curto ou longo comparado ao tempo de observação <em>t</em><sub>obs</sub>?</p>
+      <p>A razão entre os dois é o <span class="term">número de Deborah</span>, proposto por Markus Reiner em 1964:</p>
+      <div class="eq">De = τ / t<sub>obs</sub><span class="lbl">De ≪ 1: escoa como líquido · De ≫ 1: responde como sólido</span></div>
+      <p>O tempo de relaxação está ligado à viscosidade pela relação de Maxwell, <em>τ ≈ η/G</em><sub>∞</sub>, onde <em>G</em><sub>∞</sub> (~10<sup>10</sup> Pa para vidros de óxido) é o módulo de cisalhamento instantâneo. A viscosidade de um líquido formador de vidro aumenta mais de dez ordens de grandeza entre o banho fundido (~10 Pa·s, um mel espesso) e a transição vítrea, onde convencionalmente <em>η</em> ≈ 10<sup>12</sup> Pa·s e <em>τ</em> fica na faixa de 10 a 100 segundos. Abaixo de Tg, <em>τ</em> cresce tanto que, à temperatura ambiente, um vidro de janela levaria tempos muito maiores que a idade do universo para relaxar.</p>
+    </div>
+
+    <figure class="figure" data-module="deborah">
+      <div class="fig-head">
+        <h4>Parece sólido ou parece líquido? Depende de quanto tempo você espera</h4>
+        <span class="cap">Tempo de relaxação de um vidro sodo-cálcico (modelo MYEGA, Tg ≈ 550 °C, m ≈ 38). Escolha o tempo de observação.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div class="canvas-box ratio-43"><canvas id="deb-canvas" aria-label="Gráfico do tempo de relaxação em função da temperatura"></canvas></div>
+          <div class="controls">
+            <div class="ctl">
+              <span class="lab">Tempo de observação <span class="val" id="deb-obs-v"></span></span>
+              <div class="btns" id="deb-obs" role="group" aria-label="Tempo de observação"></div>
+            </div>
+            <div class="ctl">
+              <label for="deb-T">Temperatura <output id="deb-T-v"></output></label>
+              <input type="range" id="deb-T" min="400" max="1500" value="700">
+            </div>
+            <div class="readouts">
+              <div class="readout"><div class="k">τ (equilíbrio)</div><div class="v" id="deb-tau">–</div></div>
+              <div class="readout"><div class="k">Deborah</div><div class="v" id="deb-De">–</div></div>
+            </div>
+            <p class="note" id="deb-verdict"></p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Os quatro estados da vitrificação</h3>
+      <p>Com essas duas perguntas, os quatro estados ligados à formação de vidro ficam bem separados. O líquido super-resfriado (LSR) é o personagem que costuma ser esquecido: entre Tg e Tm, ele está em <em>equilíbrio interno</em> (suas propriedades dependem só de T e P, não da história), mas é <em>metaestável</em>, porque o cristal tem energia livre menor. Ao cruzar Tg, o LSR deixa de conseguir acompanhar o resfriamento e "congela" uma estrutura: nasce o vidro, que já não está em equilíbrio e por isso evolui com o tempo.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="states-table">
+        <thead><tr><th>Estado</th><th>Faixa</th><th>Estabilidade</th><th>Propriedades dependem da história?</th><th>Evolução espontânea</th></tr></thead>
+        <tbody>
+          <tr><td class="s-liq"><span class="dot"></span>Líquido (L)</td><td>T &gt; Tm</td><td>Equilíbrio estável</td><td>Não</td><td>Nenhuma</td></tr>
+          <tr><td class="s-scl"><span class="dot"></span>Líquido super-resfriado (LSR)</td><td>Tg &lt; T &lt; Tm</td><td>Equilíbrio metaestável</td><td>Não</td><td>Cristalizar (nucleação e crescimento)</td></tr>
+          <tr><td class="s-glass"><span class="dot"></span>Vidro (V)</td><td>T &lt; Tg</td><td>Fora do equilíbrio (instável)</td><td>Sim: taxa de resfriamento, recozimento, pressão…</td><td>Relaxar em direção ao LSR e, em tempo infinito, cristalizar</td></tr>
+          <tr><td class="s-cryst"><span class="dot"></span>Cristal (C)</td><td>T &lt; Tm</td><td>Equilíbrio estável</td><td>Pouco (defeitos, tamanho de grão)</td><td>Nenhuma relevante</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <h3>O que acontece com os átomos</h3>
+      <p>A simulação abaixo é dinâmica molecular de verdade, rodando no seu navegador: centenas de partículas interagindo por um potencial de Lennard-Jones em duas dimensões, com um termostato que impõe a temperatura. As cores mostram a <span class="term">mobilidade</span> (quanto cada partícula se deslocou na última janela de tempo) ou a <span class="term">ordem local hexagonal</span> |ψ<sub>6</sub>|, que vale 1 em um cristal hexagonal perfeito.</p>
+      <p>Compare os dois sistemas. O <b>monoatômico</b> (todas as partículas iguais) cristaliza mesmo sob a têmpera mais brusca que a simulação permite. Na prática, metais puros só foram vitrificados com taxas da ordem de 10<sup>14</sup> K/s. A <b>mistura binária</b> (dois tamanhos, razão 1 : 1,4) não consegue se organizar em uma rede simples, a mobilidade despenca ao resfriar e a estrutura desordenada fica presa. É a mesma lógica das regras empíricas para vidros metálicos: vários componentes com tamanhos atômicos bem diferentes dificultam a cristalização.</p>
+    </div>
+
+    <figure class="figure" data-module="md">
+      <div class="fig-head">
+        <h4>Laboratório de partículas: cristalizar ou vitrificar?</h4>
+        <span class="cap">Dinâmica molecular 2D (Lennard-Jones, unidades reduzidas). Use os protocolos prontos ou controle a temperatura à mão.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div>
+            <div class="clip" id="md-clip">
+              <div class="canvas-box ratio-sq"><canvas id="md-canvas" aria-label="Simulação de partículas"></canvas></div>
+            </div>
+            <div class="canvas-box h-200" style="margin-top:12px"><canvas id="md-hist" aria-label="Histórico de temperatura, ordem e mobilidade"></canvas></div>
+          </div>
+          <div class="controls">
+            <div class="ctl"><span class="lab">Sistema</span>
+              <div class="seg" id="md-kind" role="group" aria-label="Sistema">
+                <button type="button" data-v="binary" aria-pressed="true">Mistura binária</button>
+                <button type="button" data-v="mono" aria-pressed="false">Monoatômico</button>
+              </div>
+            </div>
+            <div class="ctl"><span class="lab">Colorir por</span>
+              <div class="seg" id="md-color" role="group" aria-label="Colorir por">
+                <button type="button" data-v="mob" aria-pressed="true">Mobilidade</button>
+                <button type="button" data-v="psi" aria-pressed="false">Ordem |ψ₆|</button>
+                <button type="button" data-v="type" aria-pressed="false">Espécie</button>
+              </div>
+            </div>
+            <div class="ctl">
+              <label for="md-T">Temperatura alvo <output id="md-T-v">1,20</output></label>
+              <input type="range" id="md-T" min="5" max="200" value="120">
+            </div>
+            <div class="btns">
+              <button class="btn" type="button" id="md-quench">Têmpera brusca</button>
+              <button class="btn" type="button" id="md-slow">Resfriamento lento</button>
+              <button class="btn" type="button" id="md-melt">Fundir</button>
+            </div>
+            <div class="readouts">
+              <div class="readout"><div class="k">T medida</div><div class="v" id="md-Tm">–</div></div>
+              <div class="readout"><div class="k">Ordem ⟨|ψ₆|⟩</div><div class="v" id="md-psi">–</div></div>
+              <div class="readout"><div class="k">Mobilidade</div><div class="v" id="md-mob">–</div></div>
+            </div>
+            <p class="note">Mobilidade: deslocamento quadrático médio (raiz) em uma janela de 0,8 unidade de tempo, em diâmetros de partícula. No vidro, ela cai a quase zero sem que a ordem |ψ₆| suba; no cristal, as duas coisas acontecem juntas.</p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Vitrais medievais escorrem? Não.</h3>
+      <p>Um mito muito difundido diz que vitrais antigos são mais grossos embaixo porque o vidro "escorreu" ao longo dos séculos. Zanotto calculou em 1998, no <em>American Journal of Physics</em>, que o tempo de relaxação de vidros de catedral à temperatura ambiente é muito maior que a história humana e até que a idade do universo. Mesmo o GeO<sub>2</sub>, que flui com mais facilidade, teria tempo de relaxação de ~10<sup>32</sup> anos. A espessura irregular vem do processo de fabricação da época (vidro soprado e aberto em disco, depois cortado), e os vidreiros tendiam a montar o lado mais grosso para baixo.</p>
+      <p>Isso não contradiz a definição moderna: o vidro <em>relaxa</em>, mas em escalas de tempo que, perto da temperatura ambiente, estão fora de qualquer observação. Perto de Tg, por outro lado, a relaxação é rápida e mensurável. É por isso que vidros de alta precisão para telas são recozidos com cuidado: alguns nanômetros de compactação já importam.</p>
+    </div>
+
+    <figure class="figure" data-module="fate">
+      <div class="fig-head">
+        <h4>O destino final: cristal, sólido amorfo e vidro ao longo de um tempo "infinito"</h4>
+        <span class="cap">Escala logarítmica de tempo, de um segundo até muito além da idade do universo. Esquemático, inspirado na figura de Zanotto e Mauro (2017).</span>
+      </div>
+      <div class="fig-body">
+        <div class="clip" id="fate-clip">
+          <div class="canvas-box ratio-wide"><canvas id="fate-canvas" aria-label="Animação do destino final de três materiais"></canvas></div>
+        </div>
+      </div>
+    </figure>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>O piche que pinga</b>Na Universidade de Queensland, um funil de piche goteja desde 1927, uma gota a cada uns dez anos. Bata nesse piche com um martelo e ele se estilhaça como vidro. Ele é sólido ou líquido? Depende de quanto tempo você olha. Essa é a ideia do número de Deborah.</p>
+        <p>Pense em <b>quatro situações</b>:</p>
+        <ul>
+          <li><span class="s-liq"><b>Líquido</b></span>: a água da panela, à vontade, escorrendo.</li>
+          <li><span class="s-scl"><b>Líquido super-resfriado</b></span>: a água que, em um congelador muito limpo, passa de 0 °C sem virar gelo. Ainda é líquida, mas está "devendo" a cristalização.</li>
+          <li><span class="s-glass"><b>Vidro</b></span>: esse líquido ficou tão lento que parou de se reorganizar. Ele é uma foto do líquido, só que a foto continua se ajustando, bem devagar.</li>
+          <li><span class="s-cryst"><b>Cristal</b></span>: o gelo, com todo mundo no lugar certo.</li>
+        </ul>
+        <p>Na simulação: partículas de um só tamanho se encaixam como laranjas na feira e formam cristal. Misture laranjas e melões e a pilha nunca fica arrumada: vira vidro.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 3. DIAGRAMA ===================== -->
+  <section class="chapter" id="diagrama">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 3</div>
+      <h2>O diagrama V–T (ou H–T): a história térmica escrita em uma curva</h2>
+      <p class="ch-lede">Acompanhar o volume ou a entalpia durante o resfriamento é a forma mais clara de ver a diferença entre líquido, cristal e vidro, e de entender por que a Tg não é um número fixo.</p>
+    </div>
+
+    <div class="prose">
+      <p>Partindo do líquido acima da temperatura de fusão <em>T</em><sub>m</sub>, o volume específico <em>V</em> e a entalpia <em>H</em> diminuem ao resfriar, com inclinações dadas pelo coeficiente de expansão térmica do líquido (<em>α</em><sub>l</sub>) e pelo seu calor específico (<em>C</em><sub>p,l</sub>). Em <em>T</em><sub>m</sub>, o caminho se bifurca:</p>
+      <ul>
+        <li><b class="s-cryst">Cristalização.</b> Se houver nucleação e crescimento suficientes, ocorre uma queda descontínua de <em>V</em> e <em>H</em> (calor latente, transição de primeira ordem). O cristal segue com inclinação menor, porque só contribuem as vibrações atômicas.</li>
+        <li><b class="s-scl">Super-resfriamento.</b> Se o resfriamento for mais rápido que a taxa crítica <em>R</em><sub>c</sub> (definida pelo "nariz" da curva TTT, tempo-temperatura-transformação), o líquido passa por <em>T</em><sub>m</sub> sem cristalizar e segue a mesma linha de equilíbrio como líquido super-resfriado.</li>
+        <li><b class="s-glass">Vitrificação.</b> À medida que <em>T</em> cai, <em>τ</em> cresce exponencialmente. Quando <em>τ</em> fica comparável ao tempo que a amostra passa em cada intervalo de temperatura (da ordem de <em>T</em>/<em>q</em>, com <em>q</em> = |d<em>T</em>/d<em>t</em>|), a estrutura não consegue mais se reorganizar. A curva se afasta da linha do LSR e passa a ter inclinação parecida com a do cristal. Essa região é o <span class="term">intervalo de transformação vítrea</span>.</li>
+      </ul>
+      <p>O simulador abaixo usa o modelo de Tool–Narayanaswamy–Moynihan (TNM), padrão para relaxação estrutural de vidros, com relaxação não exponencial e uma curva TTT para a cristalização. Faça os experimentos em ordem: resfrie devagar (cristaliza), resfrie rápido (vitrifica), repita com taxas diferentes, recoza abaixo de Tg e reaqueça para ver o pico de recuperação de entalpia no sinal de DSC.</p>
+    </div>
+
+    <figure class="figure" data-module="vt">
+      <div class="fig-head">
+        <h4>Simulador H–T / V–T com histórico térmico</h4>
+        <span class="cap">Material-modelo (Tm = 1100 K). As curvas de cada experimento ficam registradas para comparação.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div>
+            <div class="clip" id="vt-clip">
+              <div class="canvas-box ratio-43"><canvas id="vt-canvas" aria-label="Diagrama de entalpia ou volume em função da temperatura"></canvas></div>
+            </div>
+            <div class="canvas-box h-200" style="margin-top:12px"><canvas id="vt-cp" aria-label="Calor específico aparente, como em um DSC"></canvas></div>
+          </div>
+          <div class="controls">
+            <div class="ctl"><span class="lab">Eixo vertical</span>
+              <div class="seg" id="vt-axis" role="group" aria-label="Eixo vertical">
+                <button type="button" data-v="H" aria-pressed="true">Entalpia H</button>
+                <button type="button" data-v="V" aria-pressed="false">Volume V</button>
+              </div>
+            </div>
+            <div class="ctl">
+              <label for="vt-rate">Taxa |dT/dt| <output id="vt-rate-v">10 K/s</output></label>
+              <input type="range" id="vt-rate" min="-3" max="3" step="0.05" value="1">
+            </div>
+            <label class="check"><input type="checkbox" id="vt-cryst" checked> Permitir cristalização</label>
+            <label class="check"><input type="checkbox" id="vt-kauz"> Mostrar extrapolação do LSR (Kauzmann)</label>
+            <div class="btns">
+              <button class="btn solid" type="button" id="vt-cool">Resfriar até 400 K</button>
+              <button class="btn" type="button" id="vt-heat">Reaquecer até 1250 K</button>
+            </div>
+            <div class="ctl">
+              <label for="vt-anT">Temperatura de recozimento <output id="vt-anT-v">720 K</output></label>
+              <input type="range" id="vt-anT" min="600" max="900" step="5" value="720">
+            </div>
+            <div class="btns">
+              <button class="btn" type="button" id="vt-anneal">Recozer (patamar)</button>
+              <button class="btn" type="button" id="vt-reset">Limpar</button>
+            </div>
+            <div class="readouts">
+              <div class="readout"><div class="k">T</div><div class="v" id="vt-T">1250 K</div></div>
+              <div class="readout"><div class="k">T<sub>f</sub> (fictícia)</div><div class="v" id="vt-Tf">–</div></div>
+              <div class="readout"><div class="k">Fração cristalina</div><div class="v" id="vt-X">0 %</div></div>
+            </div>
+            <p class="note" id="vt-msg">Pronto: líquido a 1250 K. Escolha uma taxa e resfrie.</p>
+          </div>
+        </div>
+        <div class="legend" id="vt-legend"></div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>A Tg não é uma temperatura de transição de fase</h3>
+      <p>Na transição vítrea, <em>V</em> e <em>H</em> são contínuos; o que muda em degrau são as derivadas: o coeficiente de expansão <em>α</em> e o calor específico <em>C</em><sub>p</sub>. Isso lembra uma transição de "segunda ordem", mas a semelhança é enganosa: a posição do degrau depende da taxa. A transição vítrea é um fenômeno <span class="term">cinético</span>, o momento em que o tempo interno do material (<em>τ</em>) cruza o tempo do experimento. Para o modelo TNM, a dependência é dada pela relação de Moynihan:</p>
+      <div class="eq">d ln q / d(1/T<sub>g</sub>) = −Δh*/R<span class="lbl">resfriar 10× mais rápido eleva Tg em alguns por cento</span></div>
+      <p>Consequências práticas, todas visíveis no simulador:</p>
+      <ul>
+        <li><b>Quanto mais rápido o resfriamento, maior a Tg</b> e maiores o volume e a entalpia do vidro: ele congela uma estrutura "mais quente", mais aberta. Fibras ópticas puxadas rapidamente têm Tg efetiva mais alta que o mesmo vidro recozido em bloco.</li>
+        <li><b>Temperatura fictícia, T<sub>f</sub>.</b> Proposta por Tool (1946), é a temperatura na qual o LSR teria a mesma estrutura que o vidro. Geometricamente, é onde a reta do vidro cruza a linha de equilíbrio. Um mesmo vidro pode ter muitas T<sub>f</sub>, uma para cada história térmica.</li>
+        <li><b>Recozimento.</b> Mantido abaixo de Tg, o vidro relaxa: <em>T</em><sub>f</sub> desce em direção a <em>T</em>, o volume diminui e a entalpia é liberada. Isso é a "relaxação em direção ao LSR" da definição. O processo é não linear (τ depende da própria estrutura) e não exponencial (função de Kohlrausch, <em>exp[−(t/τ)<sup>β</sup>]</em>, com β ≈ 0,5–0,7).</li>
+        <li><b>Memória no reaquecimento.</b> Ao reaquecer um vidro recozido, a estrutura só "descongela" acima da Tg original, e precisa recuperar de uma vez a entalpia perdida: surge um pico endotérmico no DSC logo acima de Tg (<em>overshoot</em>). Reaqueça lentamente e o vidro pode cristalizar antes de fundir (devitrificação: pico exotérmico, depois pico de fusão em <em>T</em><sub>m</sub>).</li>
+      </ul>
+
+      <h3>Como se mede a Tg</h3>
+      <p>Como a transição é um intervalo, há várias convenções, que diferem em alguns kelvins: o ponto de inflexão ou o <em>onset</em> do degrau de <em>C</em><sub>p</sub> no DSC (normalmente a 10 K/min), a interseção das retas do vidro e do líquido em dilatometria, a temperatura em que <em>η</em> = 10<sup>12</sup> Pa·s, ou aquela em que <em>τ</em> ≈ 100 s. Sempre informe a taxa e o método. Duas regras empíricas úteis: <em>T</em><sub>g</sub>/<em>T</em><sub>m</sub> ≈ 2/3 para muitos formadores de vidro (no modelo, 750/1100 ≈ 0,68), e a temperatura reduzida de Turnbull <em>T</em><sub>rg</sub> = <em>T</em><sub>g</sub>/<em>T</em><sub>l</sub> ≥ 2/3 como indicador de alta capacidade de formar vidro.</p>
+
+      <h3>O paradoxo de Kauzmann</h3>
+      <p>Se o LSR pudesse ser resfriado infinitamente devagar, sua entropia (que cai mais rápido que a do cristal, porque <em>C</em><sub>p,l</sub> &gt; <em>C</em><sub>p,c</sub>) ficaria menor que a do cristal abaixo de uma temperatura <em>T</em><sub>K</sub>. Kauzmann apontou o problema em 1948. A natureza "evita" o paradoxo de duas formas: a transição vítrea sempre intervém acima de <em>T</em><sub>K</sub> e, em tempo suficientemente longo, o líquido cristaliza. Se existe ou não uma "transição vítrea ideal" em <em>T</em><sub>K</sub> continua sendo uma das questões abertas da física da matéria condensada. Ative a linha tracejada de extrapolação no simulador para ver onde o LSR cruzaria o cristal.</p>
+    </div>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>A pista de dança</b>Com a música desacelerando aos poucos, os casais têm tempo de achar par e se alinhar em fileiras: <span class="s-cryst">cristal</span>. Se as luzes se apagam de repente, todos congelam onde estavam: <span class="s-glass">vidro</span>. Quanto mais cedo as luzes apagam (resfriamento mais rápido), mais espalhadas as pessoas ficam: o vidro ocupa mais volume e "lembra" uma temperatura mais alta.</p>
+        <p class="analogy"><b>Tg é o horário em que o trânsito trava</b>Não existe um horário fixo: depende de quão rápido os carros chegam. Por isso a Tg depende da taxa de resfriamento.</p>
+        <p class="analogy"><b>Temperatura fictícia é a "data da foto"</b>Diz em que temperatura a estrutura foi congelada. Recozer é deixar a foto se ajustar devagar para uma data mais recente (mais fria, mais compacta).</p>
+        <p>Resumo do gráfico: o cristal dá um <b>degrau</b> em <em>T</em><sub>m</sub>; o vidro faz uma <b>curva suave</b> em <em>T</em><sub>g</sub>, e o lugar da curva depende da história.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 4. FAMÍLIAS ===================== -->
+  <section class="chapter" id="familias">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 4</div>
+      <h2>Óxidos, metálicos, haletos e calcogenetos</h2>
+      <p class="ch-lede">O tipo de ligação química decide quase tudo: a estrutura, a Tg, a faixa de transparência, a resistência mecânica e, para quem se interessa por luminescência, a energia dos fônons.</p>
+    </div>
+
+    <div class="prose">
+      <p>Qualquer líquido pode virar vidro se for resfriado rápido o bastante. O que muda de uma família para outra é a <span class="term">capacidade de formação vítrea</span> (quão lentamente se pode resfriar sem cristalizar) e o conjunto de propriedades que a ligação química impõe. A taxa crítica de resfriamento vai de ~10<sup>−4</sup> K/s para a sílica até ~10<sup>6</sup> K/s para os primeiros vidros metálicos. São dez ordens de grandeza.</p>
+      <p>Para os vidros de óxido, Zachariasen (1932) resumiu as condições de formação de rede em regras simples: o cátion deve ter coordenação baixa (3 ou 4); cada oxigênio deve se ligar a no máximo dois cátions formadores; os poliedros devem compartilhar vértices, não arestas ou faces; e cada poliedro deve compartilhar ao menos três vértices. Daí a classificação em <span class="term">formadores</span> (SiO<sub>2</sub>, B<sub>2</sub>O<sub>3</sub>, GeO<sub>2</sub>, P<sub>2</sub>O<sub>5</sub>), <span class="term">modificadores</span> (Na<sub>2</sub>O, K<sub>2</sub>O, CaO, que quebram pontes e criam oxigênios não ponteantes) e <span class="term">intermediários</span> (Al<sub>2</sub>O<sub>3</sub>, TiO<sub>2</sub>, ZnO, que entram na rede ou a modificam conforme a composição).</p>
+    </div>
+
+    <figure class="figure" data-module="families">
+      <div class="fig-head">
+        <h4>Estrutura em 3D e propriedades de cada família</h4>
+        <span class="cap">Modelos esquemáticos gerados no navegador (não são estruturas refinadas). Arraste para girar e use a roda do mouse para aproximar.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fam-tabs seg" id="fam-tabs" role="tablist" aria-label="Família de vidro"></div>
+        <div class="fig-grid">
+          <div>
+            <div class="canvas-box ratio-43" id="fam-3d"></div>
+            <div class="atom-key" id="fam-key"></div>
+          </div>
+          <div class="fam-card" id="fam-card"></div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Vidros de óxido</h3>
+      <p>São os vidros "clássicos": silicatos (janelas, embalagens), borossilicatos (vidraria de laboratório, baixa expansão térmica), aluminossilicatos (telas de celular quimicamente temperadas), fosfatos, germanatos, teluritos. A ligação é iono-covalente, forte e direcional, o que resulta em Tg altas (~500–600 °C para vidros sodo-cálcicos, ~1200 °C para sílica pura), boa durabilidade química, isolamento elétrico e alta transparência no visível. São frágeis: a tenacidade à fratura fica em torno de 0,7–1 MPa·m<sup>1/2</sup>, e a resistência prática é controlada por defeitos de superfície. Para luminescência, são hospedeiros versáteis de terras-raras e metais de transição, mas a alta energia de fônon (~1000–1400 cm<sup>−1</sup> em silicatos, fosfatos e boratos) favorece o decaimento não radiativo de níveis próximos.</p>
+
+      <h3>Vidros metálicos</h3>
+      <p>Descobertos em 1960 por Klement, Willens e Duwez (Caltech) em uma liga Au<sub>75</sub>Si<sub>25</sub> resfriada a ~10<sup>6</sup> K/s, só existiam como fitas finas até surgirem ligas multicomponentes com taxas críticas muito menores: Pd–Ni–P, Zr–Ti–Cu–Ni–Be (Vitreloy 1, Peker e Johnson, 1993) e outras. Esses são os <span class="term">vidros metálicos massivos</span>, com espessura de milímetros a centímetros. A ligação metálica não é direcional, e a estrutura é um empacotamento denso e aleatório de átomos de tamanhos diferentes, com ordem icosaédrica local. As regras empíricas de Inoue resumem a receita: três ou mais elementos, diferenças de tamanho atômico acima de ~12% e calores de mistura negativos. Sem contornos de grão nem discordâncias, esses vidros chegam a limites de escoamento próximos de 2 GPa e deformação elástica de ~2%, mas a plasticidade se concentra em bandas de cisalhamento. São opacos, condutores e, nas ligas à base de Fe e Co, magneticamente moles (núcleos de transformadores). Acima de Tg, podem ser moldados como plásticos.</p>
+
+      <h3>Vidros de haletos</h3>
+      <p>O BeF<sub>2</sub> é o análogo estrutural da sílica (tetraedros que compartilham vértices) e o ZnCl<sub>2</sub> também forma vidro, mas a família ganhou importância com a descoberta acidental, em 1974, dos vidros de fluorozirconato pelos irmãos Poulain e colaboradores em Rennes. O ZBLAN (ZrF<sub>4</sub>–BaF<sub>2</sub>–LaF<sub>3</sub>–AlF<sub>3</sub>–NaF) transmite de ~0,22 a ~7 µm, tem índice de refração baixo (~1,5), Tg de ~260–300 °C e energia de fônon de ~550–600 cm<sup>−1</sup>. A ligação é predominantemente iônica e os poliedros ZrF<sub>n</sub> têm coordenação alta (6 a 8), o que foge das regras de Zachariasen. O ponto fraco é químico e mecânico: são sensíveis à umidade, exigem fusão em atmosfera seca e cristalizam com mais facilidade. São hospedeiros privilegiados para lasers de fibra no infravermelho médio e para conversão ascendente (<em>upconversion</em>) em terras-raras.</p>
+
+      <h3>Vidros calcogenetos</h3>
+      <p>Baseados em S, Se ou Te (sem oxigênio) combinados com As, Ge, Sb, Ga e outros: As<sub>2</sub>S<sub>3</sub>, As<sub>2</sub>Se<sub>3</sub>, Ge–Sb–Se, Ge–As–Se. A ligação é covalente, com coordenação baixa (Se ≈ 2, As ≈ 3, Ge ≈ 4), formando cadeias e camadas ligadas por forças fracas. A rigidez da rede pode ser ajustada pela coordenação média ⟨<em>r</em>⟩, com o limiar de rigidez em ⟨<em>r</em>⟩ ≈ 2,4 (teoria de restrições de Phillips e Thorpe). São semicondutores (gap de ~1 a 3 eV), por isso vão do vermelho-alaranjado ao preto opaco no visível, mas transmitem no infravermelho até ~10 µm (sulfetos), ~15 µm (selenetos) e ~20 µm (teluretos). Têm índice de refração alto (2,2–3,5), não linearidade óptica ~100 vezes maior que a da sílica, fotossensibilidade e energia de fônon muito baixa (~250–450 cm<sup>−1</sup>). Aplicações: lentes para câmeras térmicas, fibras para o infravermelho médio, memórias de mudança de fase (Ge<sub>2</sub>Sb<sub>2</sub>Te<sub>5</sub>) e detectores de raios X de selênio amorfo.</p>
+    </div>
+
+    <figure class="figure" data-module="optics">
+      <div class="fig-head">
+        <h4>Janela de transparência e energia de fônon</h4>
+        <span class="cap">Valores típicos de literatura; a borda exata depende da composição, da pureza e da espessura. Faixas cinza: janelas atmosféricas do infravermelho (3–5 e 8–12 µm).</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid even">
+          <div><div class="canvas-box h-260"><canvas id="opt-win" aria-label="Janelas de transmissão óptica"></canvas></div></div>
+          <div><div class="canvas-box h-260"><canvas id="opt-ph" aria-label="Energia máxima de fônon"></canvas></div></div>
+        </div>
+        <p class="note" style="margin:14px 0 0">Por que isso importa para luminescência: a taxa de decaimento não radiativo por emissão de vários fônons cai exponencialmente com o número de fônons necessários para cobrir o gap de energia entre dois níveis (lei do gap de energia). Com fônons de baixa energia, transições no infravermelho que seriam apagadas em silicatos passam a emitir luz. Este será um dos temas da próxima parte do projeto.</p>
+      </div>
+    </figure>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Propriedade (típica)</th><th class="s-glass">Óxidos (silicatos)</th><th>Metálicos</th><th>Haletos (ZBLAN)</th><th>Calcogenetos</th></tr></thead>
+        <tbody>
+          <tr><td>Ligação</td><td>Iono-covalente, direcional</td><td>Metálica, não direcional</td><td>Iônica</td><td>Covalente, coordenação baixa</td></tr>
+          <tr><td>Estrutura</td><td>Rede de tetraedros SiO<sub>4</sub> + modificadores</td><td>Empacotamento denso aleatório, ordem icosaédrica local</td><td>Poliedros ZrF<sub>6–8</sub> + cátions grandes</td><td>Cadeias e camadas (AsSe<sub>3</sub>, GeSe<sub>4</sub>)</td></tr>
+          <tr><td>Tg</td><td>~550 °C (sodo-cálcico) a ~1200 °C (sílica)</td><td>~300–700 K, conforme a liga</td><td>~260–300 °C</td><td>~150–400 °C</td></tr>
+          <tr><td>Aparência</td><td>Transparente</td><td>Opaco, brilho metálico</td><td>Transparente</td><td>Vermelho a preto; transparente no IV</td></tr>
+          <tr><td>Transmissão</td><td>~0,2–4 µm</td><td>Nenhuma</td><td>~0,2–7 µm</td><td>~0,6–20 µm</td></tr>
+          <tr><td>Índice de refração</td><td>~1,45–1,9</td><td>–</td><td>~1,5</td><td>~2,2–3,5</td></tr>
+          <tr><td>Elétrica</td><td>Isolante (condução iônica a quente)</td><td>Condutor</td><td>Isolante</td><td>Semicondutor</td></tr>
+          <tr><td>Mecânica</td><td>Frágil, duro</td><td>Muito resistente, deformação elástica de ~2%</td><td>Frágil, baixa dureza</td><td>Macio, frágil</td></tr>
+          <tr><td>Durabilidade química</td><td>Alta</td><td>Boa (Zr, Pd); corrosão em algumas ligas</td><td>Baixa (umidade)</td><td>Moderada; oxida a quente</td></tr>
+          <tr><td>Taxa crítica</td><td>~10<sup>−4</sup> K/s (SiO<sub>2</sub>)</td><td>~10<sup>6</sup> K/s (1960) a ≲1 K/s (massivos)</td><td>Moderada a alta</td><td>Baixa a moderada</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Óxidos: Lego de tetraedros</b>Peças pequenas e rígidas (SiO<sub>4</sub>) presas pelos cantos. Ligações fortes: o vidro é duro, aguenta calor e é transparente. O sódio e o cálcio são "tesouras" que cortam algumas ligações e deixam o vidro mais fácil de derreter.</p>
+        <p class="analogy"><b>Metálicos: bolinhas de gude de vários tamanhos</b>Jogue bolinhas iguais numa caixa e elas tendem a se arrumar. Misture três ou quatro tamanhos e a arrumação fica impossível. O resultado é um metal sem "costuras" internas, muito resistente, mas opaco como qualquer metal.</p>
+        <p class="analogy"><b>Haletos: o primo iônico</b>Parecidos com os óxidos, mas com flúor no lugar do oxigênio. As ligações são mais fracas, por isso enxergam mais longe no infravermelho, mas são mais delicados e não gostam de umidade.</p>
+        <p class="analogy"><b>Calcogenetos: espaguete pesado</b>Átomos grandes e pesados em cadeias e camadas. Pense em cordas grossas: vibram em notas graves (fônons de baixa energia) e deixam o calor (infravermelho) passar. Por isso servem para lentes de câmeras térmicas.</p>
+        <p>A "nota" em que a rede vibra é a energia de fônon. Quanto mais grave, menos a rede rouba energia da luz emitida. Essa ideia vai voltar quando falarmos de luminescência.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 5. AMORFOS ===================== -->
+  <section class="chapter" id="amorfos">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 5</div>
+      <h2>Vidros, outros sólidos amorfos e polímeros</h2>
+      <p class="ch-lede">Todo vidro é não cristalino, mas nem todo material não cristalino é vidro. As diferenças mais interessantes não aparecem a olho nu: estão no aquecimento, na relaxação e nas propriedades a baixíssima temperatura.</p>
+    </div>
+
+    <div class="prose">
+      <h3>Vidro × sólido amorfo</h3>
+      <p>Na literatura, "amorfo" e "vidro" são muitas vezes usados como sinônimos. Gupta (1996) propôs uma distinção útil, baseada em estrutura e termodinâmica: um <span class="term">vidro</span> é um sólido não cristalino cuja ordem de curto alcance é a mesma do seu líquido (e do cristal correspondente), e que por isso pode ser levado de volta ao líquido super-resfriado, passando pela transição vítrea. Um <span class="term">sólido amorfo</span> tem ordem de curto alcance diferente da do líquido. Ao ser aquecido, ele tende a cristalizar antes de mostrar qualquer transição vítrea.</p>
+      <p>O silício amorfo é o exemplo didático. No a-Si, cada átomo tem quatro vizinhos em tetraedro, como no cristal semicondutor. O silício líquido, ao contrário, é metálico e mais denso, com coordenação média em torno de seis. Não há um "líquido de origem" com a mesma estrutura, e filmes de a-Si cristalizam quando aquecidos. Ainda há debate: há evidências de comportamento vítreo em condições especiais (irradiação, escalas de picossegundos) e de efeitos do hidrogênio. Outros sólidos amorfos típicos são filmes depositados por evaporação ou <em>sputtering</em>, materiais amorfizados por moagem de alta energia e minerais metamícticos, amorfizados pela radiação de impurezas como U e Th.</p>
+      <p>A rota de preparo, sozinha, não decide. Deposição a partir do vapor sobre um substrato aquecido logo abaixo de Tg produz os chamados <span class="term">vidros ultraestáveis</span> (Swallen e colaboradores, 2007): eles têm transição vítrea, só que muito mais alta e mais estável do que a de um vidro resfriado do líquido, equivalente a milhares de anos de recozimento. O que classifica o material é o comportamento, não a receita, e é por isso que a definição moderna não menciona o processo.</p>
+    </div>
+
+    <div class="compare">
+      <div class="col"><h5 class="s-glass">Vidro</h5><ul>
+        <li>Mesma ordem de curto alcance do líquido</li>
+        <li>Transição vítrea ao aquecer: vira LSR</li>
+        <li>Propriedades dependem da história térmica (T<sub>f</sub>)</li>
+        <li>Relaxa em direção ao LSR</li>
+      </ul></div>
+      <div class="col"><h5>Sólido amorfo</h5><ul>
+        <li>Ordem de curto alcance diferente da do líquido</li>
+        <li>Ao aquecer, cristaliza antes de amolecer</li>
+        <li>Muitas vezes só existe como filme ou pó</li>
+        <li>Ex.: a-Si, a-Ge, filmes evaporados, minerais metamícticos</li>
+      </ul></div>
+      <div class="col"><h5 class="s-scl">Polímero vítreo</h5><ul>
+        <li>É um vidro, feito de cadeias longas</li>
+        <li>Tg depende da massa molar e de plastificantes</li>
+        <li>Platô "borrachoso" acima de Tg (emaranhamentos)</li>
+        <li>Pode ser semicristalino (Tg e Tm ao mesmo tempo)</li>
+      </ul></div>
+    </div>
+
+    <figure class="figure" data-module="heating">
+      <div class="fig-head">
+        <h4>Aqueça e observe: uma viga sob peso e dois sinais de laboratório</h4>
+        <span class="cap">Curvas esquemáticas em temperatura reduzida T/Tg (para o sólido amorfo, a referência é a temperatura de cristalização). O clipe aquece a amostra; escolha o material.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fam-tabs seg" id="heat-tabs" role="group" aria-label="Material"></div>
+        <div class="fig-grid">
+          <div class="clip" id="heat-clip">
+            <div class="canvas-box ratio-wide"><canvas id="heat-beam" aria-label="Viga do material sob um peso, durante o aquecimento"></canvas></div>
+          </div>
+          <div class="controls">
+            <div class="canvas-box h-200"><canvas id="heat-E" aria-label="Módulo de elasticidade versus temperatura"></canvas></div>
+            <div class="canvas-box h-200"><canvas id="heat-dsc" aria-label="Sinal de DSC versus temperatura"></canvas></div>
+          </div>
+        </div>
+        <p class="note" id="heat-note" style="margin:12px 0 0"></p>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Polímeros: vidros feitos de cadeias</h3>
+      <p>Um polímero amorfo abaixo da Tg (poliestireno, PMMA, policarbonato) satisfaz a definição de vidro: é não cristalino, está fora do equilíbrio, relaxa (o "envelhecimento físico" é exatamente a relaxação estrutural) e mostra transição vítrea. As diferenças em relação a vidros inorgânicos vêm da arquitetura de cadeias longas:</p>
+      <ul>
+        <li><b>Tg depende da massa molar.</b> As pontas de cadeia trazem volume livre extra. A equação de Flory–Fox (1950), <em>T</em><sub>g</sub> = <em>T</em><sub>g,∞</sub> − <em>K</em>/<em>M</em><sub>n</sub>, descreve a subida da Tg até um patamar. Plastificantes, taticidade e reticulação também deslocam a Tg.</li>
+        <li><b>O platô borrachoso.</b> Acima de Tg, um vidro de óxido amolece de forma contínua: a viscosidade cai e ele flui. Um polímero de cadeias longas passa por um patamar de módulo (~1 MPa), porque os emaranhamentos funcionam como nós temporários. Se houver reticulação química (borrachas vulcanizadas, termofixos), o platô se estende até a degradação: o material nunca flui.</li>
+        <li><b>Semicristalinidade.</b> Polietileno, PET e náilon têm regiões cristalinas e amorfas ao mesmo tempo. A Tg pertence só à fração amorfa, e a Tm, aos cristalitos. Um vidro inorgânico comum é integralmente amorfo ou, se cristalizado de forma controlada, vira vitrocerâmica.</li>
+        <li><b>Degradação antes da fluidez.</b> Muitos polímeros se decompõem antes de atingir viscosidades baixas, ao passo que vidros de óxido são trabalhados como líquidos (~10<sup>3</sup> Pa·s).</li>
+        <li><b>Anisotropia por orientação.</b> Estirar um polímero perto da Tg alinha as cadeias e gera birrefringência e propriedades direcionais, um dos motivos pelos quais "isotrópico" não pode entrar na definição de vidro.</li>
+        <li><b>Mecânica.</b> Vidros de óxido fraturam de modo frágil. Polímeros vítreos podem escoar, formar <em>crazes</em> (microfissuras com fibrilas) e absorver muito mais energia. Vidros metálicos ficam no meio, com bandas de cisalhamento.</li>
+      </ul>
+
+      <h3>Fragilidade cinética: o gráfico de Angell</h3>
+      <p>Uma diferença menos óbvia é a forma como a viscosidade (ou o tempo de relaxação) cresce ao se aproximar da Tg. Angell propôs comparar líquidos em um gráfico de log <em>η</em> contra <em>T</em><sub>g</sub>/<em>T</em>. Líquidos <span class="term">fortes</span>, como SiO<sub>2</sub> e GeO<sub>2</sub>, seguem uma reta (Arrhenius); líquidos <span class="term">frágeis</span>, como o-terfenil e muitos polímeros, ficam praticamente "fluidos" até perto da Tg e então endurecem abruptamente. O índice de fragilidade <em>m</em>, a inclinação em <em>T</em><sub>g</sub>, vai de ~20 (sílica) a mais de 100 (polímeros). A fragilidade se correlaciona com a janela de trabalho na conformação, com a não exponencialidade da relaxação e com a variação de <em>C</em><sub>p</sub> em Tg. "Frágil", aqui, não tem nada a ver com quebrar com facilidade.</p>
+    </div>
+
+    <figure class="figure" data-module="angell">
+      <div class="fig-head">
+        <h4>Gráfico de Angell: líquidos fortes e frágeis</h4>
+        <span class="cap">Curvas do modelo MYEGA com valores típicos de fragilidade m. Passe o mouse ou toque em uma curva.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div class="canvas-box ratio-43"><canvas id="ang-canvas" aria-label="Gráfico de Angell"></canvas></div>
+          <div class="controls" id="ang-list"></div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Diferenças menos triviais</h3>
+      <ul>
+        <li><b>Anomalias em temperaturas muito baixas.</b> Abaixo de ~1 K, praticamente todos os vidros (óxidos, polímeros, metálicos) têm calor específico linear em <em>T</em> e condutividade térmica ∝ <em>T</em><sup>2</sup>, atribuídos a "sistemas de dois níveis" de tunelamento. Entre ~5 e 20 K aparece o <span class="term">pico de bósons</span>, um excesso de modos vibracionais em relação ao modelo de Debye. É uma assinatura universal de vidros. Filmes densos de a-Si podem ter quase nenhum sistema de dois níveis: mais um sinal de que nem todo amorfo se comporta como vidro.</li>
+        <li><b>Entropia residual.</b> Um vidro "congela" entropia configuracional: em <em>T</em> → 0 ele retém uma entropia residual que um cristal perfeito não tem, e o valor depende da história térmica.</li>
+        <li><b>Memória e efeito Kovacs.</b> Um vidro levado de um recozimento para outra temperatura pode ter o volume se afastando do equilíbrio antes de voltar. Duas amostras com o mesmo volume, mas histórias diferentes, não são o mesmo estado: uma só variável (T<sub>f</sub>) não descreve tudo.</li>
+        <li><b>Polimorfismo amorfo.</b> A água tem pelo menos duas formas amorfas, de baixa e de alta densidade, interconvertidas sob pressão. Sílica e silício também mostram transições entre amorfos. Não existe "o" estado amorfo de uma substância.</li>
+        <li><b>Gel não é vidro (ainda).</b> Um gel de sol-gel é uma rede porosa, cheia de solvente e hidroxilas. Só depois de secagem e sinterização ele vira um vidro denso, com Tg bem definida.</li>
+      </ul>
+    </div>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Dois quartos bagunçados</b>Um ficou bagunçado porque a festa congelou de repente: esse é o <span class="s-glass">vidro</span>. Aqueça e a festa volta (vira líquido). O outro foi bagunçado jogando coisas pela janela, uma a uma: é o <b>sólido amorfo</b>. Aqueça e ele não vira festa nenhuma, se arruma sozinho (cristaliza).</p>
+        <p class="analogy"><b>Polímero é um prato de espaguete</b>Frio, o espaguete grudado fica duro (vidro). Morno, os fios escorregam, mas continuam enroscados: o prato fica elástico como borracha. Só bem quente, com fios curtos, ele escorre. Um vidro de janela é mais parecido com mel engrossando: amolece de forma contínua, sem esse estágio "borrachudo".</p>
+        <p class="analogy"><b>Forte × frágil (no sentido de Angell)</b>A sílica endurece aos poucos, como uma rampa suave. O plástico fica mole quase até a Tg e então trava de uma vez, como uma ladeira que vira parede.</p>
+      </div>
+    </aside>
+
+    <section id="referencias" style="margin-top:56px">
+      <h3>Referências principais</h3>
+      <ol class="refs">
+        <li>Zanotto, E. D.; Mauro, J. C. The glassy state of matter: its definition and ultimate fate. <em>J. Non-Cryst. Solids</em> 471, 490–495 (2017). <a href="https://doi.org/10.1016/j.jnoncrysol.2017.05.019">doi:10.1016/j.jnoncrysol.2017.05.019</a></li>
+        <li>Zachariasen, W. H. The atomic arrangement in glass. <em>J. Am. Chem. Soc.</em> 54, 3841 (1932).</li>
+        <li>Gupta, P. K. Non-crystalline solids: glasses and amorphous solids. <em>J. Non-Cryst. Solids</em> 195, 158–164 (1996). <a href="https://doi.org/10.1016/0022-3093(95)00502-1">doi</a></li>
+        <li>Shelby, J. E. <em>Introduction to Glass Science and Technology</em>, 3ª ed. Royal Society of Chemistry (2021).</li>
+        <li>Varshneya, A. K.; Mauro, J. C. <em>Fundamentals of Inorganic Glasses</em>, 3ª ed. Elsevier (2019).</li>
+        <li>Zanotto, E. D. Do cathedral glasses flow? <em>Am. J. Phys.</em> 66, 392–395 (1998).</li>
+        <li>Tool, A. Q. Relation between inelastic deformability and thermal expansion of glass in its annealing range. <em>J. Am. Ceram. Soc.</em> 29, 240 (1946).</li>
+        <li>Moynihan, C. T. et al. Structural relaxation in vitreous materials. <em>Ann. N. Y. Acad. Sci.</em> 279, 15 (1976).</li>
+        <li>Kauzmann, W. The nature of the glassy state and the behavior of liquids at low temperatures. <em>Chem. Rev.</em> 43, 219 (1948).</li>
+        <li>Angell, C. A. Formation of glasses from liquids and biopolymers. <em>Science</em> 267, 1924 (1995).</li>
+        <li>Mauro, J. C. et al. Viscosity of glass-forming liquids. <em>PNAS</em> 106, 19780 (2009). (modelo MYEGA)</li>
+        <li>Klement, W.; Willens, R. H.; Duwez, P. Non-crystalline structure in solidified gold–silicon alloys. <em>Nature</em> 187, 869 (1960).</li>
+        <li>Peker, A.; Johnson, W. L. A highly processable metallic glass: Zr–Ti–Cu–Ni–Be. <em>Appl. Phys. Lett.</em> 63, 2342 (1993).</li>
+        <li>Inoue, A. Stabilization of metallic supercooled liquid and bulk amorphous alloys. <em>Acta Mater.</em> 48, 279 (2000).</li>
+        <li>Poulain, M.; Poulain, M.; Lucas, J. Verres fluorés au tétrafluorure de zirconium. <em>Mater. Res. Bull.</em> 10, 243 (1975).</li>
+        <li>Zhong, L. et al. Formation of monatomic metallic glasses through ultrafast liquid quenching. <em>Nature</em> 512, 177 (2014).</li>
+        <li>Fox, T. G.; Flory, P. J. Second-order transition temperatures and related properties of polystyrene. <em>J. Appl. Phys.</em> 21, 581 (1950).</li>
+        <li>Swallen, S. F. et al. Organic glasses with exceptional thermodynamic and kinetic stability. <em>Science</em> 315, 353 (2007).</li>
+        <li>Reiner, M. The Deborah number. <em>Physics Today</em> 17, 62 (1964).</li>
+      </ol>
+    </section>
+
+    <div class="next">
+      <div>
+        <h3>Próxima parte: luz em vidro</h3>
+        <p>Terras-raras, níveis de energia, fônons e eficiência quântica: por que um mesmo íon Eu<sup>3+</sup> brilha diferente em um silicato e em um fluoreto.</p>
+      </div>
+      <canvas id="next-canvas" aria-hidden="true"></canvas>
+    </div>
+  </section>
+  </main>
+</div>
+
+<footer>
+  Vidros &amp; Luminescência · Parte 1: Fundamentos do vidro. Simulações didáticas: os modelos são simplificados e os valores numéricos são típicos, não de uma composição específica, salvo quando indicado.
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>
