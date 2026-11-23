@@ -6,7 +6,8 @@ Site didático e interativo sobre ciência do vidro e luminescência em vidros, 
 |---|---|---|
 | 1. Fundamentos do vidro | `parte-1-fundamentos/` | publicada |
 | 2. Formação de vidros | `parte-2-formacao/` | publicada |
-| 3. Luminescência em vidros | `parte-3-luminescencia/` | em preparação |
+| 3. Propriedades dos vidros óxidos | `parte-3-propriedades/` | publicada |
+| 4. Luminescência em vidros | `parte-4-luminescencia/` | em preparação |
 
 **Parte 1: Fundamentos do vidro**
 
@@ -25,6 +26,16 @@ Cada capítulo traz um texto técnico seguido de uma versão simplificada, com a
 3. **Formadores, modificadores e companhia.** Laboratório de composição: rede 2D que responde a ~30 compostos (formadores, modificadores, intermediários, condicionais, nucleantes e polivalentes Fe, Eu, Ce, Cu com controle de redox), com NBO/T, Qⁿ, basicidade óptica e tratamento térmico.
 4. **Teoria cinética.** Nucleação e crescimento clássicos com viscosidade MYEGA, diagrama TTT, taxa crítica e espessura máxima, calibrados na Tab. 3.3 do Varshneya.
 5. **Agentes nucleantes e vitrocerâmicas.** Ângulo de contato e f(θ); clipe de tratamento térmico em duas etapas.
+
+**Parte 3: Propriedades dos vidros óxidos** (base: Varshneya & Mauro, caps. 6–12, 17–19; Springer Handbook of Glass, Parte A)
+
+1. **Térmicas e viscosidade.** Curvas VFT ajustadas aos pontos fixos Corning de seis vidros comerciais (faixa de trabalho, fragilidade); poço de Morse ligando energia de ligação, rigidez e expansão; calculadora de expansão por aditividade (Winkelmann–Schott e English–Turner) com curva dilatométrica; choque térmico; condutividade por fônons × radiação.
+2. **Ópticas lineares.** Sellmeier, diagrama de Abbe e prisma; janela de transparência de seis famílias (Urbach, multifônon, OH, ferro); simulador de cor com bandas de íons e coloides convertidas em cor via CIE 1931; espalhamento de Rayleigh a Mie e perdas de fibra. Extra: o gap pela teoria de orbitais moleculares (NBO, F⁻, Pb²⁺, S/Se, transferência de carga).
+3. **Mecânicas, densidade e volume molar.** Densidade por fatores (Tab. 7.2), volume molar e empacotamento; anomalia do boro no módulo de Young (Tab. 8.1); Griffith e concentração de tensão; têmpera térmica × química.
+4. **Químicas.** Simulador de corrosão aquosa (lixiviação ∝ √t, dissolução ∝ t, pH, sistema fechado, saturação em sílica); difusividades e tempos característicos no fundido, no líquido super-resfriado e no vidro.
+5. **Fotofísicas.** Lei do gap de energia com parâmetros de Layne et al. e eficiência quântica por matriz; espectros de Eu³⁺, Tb³⁺, Eu²⁺ e Ce³⁺ em função da basicidade óptica; clipe do fotocromismo com AgCl.
+
+Cada capítulo termina com um bloco "Ligação e polarizabilidade", e uma tabela de síntese fecha a página.
 
 ## Como rodar
 
@@ -55,6 +66,8 @@ parte-1-fundamentos/
   index.html            conteúdo e estrutura dos capítulos da Parte 1
 parte-2-formacao/
   index.html            conteúdo da Parte 2
+parte-3-propriedades/
+  index.html            conteúdo da Parte 3
 css/style.css           tema (claro/escuro), layout e componentes (compartilhado)
 js/main.js              carrega cada módulo quando ele se aproxima da tela
 js/lib/
@@ -67,6 +80,8 @@ js/lib/
   oxides.js             banco de dados dos óxidos do laboratório de composição
   complab-model.js      contabilidade estrutural (NBO/T, Qⁿ, compensação de carga, Λ, redox)
   crn.js                gerador de rede aleatória contínua 2D
+  color.js              espectro → cor (funções CIE 1931 analíticas, iluminantes, sRGB) (Parte 3)
+  props-data.js         dados de vidros comerciais, ajuste VFT, sliders e utilidades (Parte 3)
 js/sections/            um módulo por figura interativa
 vendor/                 three.module.js, OrbitControls, RoomEnvironment, d3-delaunay
 assets/                 favicon
@@ -88,8 +103,8 @@ As simulações são didáticas. Os números de propriedades são típicos de li
 
 ## Próximas partes
 
-- Parte 3: luminescência em vidros (terras-raras, níveis de energia, fônons, eficiência quântica)
-- Parte 4: …
+- Parte 4: luminescência em vidros (terras-raras, metais de transição, níveis de energia, transferência de energia, conversão ascendente)
+- Parte 5: …
 
 ## Referência principal
 

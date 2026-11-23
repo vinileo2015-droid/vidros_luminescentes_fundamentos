@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propriedades dos vidros óxidos · Vidros &amp; Luminescência</title>
+<meta name="description" content="Propriedades dos vidros óxidos: viscosidade e propriedades térmicas, óptica linear (índice, janela de transparência, cor, espalhamento e orbitais moleculares), propriedades mecânicas, densidade e volume molar, durabilidade química e propriedades fotofísicas, sempre ligadas ao caráter da ligação e à polarizabilidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="../" title="Voltar à capa do projeto"><span class="brand-mark" aria-hidden="true"></span><span>Vidros <span class="long">&amp; Luminescência</span></span></a>
+  <nav class="chapters" aria-label="Capítulos">
+    <a href="#termicas">Térmicas e viscosidade</a>
+    <a href="#opticas">Ópticas lineares</a>
+    <a href="#mecanicas">Mecânicas e densidade</a>
+    <a href="#quimicas">Químicas</a>
+    <a href="#fotofisicas">Fotofísicas</a>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero p3-hero" id="topo">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">Vidros &amp; Luminescência · Parte 3: Propriedades dos vidros óxidos</div>
+      <h1>Calor, luz, força e água: o que a ligação química decide</h1>
+      <p class="lede">Viscosidade, expansão, cor, resistência e durabilidade parecem assuntos separados. Nesta parte, todos voltam às mesmas três perguntas: quão conectada é a rede, quão fortes são as ligações e quão deformável é a nuvem eletrônica dos íons.</p>
+      <div class="hero-meta">
+        <a class="primary" href="#mo">Ver o gap pelos orbitais moleculares</a>
+        <a href="#termicas">Começar pela viscosidade</a>
+      </div>
+    </div>
+    <div class="hero-stage">
+      <canvas id="p3-hero-canvas" aria-label="Animação: três ondas de luz atravessam uma placa de vidro. O ultravioleta é absorvido pelos elétrons, o infravermelho pelas vibrações da rede, e o visível passa, com comprimento de onda menor dentro do vidro."></canvas>
+    </div>
+  </div>
+</section>
+
+<div class="layout with-rail">
+  <aside class="rail" aria-label="Índice">
+    <div class="rail-t">Parte 3</div>
+    <ol>
+      <li><a href="#termicas">1. Térmicas e viscosidade</a></li>
+      <li><a href="#opticas">2. Ópticas lineares</a></li>
+      <li><a href="#mecanicas">3. Mecânicas, densidade e volume molar</a></li>
+      <li><a href="#quimicas">4. Propriedades químicas</a></li>
+      <li><a href="#fotofisicas">5. Propriedades fotofísicas</a></li>
+      <li><a href="#sintese">Síntese</a></li>
+      <li><a href="#referencias">Referências</a></li>
+      <li><a href="../parte-2-formacao/">← Parte 2</a></li>
+    </ol>
+  </aside>
+
+  <main>
+  <div class="prose" style="margin-top:8px">
+    <p>Nas Partes 1 e 2 vimos o que é um vidro e por que alguns líquidos vitrificam. Aqui o vidro já existe, e a pergunta passa a ser como ele se comporta. O Varshneya trata as propriedades em capítulos separados (densidade, elasticidade, viscosidade, expansão, propriedades térmicas, durabilidade, resistência e óptica), e o Handbook de vidro faz o mesmo na sua Parte A. Esta página segue essa divisão, mas costura os capítulos com um fio comum. Quase toda propriedade de um vidro óxido pode ser lida a partir de três variáveis estruturais:</p>
+    <ol>
+      <li><b>Conectividade da rede</b>: quantos oxigênios são ponte (BO) e quantos são não ponte (NBO), o que se resume em NBO/T ou na distribuição de unidades Qⁿ (Parte 2, capítulo 3).</li>
+      <li><b>Força e caráter da ligação</b>: ligações curtas, fortes e direcionais (Si–O, B–O, P–O) ou longas, fracas e iônicas (Na–O, K–O). A força de campo Z/a² de Dietzel é um bom resumo.</li>
+      <li><b>Polarizabilidade</b>: o quanto a nuvem eletrônica de um íon se deforma sob um campo elétrico. Ânions grandes (O²⁻ não ponte, S²⁻, Se²⁻) e cátions com pares isolados (Pb²⁺, Bi³⁺, Te⁴⁺) são muito polarizáveis. O F⁻ e os cátions pequenos de carga alta, quase nada.</li>
+    </ol>
+    <p>Cada capítulo termina com um bloco <b>Ligação e polarizabilidade</b> que aplica essas três variáveis à propriedade discutida. A síntese, no fim da página, junta tudo numa tabela.</p>
+  </div>
+
+  <!-- ===================== 1. TÉRMICAS ===================== -->
+  <section class="chapter" id="termicas">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 1</div>
+      <h2>Propriedades térmicas e viscosidade</h2>
+      <p class="ch-lede">A viscosidade decide como o vidro é fundido, moldado, recozido e usado. A expansão térmica e a condutividade decidem se ele aguenta o caminho entre o forno e a mesa.</p>
+    </div>
+
+    <div class="prose">
+      <h3>A viscosidade como propriedade mestra</h3>
+      <p>Entre o fundido e o vidro frio, a viscosidade de um sodo-cálcico varia mais de 15 ordens de grandeza: cerca de 10 Pa·s a 1450 °C, onde ele flui como mel, e mais de 10¹⁵ Pa·s abaixo de ~450 °C. A indústria não consegue trabalhar com uma escala tão larga sem marcos, e por isso definiu <span class="term">pontos de referência</span>, cada um associado a uma etapa do processo. O Varshneya os lista assim (em Pa·s):</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Ponto</th><th class="num">η (Pa·s)</th><th>O que acontece ali</th></tr></thead>
+        <tbody>
+          <tr><td>Fusão</td><td class="num">10</td><td>O fundido é fluido o bastante para homogeneizar e liberar bolhas (refino).</td></tr>
+          <tr><td>Trabalho</td><td class="num">10³</td><td>A gota pode ser soprada, prensada ou puxada.</td></tr>
+          <tr><td>Escoamento</td><td class="num">10⁴</td><td>A peça ainda se deforma, mas segura a forma por instantes.</td></tr>
+          <tr><td>Amolecimento (Littleton)</td><td class="num">10<sup>6,65</sup></td><td>Uma fibra padrão se alonga sob o próprio peso a 1 mm/min. Abaixo dele, a peça não cede sozinha.</td></tr>
+          <tr><td>Recozimento</td><td class="num">10¹²</td><td>Tensões internas caem 95 % em ~15 min. Fica perto da T<sub>g</sub> de laboratório.</td></tr>
+          <tr><td>Deformação (strain)</td><td class="num">10<sup>13,5</sup></td><td>O alívio de tensões leva horas (~6 h): abaixo daqui, pode-se resfriar rápido sem criar tensões novas.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <p>O intervalo de temperatura entre o ponto de trabalho e o de amolecimento é a <span class="term">faixa de trabalho</span>. Vidros com faixa larga são chamados de "longos": esfriam devagar em viscosidade e dão tempo ao artesão. Os "curtos" endurecem depressa, o que é bom para máquinas de alta cadência. Os vidros de chumbo são o exemplo clássico de vidro longo, e por isso foram por séculos o material preferido da lapidação e do vidro artístico.</p>
+    </div>
+
+    <div class="eqx">
+      <div class="eq">log₁₀ η = A + B / (T − T₀)<span class="lbl">Vogel–Fulcher–Tammann (VFT): A ≈ log η a temperatura infinita, B e T₀ são parâmetros de ajuste</span></div>
+      <p class="means"><b>O que mede:</b> como a viscosidade cresce ao esfriar. <b>Sentido físico:</b> a "barreira" para o escoamento não é fixa; ela aumenta à medida que o líquido se adensa, porque o movimento de cada região exige que mais vizinhos se rearranjem juntos. A temperatura T₀, abaixo de T<sub>g</sub>, é onde a extrapolação divergiria. Ninguém mede η em T₀, mas o parâmetro captura bem a curvatura entre 10 e 10¹² Pa·s. O MYEGA, que vimos na Parte 1, faz o mesmo sem a divergência e é mais seguro para extrapolar abaixo de T<sub>g</sub>.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">m = d log₁₀ η / d(T<sub>g</sub>/T) |<sub>T = Tg</sub><span class="lbl">índice de fragilidade (Angell); pelo VFT, m = B·T<sub>g</sub> / (T<sub>g</sub> − T₀)²</span></div>
+      <p class="means"><b>O que mede:</b> o quanto a viscosidade é sensível à temperatura perto de T<sub>g</sub>. <b>Por que importa:</b> um líquido "forte" (m ≈ 20, como a sílica) tem curva quase reta no gráfico de Arrhenius; um "frágil" (m de 40 a 100) despenca logo acima de T<sub>g</sub>. Na prática, a fragilidade é o que define se um vidro é longo ou curto.</p>
+    </div>
+
+    <figure class="figure" data-module="viscref">
+      <div class="fig-head">
+        <h4>Curvas de viscosidade de seis vidros comerciais</h4>
+        <span class="cap">Os pontos são os valores de catálogo Corning (deformação, recozimento, amolecimento e trabalho); as curvas, um ajuste VFT por mínimos quadrados. Passe o mouse para ler η em cada temperatura. A faixa sombreada é a faixa de trabalho do vidro escolhido.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="vr-pick" role="group" aria-label="Vidro" style="margin-bottom:14px"></div>
+        <div class="canvas-box ratio-wide"><canvas id="vr-canvas" aria-label="Logaritmo da viscosidade contra a temperatura para seis vidros comerciais, com as linhas dos pontos de referência"></canvas></div>
+        <div class="readouts" style="margin-top:14px">
+          <div class="readout"><div class="k">Recozimento</div><div class="v" id="vr-a">–</div></div>
+          <div class="readout"><div class="k">Amolecimento</div><div class="v" id="vr-s">–</div></div>
+          <div class="readout"><div class="k">Trabalho</div><div class="v" id="vr-w">–</div></div>
+          <div class="readout"><div class="k">Faixa de trabalho</div><div class="v" id="vr-range">–</div></div>
+          <div class="readout"><div class="k">Fragilidade m</div><div class="v" id="vr-m">–</div></div>
+        </div>
+        <p class="note" style="margin:10px 0 0"><span id="vr-vft" style="font-family:var(--font-ui)"></span>. <span id="vr-note"></span></p>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Como a composição mexe na viscosidade</h3>
+      <p>A viscosidade de um óxido puro acompanha a força e a conectividade da sua rede. A energia de ativação do escoamento da sílica é de ~170 kcal/mol entre 1100 e 1400 °C, a do GeO₂ é de ~75 e a do P₂O₅, de ~42. No B₂O₃ ela cai de ~83 para ~12 kcal/mol ao subir a temperatura, porque a rede de anéis boroxol se desfaz no líquido. As tendências principais, segundo o Varshneya:</p>
+      <ul>
+        <li><b>Álcalis</b> quebram pontes Si–O–Si e derrubam η de forma muito não linear: os primeiros mols de Na₂O são os que mais pesam. Misturar dois álcalis (Na + K) baixa a viscosidade ainda mais, um dos sintomas do <span class="term">efeito de álcali misto</span>.</li>
+        <li><b>CaO, MgO e Al₂O₃</b> no lugar de Na₂O aumentam a viscosidade. Os alcalinoterrosos ligam dois NBO com força maior; o Al³⁺ em tetraedro consome NBO e reconecta a rede.</li>
+        <li><b>Água</b> é um modificador poderoso: centenas de ppm de OH (um sodo-cálcico tem ~350 ppm) já baixam T<sub>g</sub> e η de forma mensurável, porque cada H₂O incorporada vira dois Si–OH, ou seja, uma ponte cortada.</li>
+        <li><b>B₂O₃</b> num silicato com álcali faz algo curioso: o ponto de recozimento de um borossilicato fica parecido com o de um sodo-cálcico, mas o ponto de trabalho fica muito mais alto. Por isso ele é chamado de vidro "duro".</li>
+        <li><b>PbO</b> em grande quantidade dá vidros longos e de baixa temperatura de trabalho.</li>
+      </ul>
+
+      <h3>Expansão térmica: por que um sólido cresce ao esquentar</h3>
+      <p>Se a energia de uma ligação variasse como uma parábola perfeita em torno da distância de equilíbrio, os átomos vibrariam mais ao esquentar, mas a distância <i>média</i> não mudaria. A expansão existe porque o poço de potencial real é <span class="term">assimétrico</span>: aproximar dois íons custa muito mais energia (repulsão das nuvens eletrônicas) do que afastá-los. Quanto mais energia térmica, mais o par passa tempo do lado "frouxo" do poço, e a distância média aumenta. O mesmo desenho do poço explica três propriedades de uma vez:</p>
+      <ul>
+        <li><b>profundidade</b> do poço ↔ energia de ligação ↔ temperaturas características (T<sub>m</sub>, T<sub>g</sub>);</li>
+        <li><b>curvatura</b> no fundo ↔ constante de força ↔ módulo de elasticidade;</li>
+        <li><b>assimetria</b> ↔ anarmonicidade ↔ coeficiente de expansão térmica.</li>
+      </ul>
+    </div>
+
+    <figure class="figure" data-module="anharm">
+      <div class="fig-head">
+        <h4>O poço de potencial de uma ligação e a expansão que ele produz</h4>
+        <span class="cap">Potencial de Morse com média térmica clássica de r. O nível de energia desenhado foi exagerado (6 k<sub>B</sub>T) para ficar visível. Os valores de profundidade e largura são ilustrativos, da ordem dos de cada ligação.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="ah-pre" role="group" aria-label="Ligação" style="margin-bottom:14px"></div>
+        <div class="fig-grid even">
+          <div class="canvas-box h-320"><canvas id="ah-well" aria-label="Poço de potencial com nível térmico e posição média"></canvas></div>
+          <div class="canvas-box h-320"><canvas id="ah-exp" aria-label="Variação relativa da distância média com a temperatura"></canvas></div>
+        </div>
+        <div class="fig-grid" style="margin-top:16px">
+          <div class="controls">
+            <div class="ctl"><label for="ah-D">Profundidade (energia de ligação) <output id="ah-D-v"></output></label><input type="range" id="ah-D" min="0.6" max="6" step="0.1" value="4.6"></div>
+            <div class="ctl"><label for="ah-a">Largura inversa do poço a <output id="ah-a-v"></output></label><input type="range" id="ah-a" min="1" max="3" step="0.05" value="2"></div>
+            <div class="ctl"><label for="ah-T">Temperatura <output id="ah-T-v"></output></label><input type="range" id="ah-T" min="0" max="1500" step="10" value="600"></div>
+          </div>
+          <div class="readouts">
+            <div class="readout"><div class="k">Constante de força 2Da²</div><div class="v" id="ah-k">–</div></div>
+            <div class="readout"><div class="k">E relativo ao Si–O</div><div class="v" id="ah-E">–</div></div>
+            <div class="readout"><div class="k">α linear da ligação</div><div class="v" id="ah-al" style="font-size:18px">–</div></div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>A ligação Si–O tem um poço fundo e estreito, e por isso expande pouco. Mas a sílica vítrea expande ainda menos do que a ligação sugeriria: α ≈ 5,5 × 10⁻⁷/°C, e chega a ser negativa em baixa temperatura. A explicação é geométrica. Na rede de tetraedros ligados pelos vértices, parte da energia térmica vai para <span class="term">vibrações transversais</span> do oxigênio ponte, que giram os tetraedros e puxam os silícios uns para os outros. Esse encolhimento compensa quase todo o alongamento das ligações. A adição de TiO₂ (~7 %) leva essa compensação ao limite: o vidro ULE tem α praticamente nulo e é usado em espelhos de telescópio.</p>
+      <p>Nos vidros com modificadores, a expansão é dominada pelas ligações M–O, longas e fracas, e por isso um sodo-cálcico expande ~17 vezes mais que a sílica. Acima de T<sub>g</sub> há uma contribuição extra: além de vibrar, o líquido muda de estrutura com a temperatura. O Varshneya escreve α<sub>líquido</sub> = α<sub>vib</sub> + α<sub>conf</sub>; num vidro de cozinha "Jade", 42 + 107 × 10⁻⁷/°C. É esse salto que marca T<sub>g</sub> numa curva dilatométrica.</p>
+    </div>
+
+    <div class="eqx">
+      <div class="eq">α = Σ pᵢ wᵢ<span class="lbl">aditividade: wᵢ = % em massa do óxido i, pᵢ = fator tabelado (Winkelmann–Schott ou English–Turner)</span></div>
+      <p class="means"><b>O que mede:</b> uma estimativa rápida de α a partir da composição. <b>Por que funciona (às vezes):</b> o vidro é uma "solução" de óxidos, e muitas propriedades variam de forma quase linear com a composição dentro de uma família. <b>Por que falha:</b> os fatores supõem que cada óxido tem sempre o mesmo papel estrutural. O B₂O₃ é o contraexemplo perfeito: o fator de English–Turner é negativo, porque o boro em BO₄ aperta a rede, mas o B₂O₃ puro tem α = 150 × 10⁻⁷/°C. Para a sílica pura, Winkelmann–Schott dá 27, quase cinco vezes o valor real. Os fatores de Gilard–Dubrul tentam corrigir isso tornando pᵢ dependente da composição.</p>
+    </div>
+
+    <figure class="figure" data-module="expansion">
+      <div class="fig-head">
+        <h4>Calculadora de expansão térmica e curva dilatométrica</h4>
+        <span class="cap">Fatores da Tab. 10.2 do Varshneya (× 10⁻⁷/°C por % em massa). A escala compara o resultado com metais usados em selagens vidro–metal. Na curva, T<sub>g</sub> é ajustável e α<sub>líquido</sub> foi tomado como ~3,2 × α<sub>vidro</sub> (ordem de grandeza típica).</span>
+      </div>
+      <div class="fig-body">
+        <div class="presets" id="ex-pre" style="margin-bottom:14px"><span class="lab-gh" style="font-family:var(--font-ui);font-weight:600">Composições:</span></div>
+        <div class="fig-grid">
+          <div>
+            <div class="canvas-box h-200"><canvas id="ex-bar" aria-label="Coeficiente de expansão calculado numa escala com materiais de referência"></canvas></div>
+            <div class="readouts" style="margin:12px 0">
+              <div class="readout"><div class="k">Winkelmann–Schott</div><div class="v" id="ex-ws">–</div></div>
+              <div class="readout"><div class="k">English–Turner</div><div class="v" id="ex-et">–</div></div>
+              <div class="readout"><div class="k">Medido (aprox.)</div><div class="v" id="ex-meas">–</div></div>
+            </div>
+            <div class="canvas-box h-260"><canvas id="ex-dil" aria-label="Curva dilatométrica com Tg e ponto de amolecimento dilatométrico"></canvas></div>
+            <div class="ctl" style="margin-top:12px"><label for="ex-tg"><span>T<sub>g</sub> da curva</span> <output id="ex-tg-v"></output></label><input type="range" id="ex-tg" min="350" max="1250" step="5" value="550"></div>
+          </div>
+          <div class="controls">
+            <div id="ex-sl" class="controls"></div>
+            <p class="note" id="ex-sum" style="margin:0"></p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Choque térmico</h3>
+      <p>Quando a superfície de uma placa quente é resfriada de repente, ela tenta encolher enquanto o interior continua dilatado. O interior impede o encolhimento e a superfície fica sob tração. Como o vidro quebra por tração a partir de defeitos superficiais (capítulo 3), a pergunta é qual salto de temperatura gera uma tração igual à resistência.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">ΔT<sub>máx</sub> = σ<sub>f</sub> (1 − ν) / (E α)<span class="lbl">σ<sub>f</sub>: resistência à tração; ν: razão de Poisson; E: módulo de Young; α: expansão térmica</span></div>
+      <p class="means"><b>O que mede:</b> o maior choque de resfriamento que uma superfície aguenta. <b>Sentido físico:</b> E·α diz quanta tensão nasce por grau de diferença; σ<sub>f</sub> diz quanta tensão o vidro aguenta. O produto E·α varia mais de dez vezes entre os vidros comerciais, e isso explica por que um béquer de borossilicato vai da chama à água fria e um copo comum não.</p>
+    </div>
+
+    <figure class="figure" data-module="shock">
+      <div class="fig-head">
+        <h4>Quem aguenta o choque?</h4>
+        <span class="cap">ΔT<sub>máx</sub> com os valores de catálogo de E, ν e α (0–300 °C). A têmpera soma ~100 MPa de compressão superficial à resistência. Estimativa de primeira ordem: ignora a espessura, a transferência de calor finita e o tamanho real dos defeitos.</span>
+      </div>
+      <div class="fig-body">
+        <div class="canvas-box ratio-wide"><canvas id="sh-canvas" aria-label="Barras do choque térmico máximo para seis vidros"></canvas></div>
+        <div class="fig-grid even" style="margin-top:14px">
+          <div class="controls">
+            <div class="ctl"><label for="sh-dT">Choque aplicado <output id="sh-dT-v"></output></label><input type="range" id="sh-dT" min="10" max="1200" step="5" value="80"></div>
+            <div class="ctl"><label for="sh-s"><span>Resistência de superfície σ<sub>f</sub></span> <output id="sh-s-v"></output></label><input type="range" id="sh-s" min="20" max="120" step="1" value="50"></div>
+            <label class="check"><input type="checkbox" id="sh-temp"> Vidro temperado (+100 MPa de compressão)</label>
+          </div>
+          <p class="verdict-line" id="sh-out" aria-live="polite"></p>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Capacidade calorífica e condutividade térmica</h3>
+      <p>Acima da temperatura ambiente, a capacidade calorífica de um vidro óxido se aproxima do limite de Dulong–Petit, 3R por mol de átomos, e na transição vítrea dá um salto (ΔC<sub>p</sub>), porque o líquido ganha os graus de liberdade configuracionais que o vidro tinha congelado. Em temperaturas muito baixas (4–10 K), os vidros têm um excesso de modos vibracionais em relação ao cristal, o chamado <span class="term">pico de bóson</span>, uma das assinaturas da desordem.</p>
+      <p>O calor atravessa um sólido isolante principalmente por fônons, e a teoria cinética dá K = ⅓ C<sub>v</sub> v Λ, em que v é a velocidade do som e Λ o livre caminho médio do fônon. Num cristal, Λ pode ser longo; num vidro, a desordem espalha os fônons a cada poucos ângstrons, e K fica baixo e pouco dependente da composição: ~1,4 W m⁻¹ K⁻¹ para a sílica a 0 °C e ~1 W m⁻¹ K⁻¹ para muitos vidros com modificadores. Acima de ~400 °C entra outro mecanismo: o vidro é transparente à radiação térmica, e o calor passa a viajar como luz.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">K<sub>R</sub> = 16 n² σ T³ / (3 α<sub>R</sub>)<span class="lbl">condutividade radiativa: n = índice de refração, σ = constante de Stefan–Boltzmann, α<sub>R</sub> = coeficiente de absorção médio no IV próximo</span></div>
+      <p class="means"><b>O que mede:</b> quanto calor é transportado por fótons que são absorvidos e reemitidos dentro do vidro. <b>Sentido físico:</b> o T³ faz o termo radiativo crescer muito depressa; a 1100 °C ele já é ~80 vezes maior que o fonônico num vidro claro. E ele depende de 1/α: quanto mais o vidro absorve no IV próximo, menos calor chega ao fundo do forno. É por isso que tanques de vidro claro podem ter ~1,5 m de profundidade e que vidros verdes ou âmbar (Fe²⁺ absorve em ~1 µm) são mais difíceis de fundir de modo homogêneo.</p>
+    </div>
+
+    <figure class="figure" data-module="radk">
+      <div class="fig-head">
+        <h4>Fônons contra radiação</h4>
+        <span class="cap">K<sub>fônon</sub> ≈ 1 + 0,0006·T (W m⁻¹ K⁻¹, ilustrativo) e K<sub>R</sub> com n = 1,5. Escolha quanto o vidro absorve no IV próximo.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="rk-pre" role="group" aria-label="Tipo de vidro" style="margin-bottom:14px"></div>
+        <div class="fig-grid">
+          <div class="canvas-box h-320"><canvas id="rk-canvas" aria-label="Condutividade fonônica e radiativa contra a temperatura"></canvas></div>
+          <div class="controls">
+            <div class="ctl"><label for="rk-a"><span>Absorção média α<sub>R</sub></span> <output id="rk-a-v"></output></label><input type="range" id="rk-a" min="-1" max="1.4" step="0.01" value="0.08"></div>
+            <div class="ctl"><label for="rk-T">Temperatura <output id="rk-T-v"></output></label><input type="range" id="rk-T" min="20" max="1500" step="10" value="1100"></div>
+            <div class="readouts">
+              <div class="readout"><div class="k">K fônon</div><div class="v" id="rk-kp">–</div></div>
+              <div class="readout"><div class="k">K radiação</div><div class="v" id="rk-kr">–</div></div>
+              <div class="readout"><div class="k">Fração radiativa</div><div class="v" id="rk-f">–</div></div>
+              <div class="readout"><div class="k">Penetração 1/α</div><div class="v" id="rk-d">–</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <aside class="bond">
+      <h3>Ligação e polarizabilidade</h3>
+      <div class="sub">Propriedades térmicas e viscosidade</div>
+      <p><b>Viscosidade e T<sub>g</sub></b> medem quanto custa reorganizar a rede. Quanto mais pontes fortes por poliedro (Q⁴ na sílica), mais ligações precisam se romper ao mesmo tempo, e mais alta é a energia de ativação. Cátions de campo alto (Mg²⁺, Al³⁺, Zr⁴⁺) seguram os NBO com força e endurecem o líquido; cátions grandes e de campo baixo (K⁺, Cs⁺) fazem ligações fracas, não direcionais, que se trocam com facilidade. Íons muito polarizáveis (Pb²⁺, Bi³⁺) deformam a nuvem eletrônica dos oxigênios e tornam as ligações mais "macias": baixam T<sub>g</sub> e alongam a faixa de trabalho.</p>
+      <p><b>Expansão térmica</b> mede a assimetria do poço. Ligações fortes e curtas (Si–O, B–O em BO₄) são pouco anarmônicas; ligações iônicas longas (Na–O, K–O) são muito. Por isso α cresce na sequência Li &lt; Na &lt; K e acompanha 1/(força de campo) do modificador. A topologia também entra: redes que podem girar seus poliedros (sílica) absorvem parte da expansão.</p>
+      <table>
+        <thead><tr><th>Mudança</th><th>η e T<sub>g</sub></th><th>α</th><th>Por quê</th></tr></thead>
+        <tbody>
+          <tr><td>+ Na₂O ou K₂O</td><td>↓↓</td><td>↑↑</td><td>NBO; ligações M–O longas e fracas</td></tr>
+          <tr><td>Na₂O → CaO, MgO</td><td>↑</td><td>↓</td><td>campo mais alto; um M²⁺ amarra dois NBO</td></tr>
+          <tr><td>+ Al₂O₃ (Al ≤ R)</td><td>↑</td><td>↓</td><td>AlO₄⁻ consome NBO e reconecta a rede</td></tr>
+          <tr><td>+ B₂O₃ (com álcali)</td><td>↑ em T<sub>g</sub></td><td>↓ até ~15 %</td><td>BO₃ → BO₄⁻ sem criar NBO (anomalia do boro)</td></tr>
+          <tr><td>+ PbO</td><td>↓, vidro longo</td><td>↑</td><td>Pb²⁺ polarizável, ligações macias e pouco direcionais</td></tr>
+          <tr><td>+ H₂O (OH)</td><td>↓</td><td>≈</td><td>cada H₂O corta uma ponte Si–O–Si</td></tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Mel na geladeira</b>A viscosidade do vidro muda como a do mel quando sai do pote quente e vai para a geladeira, só que por um fator de 10¹⁵. A indústria marcou "pontos" nessa escala, como se fossem marcas num termômetro: aqui se funde, aqui se sopra, aqui se recoze.</p>
+        <p class="analogy"><b>Mola torta</b>Uma ligação química é como uma mola que é dura para apertar e mole para esticar. Quando chacoalha mais (esquenta), ela passa mais tempo esticada, e o material cresce. Ligações fortes, como Si–O, são molas curtas e duras; Na–O é uma mola longa e mole.</p>
+        <p>O choque térmico é uma disputa entre o quanto o vidro encolhe por grau (E·α) e o quanto ele aguenta (σ<sub>f</sub>). O borossilicato encolhe três vezes menos que o vidro de janela, e por isso vai ao forno.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 2. ÓPTICAS ===================== -->
+  <section class="chapter" id="opticas">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 2</div>
+      <h2>Propriedades ópticas lineares</h2>
+      <p class="ch-lede">Índice de refração, dispersão, janela de transparência, cor e espalhamento. E um extra: por que o vidro é transparente, contado pela teoria de orbitais moleculares.</p>
+    </div>
+
+    <div class="prose">
+      <h3>Índice de refração, reflexão e absorção</h3>
+      <p>A luz é um campo elétrico oscilante. Ao atravessar o vidro, ela desloca levemente as nuvens eletrônicas dos íons em relação aos núcleos, criando dipolos que oscilam junto com ela e reemitem. A soma dessa reemissão com a onda original se propaga mais devagar: c/n. O <span class="term">índice de refração</span> n é, portanto, uma medida direta da polarizabilidade eletrônica por unidade de volume. Dele saem também a reflexão em incidência normal, R = [(n − 1)/(n + 1)]², cerca de 4 % por face num vidro comum e 17 % num calcogeneto com n ≈ 2,4, e a lei de Snell.</p>
+      <p>A absorção segue a lei de Beer–Lambert, I = I₀ e<sup>−αz</sup>. Em química costuma-se usar a forma decimal, A = log(I₀/I) = ε c l, com ε a absortividade molar. A Parte 2 já mostrou de onde vêm muitos absorvedores (Fe²⁺, Fe³⁺, redox); aqui olhamos o espectro inteiro.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">R<sub>m</sub> = V<sub>m</sub> (n² − 1)/(n² + 2) = (N<sub>A</sub> / 3ε₀) α<sub>m</sub><span class="lbl">Lorentz–Lorenz: refração molar R<sub>m</sub>, volume molar V<sub>m</sub>, polarizabilidade molar α<sub>m</sub></span></div>
+      <p class="means"><b>O que mede:</b> a polarizabilidade eletrônica total de um mol do vidro. <b>Sentido físico:</b> o índice cresce por dois caminhos: íons mais polarizáveis (α<sub>m</sub> maior) ou íons mais apertados (V<sub>m</sub> menor). Como R<sub>m</sub> é quase aditivo, dá para separar a contribuição de cada íon. Dimitrov e Sakka usaram isso para extrair a polarizabilidade do próprio O²⁻ em cada vidro: ela vai de ~1,4 Å³ em silicatos a mais de 3 Å³ em vidros de Bi₂O₃, e é a ponte com a basicidade óptica que aparece no extra e no capítulo 5.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">n²(λ) = 1 + Σ Bᵢ λ² / (λ² − Cᵢ)<span class="lbl">Sellmeier: cada termo é um "oscilador" com ressonância em λ = √Cᵢ</span></div>
+      <p class="means"><b>O que mede:</b> como n varia com o comprimento de onda (dispersão). <b>Sentido físico:</b> o vidro se comporta como um conjunto de osciladores com ressonâncias no UV (elétrons) e no IV (vibrações). No visível, estamos entre as duas: n cai ao se afastar do UV, devagar, e volta a cair perto do IV. Dois ou três termos bastam para descrever n com cinco casas decimais. Os fabricantes de vidro óptico publicam exatamente esses coeficientes.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">ν<sub>d</sub> = (n<sub>d</sub> − 1) / (n<sub>F</sub> − n<sub>C</sub>)<span class="lbl">número de Abbe, com as linhas d (587,6 nm), F (486,1 nm) e C (656,3 nm)</span></div>
+      <p class="means"><b>O que mede:</b> o quanto o vidro "abre" as cores em relação ao quanto ele desvia a luz. ν<sub>d</sub> alto = pouca dispersão (crowns, ν<sub>d</sub> &gt; 50); ν<sub>d</sub> baixo = muita dispersão (flints). Uma lente acromática cola um crown e um flint para que as dispersões se cancelem e o foco seja o mesmo para todas as cores.</p>
+    </div>
+
+    <figure class="figure" data-module="dispersion">
+      <div class="fig-head">
+        <h4>Dispersão, diagrama de Abbe e um prisma</h4>
+        <span class="cap">Curvas de Sellmeier com coeficientes de catálogo (sílica: Malitson, 1965; demais: Schott). Os pontos cinza do diagrama são outros vidros de catálogo, para dar o contexto. O leque do prisma (60°, desvio mínimo) foi desenhado 4 vezes mais aberto.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="dp-pick" role="group" aria-label="Vidro óptico" style="margin-bottom:14px"></div>
+        <div class="fig-grid even">
+          <div class="canvas-box h-320"><canvas id="dp-n" aria-label="Índice de refração contra comprimento de onda"></canvas></div>
+          <div class="canvas-box h-320"><canvas id="dp-abbe" aria-label="Diagrama de Abbe"></canvas></div>
+        </div>
+        <div class="fig-grid" style="margin-top:16px">
+          <div class="canvas-box h-260"><canvas id="dp-prism" aria-label="Prisma decompondo luz branca"></canvas></div>
+          <div class="readouts">
+            <div class="readout"><div class="k">n<sub>d</sub></div><div class="v" id="dp-nd">–</div></div>
+            <div class="readout"><div class="k">ν<sub>d</sub></div><div class="v" id="dp-vd">–</div></div>
+            <div class="readout"><div class="k">(n<sub>F</sub> − n<sub>C</sub>) × 10³</div><div class="v" id="dp-dn">–</div></div>
+            <div class="readout"><div class="k">Tipo</div><div class="v" id="dp-kind" style="font-size:17px">–</div></div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>O diagrama de Abbe é, no fundo, um mapa de polarizabilidade. Para subir n<sub>d</sub>, os fabricantes adicionam íons pesados e polarizáveis: PbO nos flints clássicos, BaO e La₂O₃ nos crowns densos, TiO₂ e Nb₂O₅ nos flints modernos sem chumbo. Mas quase todo íon que aumenta n também traz uma ressonância eletrônica mais próxima do visível, e por isso aumenta a dispersão. Os vidros fluorofosfatados (como o N-FK51A) fazem o contrário: o flúor é o ânion menos polarizável que existe, e o resultado é índice baixo, dispersão baixíssima e dispersão parcial anômala, ótima para corrigir o espectro secundário em lentes apocromáticas.</p>
+
+      <h3>A janela de transparência</h3>
+      <p>Um vidro óxido só é transparente numa faixa limitada do espectro. No lado do ultravioleta, os fótons têm energia para levar elétrons da banda de valência à banda de condução (ou a estados de transferência de carga), e o vidro absorve tudo. No lado do infravermelho, a frequência da luz se aproxima das frequências de vibração da rede, e a energia vira vibração (absorção multifônon). Entre as duas bordas estão a janela e as bandas de impurezas: OH (2,7–3,6 µm e harmônicos), Fe²⁺ (~1,1 µm), Fe³⁺ (UV).</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">λ<sub>c</sub> = hc / E<sub>g</sub> ≈ 1240 nm·eV / E<sub>g</sub><span class="lbl">borda UV a partir do gap óptico (Varshneya, eq. 19.42)</span></div>
+      <p class="means"><b>O que mede:</b> o comprimento de onda abaixo do qual o vidro absorve por transições eletrônicas. Para a sílica, E<sub>g</sub> ≈ 8,9 eV dá λ<sub>c</sub> ≈ 140 nm; a sílica pura de verdade transmite até ~160 nm. Para um calcogeneto com 1–3 eV, a borda cai no visível ou no IV próximo. <b>A cauda:</b> abaixo do gap, a absorção não cai a zero de repente; ela decai exponencialmente (cauda de Urbach, α ∝ e<sup>E/E<sub>U</sub></sup>), porque a desordem cria estados localizados nas bordas das bandas.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">ν<sub>IV</sub> = (1/2π) √(F / μ)<span class="lbl">Szigeti: frequência de estiramento de um par de massas com constante de força F e massa reduzida μ</span></div>
+      <p class="means"><b>O que mede:</b> onde começa a absorção multifônon. <b>Sentido físico:</b> ligações fracas (F pequeno) entre átomos pesados (μ grande) vibram devagar e empurram a borda IV para longe. Por isso a janela vai até ~4,5 µm nos silicatos (Si–O forte, átomos leves), ~6 µm nos germanatos e teluritos, ~7 µm nos fluoretos de metais pesados e mais de 10 µm nos calcogenetos. O Varshneya cita Y·r₀ (módulo de Young × distância) como aproximação para F, uma bela ligação entre óptica e mecânica.</p>
+    </div>
+
+    <figure class="figure" data-module="window">
+      <div class="fig-head">
+        <h4>Janela de transparência de seis famílias</h4>
+        <span class="cap">Modelo de duas bordas exponenciais (Urbach no UV, multifônon no IV), bandas de OH e de ferro, e perda de Fresnel nas duas faces. Parâmetros escolhidos para reproduzir a posição típica das bordas de cada família; não são dados de um vidro específico.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="wn-pick" role="group" aria-label="Família" style="margin-bottom:14px"></div>
+        <div class="canvas-box ratio-wide"><canvas id="wn-canvas" aria-label="Transmitância contra comprimento de onda em escala logarítmica"></canvas></div>
+        <div class="fig-grid" style="margin-top:14px">
+          <div class="controls">
+            <div class="ctl"><label for="wn-d">Espessura <output id="wn-d-v"></output></label><input type="range" id="wn-d" min="-1" max="2" step="0.01" value="1"></div>
+            <div class="ctl"><label for="wn-oh">Teor de OH <output id="wn-oh-v"></output></label><input type="range" id="wn-oh" min="-1" max="3.2" step="0.01" value="0.7"></div>
+            <div class="ctl"><label for="wn-fe">Ferro total (Fe₂O₃, % massa) <output id="wn-fe-v"></output></label><input type="range" id="wn-fe" min="0" max="1" step="0.01" value="0.1"></div>
+          </div>
+          <div class="readouts">
+            <div class="readout"><div class="k">Corte UV (T = 10 %)</div><div class="v" id="wn-uv">–</div></div>
+            <div class="readout"><div class="k">Corte IV (T = 10 %)</div><div class="v" id="wn-ir">–</div></div>
+            <div class="readout"><div class="k">Perda de Fresnel</div><div class="v" id="wn-R">–</div></div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Repare em dois detalhes no sodo-cálcico. Primeiro, a borda UV de uma janela comum (~300 nm) não é intrínseca: ela é dominada pela transferência de carga O²⁻ → Fe³⁺ de poucas centenas de ppm de ferro. Zere o ferro e a borda recua para ~250 nm. Segundo, a banda larga do Fe²⁺ em ~1 µm é o que dá a cor verde-azulada da borda de uma placa e o que torna o vidro um absorvedor de calor. Na sílica, aumente o OH: a banda de 2,73 µm aparece primeiro, e com muita água também os harmônicos de 2,2 e 1,38 µm. É por isso que as fibras ópticas são feitas de sílica "seca".</p>
+
+      <h3>Cores em vidros</h3>
+      <p>Um vidro tem cor quando absorve seletivamente parte do visível; a cor que vemos é a complementar da que foi absorvida. O Varshneya e o capítulo de de Ligny e Möncke no Handbook distinguem as origens:</p>
+      <ul>
+        <li><b>Transições d–d</b> em íons de metais de transição. O campo dos ligantes (os oxigênios vizinhos) desdobra os níveis d, e a luz promove elétrons entre eles. A regra de Laporte proíbe essas transições num centro simétrico, por isso elas são fracas em sítios octaédricos e muito mais intensas em tetraédricos (o Co²⁺ tetraédrico tinge um vidro de azul com 0,01 %). Transições que exigem inverter o spin (Fe³⁺, Mn²⁺, d⁵) são ainda mais fracas.</li>
+        <li><b>Transferência de carga</b> (TC): um elétron passa de um ligante para o metal (O²⁻ → Fe³⁺, O²⁻ → Cr⁶⁺) ou entre metais (Fe²⁺ → Fe³⁺). São transições permitidas e cerca de 10⁴ vezes mais intensas que as d–d. A banda de TC do Fe³⁺ tem ε ≈ 7000 L mol⁻¹ cm⁻¹ em ~210 nm, e sua cauda amarela o vidro.</li>
+        <li><b>Transições f–f</b> nos lantanídeos (Nd³⁺, Er³⁺, Pr³⁺): linhas finas, porque os elétrons 4f estão blindados pelas camadas 5s²5p⁶ e quase não sentem a matriz.</li>
+        <li><b>Coloides metálicos</b> (Au, Ag, Cu): a ressonância de plasmon dos elétrons livres de nanopartículas absorve forte numa banda estreita. O rubi de ouro tem ~0,01 % de Au.</li>
+        <li><b>Semicondutores</b>: nanocristais de CdS₁₋ₓSeₓ absorvem tudo acima do seu gap e funcionam como filtros de corte.</li>
+      </ul>
+    </div>
+    <div class="eqx">
+      <div class="eq">4 M<sup>m+</sup> + 2n O²⁻ ⇌ 4 M<sup>(m−n)+</sup> + n O₂(g)<span class="lbl">equilíbrio redox no fundido (Varshneya, eq. 19.36)</span></div>
+      <p class="means"><b>O que diz:</b> o estado de oxidação de um íon polivalente, e portanto a cor, é decidido no fundido pela pressão parcial de O₂ e pela basicidade da matriz. Uma fusão redutora favorece Fe²⁺ (azul) e permite o cromóforo âmbar Fe³⁺–S²⁻; uma oxidante favorece Fe³⁺ (amarelo fraco) e Cr⁶⁺ (amarelo). O laboratório de composição da Parte 2 calcula essa razão.</p>
+    </div>
+
+    <figure class="figure" data-module="colors">
+      <div class="fig-head">
+        <h4>Simulador de cor: do espectro de absorção à cor percebida</h4>
+        <span class="cap">Bandas gaussianas com posições e intensidades típicas em silicatos; a cor sai das funções de cor CIE 1931 sob luz do dia (D65) ou incandescente (A). As concentrações são indicativas. Combine íons: a cor de uma mistura não é a "média" das cores, porque as absorções se multiplicam.</span>
+      </div>
+      <div class="fig-body">
+        <div class="presets" id="co-pre" style="margin-bottom:10px"><span class="lab-gh" style="font-family:var(--font-ui);font-weight:600">Receitas:</span></div>
+        <div class="chips" id="co-chips" role="group" aria-label="Íons e cromóforos" style="margin-bottom:14px"></div>
+        <div class="fig-grid">
+          <div>
+            <div class="canvas-box h-260"><canvas id="co-spec" aria-label="Espectro de absorção da combinação de íons"></canvas></div>
+            <div class="canvas-box h-200" style="margin-top:12px"><canvas id="co-wedge" aria-label="Amostra de vidro e cunha de espessura variável com a cor calculada"></canvas></div>
+          </div>
+          <div class="controls">
+            <div class="ctl"><label for="co-d">Espessura da amostra <output id="co-d-v"></output></label><input type="range" id="co-d" min="-0.5" max="1.7" step="0.01" value="0.7"></div>
+            <div class="seg" id="co-ill" role="group" aria-label="Iluminante"><button type="button" data-t="6504" aria-pressed="true">Luz do dia</button><button type="button" data-t="2856" aria-pressed="false">Incandescente</button></div>
+            <div id="co-sl" class="controls"></div>
+            <p class="note" id="co-why" aria-live="polite" style="margin:0"></p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Teste o neodímio com as duas luzes: as linhas finas em 525 e 585 nm cortam pedaços diferentes do espectro de cada iluminante, e o vidro muda de lilás para um tom mais azulado. E veja a receita "Fe + Mn": o Mn³⁺ absorve no verde, justamente onde o ferro deixa passar, e a soma fica quase neutra, apenas mais escura. Essa é a <span class="term">descoloração física</span>, usada por séculos (o "sabão de vidreiro", MnO₂) para esconder o verde do ferro. Com o tempo, a luz do sol oxida Mn²⁺ a Mn³⁺ e as garrafas antigas ficam roxas: a solarização.</p>
+
+      <h3>Espalhamento</h3>
+      <p>Mesmo um vidro sem nenhum absorvedor perde luz por espalhamento. Num vidro homogêneo, a fonte são as flutuações de densidade congeladas em T<sub>g</sub>: regiões nanométricas um pouco mais densas ou menos densas, com índice levemente diferente. Partículas de outra fase (gotas de separação de fases, cristais, bolhas) espalham muito mais.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">α<sub>R</sub> = (8π³ / 3λ⁴) (n² − 1)² κ<sub>T</sub> k<sub>B</sub> T<sub>f</sub><span class="lbl">espalhamento de Rayleigh intrínseco (Varshneya, eq. 19.33): κ<sub>T</sub> = compressibilidade isotérmica, T<sub>f</sub> = temperatura fictícia</span></div>
+      <p class="means"><b>O que mede:</b> a perda mínima de um vidro perfeito. <b>Sentido físico:</b> as flutuações de densidade são maiores quanto mais "macio" é o líquido (κ<sub>T</sub>) e quanto mais quente ele estava quando congelou (T<sub>f</sub>). O λ⁻⁴ diz que o azul espalha 16 vezes mais que o vermelho do dobro do comprimento de onda: é a mesma física que deixa o céu azul. Para fibras de sílica, isso empurra a operação para o IV próximo, até a borda multifônon impedir.</p>
+    </div>
+
+    <figure class="figure" data-module="scatter">
+      <div class="fig-head">
+        <h4>Do vidro opalescente à fibra óptica</h4>
+        <span class="cap">Partículas: eficiência de extinção de Rayleigh combinada com a aproximação de difração anômala de van de Hulst, matriz n = 1,5 e 5 mm de espessura. Fibra: Rayleigh ∝ T<sub>f</sub>/λ⁴, borda multifônon e picos de OH com coeficientes típicos da literatura de fibras.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg" id="sc-mode" role="group" aria-label="Modo" style="margin-bottom:14px"></div>
+        <div class="fig-grid">
+          <div class="canvas-box h-320"><canvas id="sc-canvas" aria-label="Coeficiente de espalhamento ou atenuação contra o comprimento de onda"></canvas></div>
+          <div class="controls">
+            <div id="sc-part" class="controls">
+              <div class="ctl"><label for="sc-r">Raio das partículas <output id="sc-r-v"></output></label><input type="range" id="sc-r" min="0.7" max="3.5" step="0.01" value="1.6"></div>
+              <div class="ctl"><label for="sc-dn">Diferença de índice Δn <output id="sc-dn-v"></output></label><input type="range" id="sc-dn" min="0.005" max="0.3" step="0.005" value="0.05"></div>
+              <div class="ctl"><label for="sc-phi">Fração de volume <output id="sc-phi-v"></output></label><input type="range" id="sc-phi" min="-5" max="-1" step="0.01" value="-2.5"></div>
+            </div>
+            <div id="sc-fib" class="controls" hidden>
+              <div class="ctl"><label for="sc-tf"><span>Temperatura fictícia T<sub>f</sub></span> <output id="sc-tf-v"></output></label><input type="range" id="sc-tf" min="1200" max="1900" step="10" value="1500"></div>
+              <div class="ctl"><label for="sc-oh">OH no núcleo <output id="sc-oh-v"></output></label><input type="range" id="sc-oh" min="-3" max="1" step="0.01" value="-2"></div>
+              <label class="check"><input type="checkbox" id="sc-ge" checked> Núcleo dopado com GeO₂ (fibra padrão)</label>
+              <p class="note" id="sc-fib-out" style="margin:0"></p>
+            </div>
+            <div class="canvas-box h-200"><canvas id="sc-sw" aria-label="Cor da luz transmitida e da luz espalhada"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Com partículas pequenas (dezenas de nm), o espalhamento segue λ⁻⁴: a amostra fica azulada vista de lado e alaranjada vista contra a luz. É a opalescência dos vidros com separação de fases incipiente e dos "vidros de opala" antigos. Quando as partículas passam do comprimento de onda, a dependência some e o vidro fica branco leitoso, como nos vidros opalinos de fluoreto ou fosfato de cálcio usados em luminárias. Nas fibras, o que se controla é T<sub>f</sub> (puxar e resfriar de modo a congelar menos flutuações) e o OH (o pico de 1,38 µm). As melhores fibras de núcleo de sílica pura chegam a ~0,14 dB/km em 1,55 µm.</p>
+    </div>
+
+    <!-- ===================== EXTRA: ORBITAIS MOLECULARES ===================== -->
+    <div class="extra-head" id="mo"><span class="tag-extra">Extra</span><h3>Por que o vidro é transparente? Uma visita aos orbitais moleculares</h3></div>
+    <div class="prose">
+      <p>Dizer que o vidro é transparente "porque é amorfo" está errado: o quartzo cristalino é tão transparente quanto a sílica vítrea, e vidros de As₂Se₃ são pretos. A transparência é uma questão de <b>energia eletrônica</b>. A luz visível tem fótons de 1,6 a 3,1 eV. Se não houver nenhum estado eletrônico vazio entre 1,6 e 3,1 eV acima dos estados ocupados, nenhum fóton visível pode ser absorvido, e a luz passa. A pergunta, então, é: por que a distância entre ocupados e vazios é tão grande na sílica, e o que a encolhe?</p>
+
+      <h3>Do par Si–O às bandas</h3>
+      <p>Comece com uma única ligação Si–O. O silício contribui com orbitais 3s e 3p (ou, na linguagem de hibridização, quatro sp³ apontados para os vértices do tetraedro); o oxigênio, com orbitais 2p, bem mais baixos em energia porque o oxigênio é muito mais eletronegativo. A combinação dá três tipos de orbitais moleculares:</p>
+      <ul>
+        <li><b>σ ligante</b>: a combinação em fase, de energia mais baixa, com caráter majoritário de O 2p. Os elétrons da ligação moram aqui.</li>
+        <li><b>n, não ligante</b>: os orbitais 2p do oxigênio que não apontam para nenhum silício (os pares isolados). Eles ficam praticamente na energia do O 2p atômico e são os <b>orbitais ocupados mais altos</b>.</li>
+        <li><b>σ* antiligante</b>: a combinação fora de fase, alta em energia, com caráter majoritário de Si. É o <b>primeiro orbital vazio</b>.</li>
+      </ul>
+      <p>Num sólido, cada um desses níveis se repete para ~10²³ tetraedros, e as pequenas interações entre vizinhos alargam cada nível numa <span class="term">banda</span>. O topo da banda de valência da sílica é feito dos pares isolados dos oxigênios ponte; o fundo da banda de condução, dos σ* Si–O. A diferença entre os dois é o gap: ~9 eV. O Varshneya localiza a borda fundamental da sílica em ~10,2 eV e a atribui a uma transição para um nível de éxciton, um par elétron–buraco ligado, que sai dos pares isolados do oxigênio. Um gap de 9 eV corresponde a ~140 nm: todo o visível e boa parte do UV passam.</p>
+      <p>Note o que <b>não</b> entra nesse raciocínio: a ordem de longo alcance. As bandas vêm das ligações locais, e o vidro tem praticamente as mesmas ligações que o cristal. O que a desordem faz é borrar as bordas das bandas em caudas de estados localizados, e é daí que vem a cauda de Urbach.</p>
+
+      <h3>O que cada tipo de componente faz com o gap</h3>
+      <p><b>Formadores diferentes.</b> O σ* é dominado pelo cátion formador. Os orbitais 4s/4p do Ge ficam mais baixos que os 3s/3p do Si, o σ* Ge–O desce e o gap do GeO₂ cai para ~6 eV. É também por isso que dopar o núcleo de uma fibra com GeO₂ aumenta o índice: um gap menor significa uma ressonância eletrônica mais próxima e, pela relação de Sellmeier, um n maior.</p>
+      <p><b>Modificadores e oxigênios não ponte.</b> Um oxigênio ponte divide sua densidade eletrônica com dois silícios, que a estabilizam. Um NBO está ligado a um só silício e carrega uma carga negativa compensada à distância por um Na⁺ ou Ca²⁺, que mal a segura. Seus pares isolados ficam mais altos em energia (~2–3 eV acima dos do BO) e mais polarizáveis. O topo da banda de valência sobe, o gap encolhe e a borda UV avança: de ~160 nm na sílica para ~200 nm num dissilicato de sódio. A anomalia do boro aparece aqui de forma elegante: até R ≈ 0,5, o álcali converte BO₃ em BO₄⁻ sem criar NBO, e a borda UV de um borato quase não se move.</p>
+      <p><b>Flúor no lugar do oxigênio.</b> O flúor é o elemento mais eletronegativo (3,98 contra 3,44 do O). Seus orbitais 2p estão ~3 eV abaixo dos 2p do oxigênio, e a nuvem do F⁻ é pequena e rígida: polarizabilidade de ~0,9 Å³, contra 1,4–3 Å³ do O²⁻. Substituir O por F faz quatro coisas ao mesmo tempo. Abaixa o topo da banda de valência e alarga o gap. Como a carga do F⁻ é −1, ele termina a rede (Si–F) e substitui preferencialmente os NBO, que eram justamente os estados mais altos. Diminui o índice e a dispersão, porque é pouco polarizável. E reage com a água do fundido, eliminando OH. É por isso que fluorofosfatos e vidros de sílica dopada com flúor transmitem no UV de vácuo (até ~160 nm) e são usados em litografia e ópticas de UV.</p>
+      <p><b>Ânions pesados (S²⁻, Se²⁻, Te²⁻).</b> Descendo o grupo 16, os orbitais p de valência ficam cada vez mais altos e mais difusos, e as ligações, mais fracas. O topo da banda de valência sobe e o σ* desce. O gap do As₂S₃ é de 2,35 eV (vidro laranja-avermelhado) e o do As₂Se₃, de ~1,75 eV (preto). Em troca, as ligações fracas entre átomos pesados empurram a borda multifônon para além de 10 µm: os calcogenetos são os vidros do IV térmico.</p>
+      <p><b>Cátions de par isolado (Pb²⁺, Bi³⁺, Tl⁺).</b> Esses íons têm um par 6s² ocupado e orbitais 6p vazios logo acima. A transição 6s → 6p cria estados dentro do gap da matriz: o 6s² fica acima dos pares isolados do O, o 6p abaixo do σ*. Em pouca quantidade, eles absorvem no UV; em vidros com 60–70 % de PbO ou Bi₂O₃, a borda chega a ~400 nm, e o vidro fica amarelado. São também os vidros de maior índice entre os óxidos, pela mesma razão.</p>
+      <p><b>Íons com orbitais d ou f vazios (Ti⁴⁺, Ce⁴⁺, Fe³⁺).</b> Esses cátions oferecem um estado vazio abaixo do σ*, e um elétron do O 2p pode saltar para ele: é a transferência de carga ligante → metal, uma transição permitida e intensa. Uma fração de 1 % de TiO₂ ou CeO₂ basta para cortar o UV abaixo de ~320 nm, e é assim que se fazem os vidros de proteção UV e os que blindam lâmpadas. O Varshneya cita justamente o CeO₂ e o aumento de NBO como as duas formas de deslocar a borda UV para comprimentos de onda maiores.</p>
+      <p><b>Metais de transição com d parcialmente cheio.</b> Os níveis d desdobrados pelo campo ligante ficam dentro do gap, separados por 1–3 eV: exatamente a energia da luz visível. É por isso que eles colorem e as matrizes de gap largo não.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">(n² − 1)/(n² + 2) = 1 − √(E<sub>g</sub> / 20)<span class="lbl">relação empírica de Dimitrov e Sakka (1996) entre índice de refração e gap óptico (E<sub>g</sub> em eV)</span></div>
+      <p class="means"><b>O que diz:</b> gap pequeno ↔ índice alto. As duas grandezas medem a mesma coisa vista de dois lados: quão fácil é deformar a nuvem eletrônica (n) e quão perto está o primeiro estado excitado (E<sub>g</sub>). A relação é aproximada (para a sílica ela superestima n), mas acerta a tendência entre famílias e é usada no simulador abaixo como estimativa.</p>
+    </div>
+
+    <figure class="figure" data-module="mobands">
+      <div class="fig-head">
+        <h4>Montando o gap: orbitais, bandas e a borda UV</h4>
+        <span class="cap">Esquema semiquantitativo. Energias relativas ao topo dos pares isolados do oxigênio ponte. Gaps dos óxidos puros aproximados da literatura; deslocamentos de NBO, F, Pb e transferência de carga escolhidos para reproduzir as tendências descritas no texto. A borda efetiva combina todos os estados presentes, ponderados pela fração de cada um (estados raros contam menos, mas contam).</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="mo-former" role="group" aria-label="Formador" style="margin-bottom:14px"></div>
+        <div class="canvas-box ratio-wide"><canvas id="mo-canvas" aria-label="Diagrama de orbitais moleculares e bandas com o gap indicado"></canvas></div>
+        <div class="canvas-box mo-strip" style="margin-top:10px"><canvas id="mo-strip" aria-label="Faixa do espectro de 100 a 1000 nm mostrando o que é absorvido e a cor de uma amostra de 5 mm"></canvas></div>
+        <div class="fig-grid" style="margin-top:16px">
+          <div class="controls">
+            <div class="ctl"><label for="mo-m">Modificador M₂O <output id="mo-m-v"></output></label><input type="range" id="mo-m" min="0" max="45" step="1" value="0"></div>
+            <div class="ctl"><label for="mo-f">Flúor no lugar de oxigênio <output id="mo-f-v"></output></label><input type="range" id="mo-f" min="0" max="50" step="1" value="0"></div>
+            <div class="ctl"><label for="mo-pb">PbO <output id="mo-pb-v"></output></label><input type="range" id="mo-pb" min="0" max="70" step="1" value="0"></div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px 18px">
+              <label class="check"><input type="checkbox" id="mo-ti"> 1 % TiO₂</label>
+              <label class="check"><input type="checkbox" id="mo-ce"> 0,5 % CeO₂</label>
+              <label class="check"><input type="checkbox" id="mo-fe"> 0,1 % Fe₂O₃</label>
+            </div>
+          </div>
+          <div class="controls">
+            <div class="readouts">
+              <div class="readout"><div class="k">Gap efetivo</div><div class="v" id="mo-eg">–</div></div>
+              <div class="readout"><div class="k">Borda λ = 1240/E<sub>g</sub></div><div class="v" id="mo-l">–</div></div>
+              <div class="readout"><div class="k">n (Dimitrov–Sakka)</div><div class="v" id="mo-n">–</div></div>
+              <div class="readout"><div class="k">Ânions NBO</div><div class="v" id="mo-nbo">–</div></div>
+            </div>
+            <p class="note" id="mo-note" aria-live="polite" style="margin:0"></p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Brinque com três comparações. (1) Na sílica, suba o modificador até 33 %: o gap cai mais de 2 eV, e quase todo o efeito vem dos primeiros por cento, porque o topo da banda é decidido pelos estados mais altos presentes, mesmo que poucos. (2) Troque para B₂O₃ e repita: até ~33 % de M₂O, quase nada muda. (3) Com 30 % de modificador na sílica, adicione flúor: ele "apaga" os NBO e devolve o gap. Para pensar em termos químicos, há uma grandeza que resume tudo isso: a <span class="term">basicidade óptica</span> Λ de Duffy, que mede a capacidade dos oxigênios de doar densidade eletrônica. Ela é obtida justamente do deslocamento da transição 6s → 6p de uma sonda de Pb²⁺ ou Tl⁺: oxigênios mais básicos (NBO, matrizes com cátions de campo baixo) empurram o 6s² para cima e baixam a energia da transição. Λ alto ↔ O²⁻ mais polarizável ↔ gap menor ↔ n maior. A mesma escala vai reaparecer no capítulo 5, ao explicar por que o Eu²⁺ emite em cores diferentes em cada vidro.</p>
+    </div>
+
+    <aside class="bond">
+      <h3>Ligação e polarizabilidade</h3>
+      <div class="sub">Propriedades ópticas lineares</div>
+      <p>Toda a óptica linear de um vidro é a resposta da nuvem eletrônica (no UV e no visível) e dos núcleos (no IV) a um campo oscilante. O índice de refração mede a polarizabilidade eletrônica por volume; o gap, a distância até o primeiro estado excitado; a borda IV, a frequência das vibrações mais rápidas. Os três se movem juntos: <b>íons mais polarizáveis</b> (NBO, Pb²⁺, Bi³⁺, Ti⁴⁺, Nb⁵⁺, S²⁻) aumentam n e a dispersão e trazem a borda UV para mais perto do visível; <b>ligações mais fracas entre átomos mais pesados</b> empurram a borda IV para longe. O flúor é o extremo oposto em quase tudo.</p>
+      <table>
+        <thead><tr><th>Componente</th><th>n</th><th>Borda UV</th><th>Borda IV</th><th>Comentário</th></tr></thead>
+        <tbody>
+          <tr><td>NBO (álcali)</td><td>↑</td><td>→ visível</td><td>≈</td><td>pares isolados mais altos e polarizáveis</td></tr>
+          <tr><td>B₂O₃ (BO₄)</td><td>≈</td><td>≈</td><td>← (B leve)</td><td>sem NBO até R ≈ 0,5</td></tr>
+          <tr><td>GeO₂</td><td>↑</td><td>→</td><td>→</td><td>σ* mais baixo; Ge mais pesado</td></tr>
+          <tr><td>PbO, Bi₂O₃</td><td>↑↑</td><td>→ até ~400 nm</td><td>→</td><td>estados 6s²/6p no gap</td></tr>
+          <tr><td>TiO₂, CeO₂</td><td>↑</td><td>→ (TC)</td><td>≈</td><td>orbitais d/f vazios abaixo do σ*</td></tr>
+          <tr><td>F no lugar de O</td><td>↓</td><td>← UV de vácuo</td><td>→ (ligações mais fracas)</td><td>F⁻ eletronegativo e pouco polarizável</td></tr>
+          <tr><td>S, Se no lugar de O</td><td>↑↑</td><td>→ visível/IV</td><td>→→</td><td>p de valência altos; ligações fracas e pesadas</td></tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Escada sem degrau no meio</b>Um elétron só absorve luz se puder pular para um degrau vazio que esteja exatamente à altura do fóton. Na sílica, o próximo degrau está a 9 eV, alto demais para qualquer luz visível (no máximo 3 eV). A luz passa por falta de degrau. Sódio, chumbo e enxofre vão "baixando" esse degrau; metais de transição colocam degraus pequenos no meio, e aí aparece a cor.</p>
+        <p class="analogy"><b>Plateia que balança junto</b>A luz atravessa o vidro como uma onda numa plateia: cada pessoa (elétron) balança e passa o movimento adiante, e isso atrasa a onda. Plateias mais "moles" (íons polarizáveis) atrasam mais: índice de refração maior.</p>
+        <p>O vidro de janela é verde na borda por causa de um pouco de ferro, e a fibra óptica perde tão pouca luz porque é sílica ultrapura, seca e usada no infravermelho próximo, longe do azul que espalha muito.</p>
+      </div>
+    </aside>
+  </section>
+  <!-- ===================== 3. MECÂNICAS ===================== -->
+  <section class="chapter" id="mecanicas">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 3</div>
+      <h2>Propriedades mecânicas, densidade e volume molar</h2>
+      <p class="ch-lede">Quanto espaço os íons ocupam, quão rígida é a rede que eles formam e por que um material com resistência teórica de dezenas de GPa quebra com algumas dezenas de MPa.</p>
+    </div>
+
+    <div class="prose">
+      <h3>Densidade e volume molar</h3>
+      <p>A densidade é a propriedade mais fácil de medir e uma das mais informativas, porque é sensível tanto à massa dos íons quanto ao modo como eles se empacotam. Para separar as duas coisas, usa-se o <span class="term">volume molar</span>. Ao adicionar um óxido pesado (PbO, BaO), a densidade sobe principalmente pela massa; ao adicionar Na₂O à sílica, ela também sobe, mas porque os Na⁺ ocupam os vazios abertos da rede de tetraedros, e o volume por oxigênio diminui.</p>
+      <p>Algumas regularidades do Varshneya: a sílica vítrea tem ρ = 2,20 g/cm³, o B₂O₃ vítreo 1,80 e o GeO₂ 3,63; os vidros de fluoretos de metais pesados chegam a 4,5–6,0. Em silicatos binários, a densidade aumenta na sequência Li &lt; Na &lt; K &lt; Rb &lt; Cs para a mesma fração molar, e os volumes parciais molares passam por um mínimo perto de 10–12 % de álcali, quando os primeiros cátions preenchem os vazios sem ainda abrir a rede. A sílica também é anômala: um vidro de sílica com temperatura fictícia mais alta é <b>mais</b> denso, ao contrário da maioria dos vidros, e sob pressões acima de ~10 GPa ela se densifica de forma permanente em 7,5 a 20 %.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">V<sub>m</sub> = Σ xᵢ Mᵢ / ρ   ·   V<sub>O</sub> = V<sub>m</sub> / Σ xᵢ n<sub>O,i</sub><span class="lbl">volume molar (por mol de óxidos) e volume por mol de oxigênio</span></div>
+      <p class="means"><b>O que medem:</b> V<sub>m</sub> tira a massa da conta e deixa só o empacotamento; V<sub>O</sub> diz quanto espaço cada oxigênio tem. Como o oxigênio é o íon maior e mais numeroso, V<sub>O</sub> é um bom indicador de quão "apertada" está a rede, e se correlaciona com a dureza, o módulo e a difusão.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">C<sub>g</sub> = ρ Σ xᵢ Vᵢ / Σ xᵢ Mᵢ,   Vᵢ = N<sub>A</sub> (4π/3)(m r<sub>A</sub>³ + n r<sub>O</sub>³)<span class="lbl">densidade de empacotamento iônico (Makishima–Mackenzie) de um óxido AₘOₙ</span></div>
+      <p class="means"><b>O que mede:</b> a fração do volume realmente ocupada pelos íons, tratados como esferas. A sílica tem C<sub>g</sub> ≈ 0,45, uma rede bem aberta; vidros com modificadores e cátions de campo alto ficam acima de 0,5. Quanto maior C<sub>g</sub>, menos espaço livre e, em geral, maior o módulo de Young.</p>
+    </div>
+
+    <figure class="figure" data-module="density">
+      <div class="fig-head">
+        <h4>Densidade e empacotamento a partir de um sodo-cálcico</h4>
+        <span class="cap">Fatores de diferença de densidade de Huggins e Sun convertidos por Elliott (Varshneya, Tab. 7.2), válidos perto da base 72,5 SiO₂ · 13,5 Na₂O · 9 CaO · 3 MgO · 1,5 Al₂O₃ · 0,5 K₂O (% massa, ρ ≈ 2,50 g/cm³). C<sub>g</sub> com raios iônicos de Shannon (r<sub>O</sub> = 1,35 Å): use para comparar tendências.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div>
+            <div class="canvas-box h-320"><canvas id="dn-canvas" aria-label="Contribuição de cada óxido para a variação de densidade"></canvas></div>
+            <div class="readouts" style="margin-top:12px">
+              <div class="readout"><div class="k">SiO₂ (balanço)</div><div class="v" id="dn-si">–</div></div>
+              <div class="readout"><div class="k">ρ (g/cm³)</div><div class="v" id="dn-rho">–</div></div>
+              <div class="readout"><div class="k">V<sub>m</sub> (cm³/mol)</div><div class="v" id="dn-vm">–</div></div>
+              <div class="readout"><div class="k">V<sub>O</sub> (cm³/mol O)</div><div class="v" id="dn-vo">–</div></div>
+              <div class="readout"><div class="k">C<sub>g</sub></div><div class="v" id="dn-cg">–</div></div>
+            </div>
+          </div>
+          <div class="controls">
+            <div id="dn-sl" class="controls"></div>
+            <button type="button" class="btn" id="dn-reset">Voltar à base sodo-cálcica</button>
+            <p class="note" id="dn-warn" style="margin:0"></p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Troque 5 % de Na₂O por K₂O: a densidade cai, embora o K seja mais pesado. O K⁺ é grande demais para os vazios da rede e a abre, e o volume cresce mais do que a massa. Troque CaO por BaO e a densidade sobe muito: o Ba²⁺ é pesado e ocupa um vazio parecido. O PbO tem o maior fator da tabela; por isso o "cristal" de chumbo pesa na mão.</p>
+
+      <h3>Constantes elásticas</h3>
+      <p>Um vidro é isotrópico, e por isso duas constantes bastam para descrever sua resposta elástica: o módulo de Young E e a razão de Poisson ν, ou o módulo de cisalhamento G e o volumétrico K, ligados por E = 2G(1 + ν) = 3K(1 − 2ν). Para a sílica, E = 70,0 GPa, K = 37,0 GPa, G = 30,5 GPa e ν = 0,17. Como vimos no poço de potencial, E é a curvatura média das ligações por volume: Gilman propôs E ≈ 2U<sub>m</sub>/r₀³, com U<sub>m</sub> a energia de ligação e r₀ a distância.</p>
+      <p>A composição mexe em E de modos que só fazem sentido pela estrutura. Adicionar Na₂O ou K₂O à sílica <b>diminui</b> E, porque quebra pontes; adicionar Li₂O <b>aumenta</b>, porque o Li⁺ é pequeno, de campo alto, e aperta os NBO. Em vidros Na₂O·xMO·5SiO₂, os MO (CaO, MgO…) aumentam E, com exceção do PbO, cujas ligações são polarizáveis e macias. Os oxinitretos Si–Al–terra-rara–O–N chegam a 100–170 GPa, os maiores módulos conhecidos em vidros: o nitrogênio liga três silícios em vez de dois, e a rede fica muito mais conectada.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">E = 2 V<sub>t</sub> Σ Gᵢ xᵢ,   V<sub>t</sub> = C<sub>g</sub><span class="lbl">Makishima–Mackenzie: Gᵢ = energia de dissociação por volume do óxido i</span></div>
+      <p class="means"><b>O que diz:</b> o módulo de Young é o produto de duas coisas: quanta energia de ligação há por volume (Σ Gᵢxᵢ) e quão bem os íons estão empacotados (V<sub>t</sub>). É a versão quantitativa da intuição "ligações fortes e bem apertadas dão um material rígido". O modelo funciona razoavelmente para silicatos e boratos, mas não capta sozinho as mudanças de coordenação, como a do boro.</p>
+    </div>
+
+    <figure class="figure" data-module="elastic">
+      <div class="fig-head">
+        <h4>A anomalia do boro vista pelo módulo de Young</h4>
+        <span class="cap">À esquerda: E de vidros Na₂O–B₂O₃–SiO₂ medidos por Imaoka et al. (1971), reproduzidos na Tab. 8.1 do Varshneya. Passe o mouse sobre os pontos. À direita: valores típicos de outras famílias para comparação.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div class="canvas-box h-320"><canvas id="el-b" aria-label="Módulo de Young contra teor de B2O3 em quatro séries de Na2O"></canvas></div>
+          <div class="canvas-box h-320"><canvas id="el-ref" aria-label="Módulo de Young de vidros de várias famílias"></canvas></div>
+        </div>
+        <p class="note" id="el-out" aria-live="polite" style="margin:12px 0 0"></p>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Na série com 10 % de Na₂O, trocar SiO₂ por B₂O₃ só piora E: há pouco álcali para converter boro em BO₄, e a rede vira uma mistura de tetraedros de Si com triângulos planares de BO₃, que se dobram com facilidade. Com 20 ou 30 % de Na₂O, E <b>sobe</b> até ~84 GPa por volta de 30 % de B₂O₃, mais que a sílica. Ali, cada Na⁺ está estabilizando um tetraedro BO₄⁻, que se conecta a quatro vizinhos sem criar nenhum NBO. Passado o ponto em que o álcali excede o que o boro consegue absorver, o excedente volta a criar NBO, e E cai.</p>
+
+      <h3>Resistência: teórica, real e a culpa das trincas</h3>
+      <p>Para romper um plano de átomos é preciso esticar todas as ligações até o ponto de ruptura ao mesmo tempo. Orowan estimou essa resistência teórica: com E = 70 GPa, energia de fratura γ<sub>f</sub> = 3,5 J/m² e a₀ = 0,2 nm, σ<sub>m</sub> ≈ 35 GPa. Fibras de sílica recém-puxadas em condições muito limpas chegam a 13–14 GPa. Um vidro de janela, porém, quebra com 50–100 MPa, centenas de vezes menos. A diferença está nas trincas.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">σ<sub>ponta</sub> = σ<sub>a</sub> (1 + 2√(c/ρ))   ·   σ<sub>f</sub> = K<sub>Ic</sub> / (Y √(πc)),   K<sub>Ic</sub> = √(2γ<sub>f</sub> E)<span class="lbl">Inglis (concentração de tensão) e Griffith (critério de fratura); c = profundidade da trinca, ρ = raio da ponta, Y ≈ 1,12 para trinca superficial</span></div>
+      <p class="means"><b>O que medem:</b> Inglis mostra que uma trinca de comprimento c com ponta de raio atômico multiplica a tensão aplicada por centenas ou milhares de vezes. Griffith transforma isso num balanço de energia: a trinca cresce quando a energia elástica liberada supera a energia para criar as duas superfícies novas. <b>Sentido físico:</b> a resistência de um vidro não é uma propriedade do material, e sim do seu pior defeito. K<sub>Ic</sub>, a tenacidade, é a propriedade do material: ~0,75 MPa·m½ num sodo-cálcico, entre as menores de todos os sólidos.</p>
+    </div>
+
+    <figure class="figure" data-module="griffith">
+      <div class="fig-head">
+        <h4>Resistência contra tamanho de defeito</h4>
+        <span class="cap">K<sub>Ic</sub> calculado com as energias de fratura γ<sub>f</sub> da Tab. 18.1 do Varshneya (nitrogênio seco). Em água, γ<sub>f</sub> cai ~40 %: é a corrosão sob tensão. O desenho da ponta é esquemático; o fator de concentração usa ρ = 0,2 nm.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="gr-pick" role="group" aria-label="Vidro" style="margin-bottom:14px"></div>
+        <div class="fig-grid">
+          <div class="canvas-box h-320"><canvas id="gr-plot" aria-label="Resistência à fratura contra profundidade da trinca em escala log-log"></canvas></div>
+          <div class="controls">
+            <div class="canvas-box h-200"><canvas id="gr-tip" aria-label="Trinca elíptica numa placa e concentração de tensão na ponta"></canvas></div>
+            <div class="ctl"><label for="gr-c">Profundidade da trinca c <output id="gr-c-v"></output></label><input type="range" id="gr-c" min="-9" max="-3" step="0.01" value="-5.3"></div>
+            <label class="check"><input type="checkbox" id="gr-wet"> <span>Ambiente úmido (γ<sub>f</sub> menor)</span></label>
+            <div class="readouts">
+              <div class="readout"><div class="k">K<sub>Ic</sub> (MPa·m½)</div><div class="v" id="gr-k">–</div></div>
+              <div class="readout"><div class="k">γ<sub>f</sub> (J/m²)</div><div class="v" id="gr-g">–</div></div>
+              <div class="readout"><div class="k">σ<sub>ponta</sub>/σ<sub>a</sub></div><div class="v" id="gr-kt">–</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Como os defeitos estão quase sempre na superfície e só crescem sob tração, há duas estratégias para fortalecer um vidro: evitar defeitos (revestimentos, manuseio cuidadoso, fibras protegidas por polímero) ou colocar a superfície sob <b>compressão</b>, de modo que uma trinca só cresça depois que a tensão aplicada vencer a compressão.</p>
+      <ul>
+        <li><b>Têmpera térmica</b>: a placa é aquecida acima de T<sub>g</sub> e resfriada com jatos de ar. A superfície solidifica primeiro; o interior, ao esfriar depois, encolhe e puxa a superfície, deixando-a em compressão (~100 MPa) e o centro em tração (~metade disso). O perfil é parabólico e a camada comprimida ocupa ~20 % da espessura.</li>
+        <li><b>Têmpera química (troca iônica)</b>: o vidro é imerso em KNO₃ fundido abaixo de T<sub>g</sub>. O K⁺ entra no lugar do Na⁺, mas é maior e não cabe direito no sítio, que não tem tempo de relaxar. O resultado é uma compressão altíssima (500–1000 MPa) numa camada fina (10–100 µm). É assim que se fazem as telas de celular.</li>
+      </ul>
+    </div>
+
+    <figure class="figure" data-module="tempering">
+      <div class="fig-head">
+        <h4>Perfil de tensão residual, flexão e uma trinca</h4>
+        <span class="cap">Placa de 4 mm. Térmica: perfil parabólico com tração central = ½ da compressão superficial. Química: perfil em erfc com tração central uniforme que equilibra as forças. A flexão traciona a face inferior. A trinca fica na face inferior; o critério usa a tensão líquida média ao longo dela e K<sub>Ic</sub> = 0,75 MPa·m½.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg" id="tp-mode" role="group" aria-label="Tratamento" style="margin-bottom:14px"></div>
+        <div class="fig-grid">
+          <div class="canvas-box h-320"><canvas id="tp-canvas" aria-label="Tensão ao longo da espessura da placa"></canvas></div>
+          <div class="controls">
+            <div class="ctl"><label for="tp-b">Tensão de flexão na superfície <output id="tp-b-v"></output></label><input type="range" id="tp-b" min="0" max="900" step="5" value="60"></div>
+            <div class="ctl"><label for="tp-c">Profundidade da trinca <output id="tp-c-v"></output></label><input type="range" id="tp-c" min="2" max="300" step="1" value="20"></div>
+            <div class="ctl"><label for="tp-s">Compressão superficial <output id="tp-s-v"></output></label><input type="range" id="tp-s" min="0" max="900" step="10" value="0"></div>
+            <div class="ctl"><label for="tp-l">Profundidade da camada (química) <output id="tp-l-v"></output></label><input type="range" id="tp-l" min="5" max="120" step="1" value="40"></div>
+            <div class="readouts">
+              <div class="readout"><div class="k">Superfície</div><div class="v" id="tp-sc">–</div></div>
+              <div class="readout"><div class="k">Centro</div><div class="v" id="tp-ct">–</div></div>
+              <div class="readout"><div class="k">Flexão máx. p/ esta trinca</div><div class="v" id="tp-max">–</div></div>
+            </div>
+            <p class="verdict-line" id="tp-out" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Compare as duas têmperas com uma trinca de 20 µm e depois de 200 µm. A química vence com folga enquanto a trinca é mais rasa que a camada comprimida; quando a trinca a atravessa, a ponta chega à região de tração e a vantagem some. A térmica tem compressão menor, mas profunda, e tolera melhor riscos fundos. Por isso as telas de celular levam troca iônica em duas etapas, para criar um perfil com pico alto na superfície e uma "cauda" mais profunda.</p>
+    </div>
+
+    <aside class="bond">
+      <h3>Ligação e polarizabilidade</h3>
+      <div class="sub">Densidade, elasticidade e resistência</div>
+      <p><b>Rigidez</b> é energia de ligação por volume. Ligações fortes e direcionais numa rede bem conectada (Q⁴, BO₄, AlO₄, Si–N) dão E alto. Cátions pequenos de campo alto (Li⁺, Mg²⁺, Be²⁺, Al³⁺) apertam a rede e aumentam E mesmo sendo modificadores; cátions grandes de campo baixo a afrouxam. Íons muito polarizáveis (Pb²⁺, Bi³⁺, Te⁴⁺, e os ânions S²⁻, Se²⁻) formam ligações que se deformam com facilidade: módulo e dureza baixos.</p>
+      <p><b>Razão de Poisson</b> mede como a rede responde a uma deformação: redes tridimensionais de ligações direcionais (sílica, ν = 0,17) resistem a mudar de volume de um jeito e se rearranjam de outro, enquanto empacotamentos densos e pouco direcionais (vidros metálicos, ν ≈ 0,35) se comportam quase como líquidos incompressíveis. ν cresce à medida que a conectividade cai e as ligações perdem direcionalidade.</p>
+      <p><b>Resistência</b> não depende tanto da ligação quanto da superfície, mas a ligação entra pela química da ponta da trinca: a água ataca a ponte Si–O–Si tensionada e a rompe com muito menos energia (corrosão sob tensão, fadiga estática). Por isso K<sub>Ic</sub> e γ<sub>f</sub> são menores em ar úmido do que em vácuo.</p>
+      <table>
+        <thead><tr><th>Mudança</th><th>ρ</th><th>E</th><th>Por quê</th></tr></thead>
+        <tbody>
+          <tr><td>+ Na₂O, K₂O</td><td>↑ / ↓</td><td>↓</td><td>pontes quebradas; K⁺ abre a rede</td></tr>
+          <tr><td>+ Li₂O</td><td>↑</td><td>↑</td><td>campo alto, preenche vazios</td></tr>
+          <tr><td>+ CaO, MgO</td><td>↑</td><td>↑</td><td>M²⁺ amarra dois NBO; empacotamento maior</td></tr>
+          <tr><td>+ Al₂O₃ (até Al = R)</td><td>≈</td><td>↑</td><td>AlO₄⁻ reconecta</td></tr>
+          <tr><td>+ B₂O₃ (R &lt; R<sub>máx</sub>)</td><td>↑</td><td>↑ até ~84 GPa</td><td>BO₄⁻ sem NBO</td></tr>
+          <tr><td>+ PbO</td><td>↑↑</td><td>↓</td><td>pesado e polarizável; ligações macias</td></tr>
+          <tr><td>N no lugar de O</td><td>↑</td><td>↑↑</td><td>N liga três Si: rede mais conectada</td></tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Estacionamento</b>A densidade depende do peso dos carros e de quão bem eles estão estacionados. O PbO é um caminhão; o Na⁺ é um carro pequeno que cabe nas vagas vazias da rede de sílica; o K⁺ é um carro grande demais, que faz o estacionamento inteiro se espalhar.</p>
+        <p class="analogy"><b>Folha de papel com um rasgo</b>É difícil rasgar uma folha puxando pelas bordas, a menos que ela já tenha um pequeno corte: aí ela rasga fácil a partir dele. O vidro é igual. A resistência "de verdade" dele é enorme; o que o derruba é o menor arranhão. Temperar é apertar a superfície para que os arranhões fiquem sempre fechados.</p>
+        <p>O boro é o ingrediente curioso: em pouca quantidade amolece o vidro, mas, com sódio suficiente para "transformar" cada boro num tetraedro, deixa a rede mais rígida que a da sílica.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 4. QUÍMICAS ===================== -->
+  <section class="chapter" id="quimicas">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 4</div>
+      <h2>Propriedades químicas</h2>
+      <p class="ch-lede">Como a água, os ácidos e as bases atacam um vidro. E por que o mesmo material reage em minutos no forno, em horas no líquido super-resfriado e em séculos na prateleira.</p>
+    </div>
+
+    <div class="prose">
+      <h3>Durabilidade química: os dois mecanismos</h3>
+      <p>O vidro é um dos materiais mais resistentes à corrosão que conhecemos, e mesmo assim nenhum vidro é inerte. O Varshneya descreve a <span class="term">durabilidade</span> (resistência a líquidos) e a <span class="term">intemperismo</span> (resistência ao vapor e à umidade) com dois tipos de reação, que costumam acontecer ao mesmo tempo:</p>
+      <ol>
+        <li><b>Lixiviação, ou troca iônica.</b> Prótons da água (H⁺ ou H₃O⁺) entram no vidro e trocam de lugar com os íons alcalinos: ≡Si–O⁻Na⁺ + H⁺ → ≡Si–OH + Na⁺. O álcali sai para a solução e a superfície fica uma camada rica em sílica hidratada. Grupos Si–OH vizinhos podem se condensar de volta em pontes: ≡Si–OH + HO–Si≡ → ≡Si–O–Si≡ + H₂O. Como a troca depende de íons se difundirem através da camada que vai engrossando, ela é controlada por <b>interdifusão</b> e segue √t.</li>
+        <li><b>Dissolução da rede.</b> Íons hidroxila atacam a própria ponte: ≡Si–O–Si≡ + OH⁻ → ≡Si–OH + ⁻O–Si≡. O resultado não é uma camada alterada, e sim vidro que desaparece, a uma taxa aproximadamente constante (∝ t). Essa reação é lenta em pH neutro ou ácido e acelera muito acima de pH ~9.</li>
+      </ol>
+      <p>Em meio ácido, a lixiviação domina, e a solução recebe quase só álcali. Em meio básico, a rede se dissolve e CaO e SiO₂ também aparecem na solução. O ácido fluorídrico é um caso à parte: ele ataca a ligação Si–O diretamente, formando complexos fluorossilicato, e dissolve qualquer silicato. Só alguns vidros de fosfato com muito Al₂O₃ resistem a ele.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">Q(t) = k₁ t<sup>½</sup> + k₂ t<span class="lbl">quantidade extraída por área: termo difusivo (lixiviação) + termo de dissolução da rede</span></div>
+      <p class="means"><b>O que diz:</b> no começo domina o termo em √t, e a camada lixiviada cresce como x ≈ 2√(Dt), com D o coeficiente de interdifusão Na⁺ ⇄ H⁺. Com o tempo, o termo linear vence. Quando a dissolução "come" a camada na mesma taxa em que a difusão a aprofunda, a espessura da camada fica estável, e todo o vidro passa a ser consumido em regime linear. <b>Por que importa:</b> é a base dos ensaios de durabilidade e dos modelos de previsão para vidros de rejeito nuclear, que precisam durar dezenas de milhares de anos.</p>
+    </div>
+    <div class="prose">
+      <p>Há um detalhe que torna os ensaios em <b>sistema fechado</b> traiçoeiros: o álcali que sai do vidro vira NaOH na solução e aumenta o pH. Com mais pH, a rede se dissolve mais depressa, mais álcali sai, e o processo se acelera. A razão entre a área de vidro e o volume de solução (SA/V) controla o quão rápido isso acontece. Um frasco com pouca água e muito vidro em pó chega a pH 11–12; uma placa num rio, nunca.</p>
+    </div>
+
+    <figure class="figure" data-module="leach">
+      <div class="fig-head">
+        <h4>Simulador de corrosão aquosa</h4>
+        <span class="cap">Modelo de duas frentes: a camada lixiviada cresce por difusão (dx/dt = D/x) e é consumida pela dissolução da rede (taxa r, com r ∝ 10<sup>0,45(pH − 7)</sup> acima de pH 7). Em sistema fechado, o Na extraído eleva o pH, o ácido silícico dissolvido tampona a solução e a aproximação da saturação em sílica freia a dissolução (a "taxa residual"). D e r a 90 °C são ordens de grandeza plausíveis para cada família (o perfil de Lanford, Fig. 17.1, fixa a escala do sodo-cálcico); ativação de 80 e 70 kJ/mol.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg wrap" id="lc-pick" role="group" aria-label="Vidro" style="margin-bottom:14px"></div>
+        <div class="fig-grid">
+          <div>
+            <div class="canvas-box h-320"><canvas id="lc-plot" aria-label="Espessura lixiviada e dissolvida contra o tempo, com o pH"></canvas></div>
+            <div class="canvas-box h-200" style="margin-top:12px"><canvas id="lc-cut" aria-label="Corte da superfície mostrando solução, camada lixiviada e vidro intacto"></canvas></div>
+          </div>
+          <div class="controls">
+            <div class="ctl"><label for="lc-t">Instante mostrado no corte <output id="lc-t-v"></output></label><input type="range" id="lc-t" min="1.78" max="8.5" step="0.01" value="6.4"></div>
+            <div class="ctl"><label for="lc-ph">pH inicial <output id="lc-ph-v"></output></label><input type="range" id="lc-ph" min="1" max="13" step="0.1" value="7"></div>
+            <div class="ctl"><label for="lc-T">Temperatura <output id="lc-T-v"></output></label><input type="range" id="lc-T" min="20" max="100" step="1" value="90"></div>
+            <label class="check"><input type="checkbox" id="lc-closed" checked> Sistema fechado (o pH sobe)</label>
+            <div class="ctl"><label for="lc-sv">Área de vidro / volume (SA/V) <output id="lc-sv-v"></output></label><input type="range" id="lc-sv" min="-1" max="2" step="0.01" value="0"></div>
+            <div class="readouts">
+              <div class="readout"><div class="k">Camada lixiviada</div><div class="v" id="lc-xl" style="font-size:18px">–</div></div>
+              <div class="readout"><div class="k">Vidro dissolvido</div><div class="v" id="lc-xd" style="font-size:18px">–</div></div>
+              <div class="readout"><div class="k">pH da solução</div><div class="v" id="lc-pHn">–</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>O papel de cada componente</h3>
+      <p>Segundo o Varshneya, a sílica vítrea, com quase 100 % de oxigênios ponte e só ppm de íons móveis, é o vidro mais durável. Os álcalis fazem o contrário duas vezes: abrem a rede e trazem íons móveis para os interstícios. Entre os silicatos binários, a durabilidade cai na ordem Li &gt; Na &gt; K. Os alcalinoterrosos entram como "bloqueadores" nos caminhos de difusão. Bastam 2–3 % de Al₂O₃ para melhorar muito a durabilidade de um vidro de embalagem, porque o Al consome NBO e aperta a rede, e é por isso que praticamente todo vidro de garrafa leva alumina. O ZrO₂ faz o mesmo em fibras resistentes a álcali para cimento. Os borossilicatos de laboratório são duráveis por conectividade alta e por um truque de microestrutura: sua composição fica do lado rico em sílica da região de imiscibilidade, e o resfriamento rápido mantém as gotas da fase rica em boro abaixo de 2–5 nm. O Vycor faz o oposto de propósito: separa as fases, lixivia a fase solúvel em ácido e sinteriza o esqueleto de sílica que sobra.</p>
+      <p>As técnicas para melhorar a durabilidade seguem a mesma lógica: aumentar SiO₂ e Al₂O₃; reduzir a mobilidade dos álcalis; tirar o álcali da superfície (o polimento a fogo volatiliza Na₂O e reconecta NBO em pontes; o tratamento com SO₂ úmido extrai o sódio como Na₂SO₄, que é lavado); ou aplicar revestimentos. E há quem queira o contrário: os <span class="term">vidros bioativos</span> de Hench (como o 45S5) foram desenhados para lixiviar depressa e formar na superfície uma camada de hidroxiapatita que se liga ao osso.</p>
+
+      <h3>Fundido, líquido super-resfriado e vidro: a mesma química, outro relógio</h3>
+      <p>A química do vidro não muda ao atravessar T<sub>g</sub>; o que muda são as velocidades. Toda reação que envolve o vidro precisa que alguma espécie se mova até o lugar certo, e o tempo para percorrer uma distância x por difusão é ~x²/D. Como D varia mais de 15 ordens de grandeza entre o fundido e o vidro frio, o mesmo processo pode levar segundos ou eras geológicas. Três regimes:</p>
+      <ul>
+        <li><b>Fundido (acima do liquidus)</b>: tudo se move. O fundido entra em equilíbrio com a atmosfera do forno (redox, solubilidade de água e de gases), volatiliza álcalis e boro, corrói os refratários e libera bolhas no refino. É aqui que se decidem o estado de oxidação dos íons polivalentes e o teor de OH.</li>
+        <li><b>Líquido super-resfriado (entre T<sub>g</sub> e o liquidus)</b>: a rede ainda relaxa, mas devagar. É a janela da devitrificação, da separação de fases, da sinterização viscosa e da formação de vitrocerâmicas (Parte 2). A troca iônica para têmpera química acontece logo abaixo dessa janela, para que a rede não relaxe a compressão.</li>
+        <li><b>Vidro (abaixo de T<sub>g</sub>)</b>: a rede está congelada. Só espécies pequenas e fracamente ligadas se movem: íons alcalinos, prótons, água molecular, gases. Por isso as reações do vidro frio são reações de superfície ou de troca iônica, nunca de reorganização da rede.</li>
+      </ul>
+    </div>
+    <div class="eqx">
+      <div class="eq">t ≈ x² / D   ·   D<sub>rede</sub> ≈ k<sub>B</sub>T / (λ η)   ·   τ ≈ η / G<span class="lbl">tempo de difusão; relação de Eyring (λ ≈ distância de salto, ~0,3 nm); tempo de relaxação de Maxwell (G ≈ 30 GPa)</span></div>
+      <p class="means"><b>O que dizem:</b> a primeira transforma coeficientes de difusão em tempos humanos. A segunda liga a mobilidade dos átomos da rede (Si, O) à viscosidade: se é preciso romper ligações para escoar, é preciso rompê-las para difundir. A terceira diz quanto tempo a estrutura leva para se reacomodar: algumas dezenas de segundos em T<sub>g</sub> (η = 10¹² Pa·s), nanossegundos no fundido. <b>Por que importa:</b> os íons modificadores não obedecem a Eyring. Eles se movem por saltos entre sítios sem romper a rede, e por isso continuam móveis muito abaixo de T<sub>g</sub>. Esse <span class="term">desacoplamento</span> é o que permite a lixiviação, a condução iônica e a têmpera química num vidro sólido.</p>
+    </div>
+
+    <figure class="figure" data-module="reactivity">
+      <div class="fig-head">
+        <h4>Quem se move, e quando: difusão num sodo-cálcico</h4>
+        <span class="cap">Rede: Eyring com a viscosidade VFT do Corning 0080 acima de T<sub>g</sub> e Arrhenius "congelado" abaixo (3/4 da inclinação em T<sub>g</sub>, o que é só uma estimativa). Na⁺, H₂O e O₂: leis de Arrhenius com parâmetros de ordem de grandeza típica para silicatos. Liquidus tomado como ~1000 °C. Arraste a temperatura e leia os tempos para percorrer 1 µm (uma camada superficial) e 1 mm (uma peça).</span>
+      </div>
+      <div class="fig-body">
+        <div class="canvas-box ratio-wide"><canvas id="rx-canvas" aria-label="Coeficientes de difusão contra a temperatura com as regiões de vidro, líquido super-resfriado e fundido"></canvas></div>
+        <div class="fig-grid" style="margin-top:14px">
+          <div class="controls">
+            <div class="ctl"><label for="rx-T">Temperatura <output id="rx-T-v"></output></label><input type="range" id="rx-T" min="20" max="1600" step="5" value="400"></div>
+            <div class="readouts">
+              <div class="readout"><div class="k">Regime</div><div class="v" id="rx-reg" style="font-size:16px;white-space:normal">–</div></div>
+              <div class="readout"><div class="k">η</div><div class="v" id="rx-eta" style="font-size:18px">–</div></div>
+              <div class="readout"><div class="k">Relaxação τ = η/G</div><div class="v" id="rx-tau" style="font-size:16px;white-space:normal">–</div></div>
+            </div>
+          </div>
+          <div class="table-wrap" style="margin:0">
+            <table class="data-table">
+              <thead><tr><th>Espécie</th><th class="num">1 µm</th><th class="num">1 mm</th></tr></thead>
+              <tbody id="rx-list"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Processo</th><th>Fundido</th><th>Líquido super-resfriado</th><th>Vidro</th></tr></thead>
+        <tbody>
+          <tr><td>Equilíbrio redox com a atmosfera</td><td>minutos a horas (convecção ajuda)</td><td>só na superfície</td><td>congelado</td></tr>
+          <tr><td>Dissolução de água / OH</td><td>equilibra com a pressão de vapor do forno</td><td>lenta, perto da superfície</td><td>hidratação superficial de nm a µm</td></tr>
+          <tr><td>Cristalização</td><td>não (acima do liquidus)</td><td>sim: é a janela da devitrificação</td><td>impossível na prática</td></tr>
+          <tr><td>Separação de fases</td><td>acima da imiscibilidade, não</td><td>sim (opalescência, Vycor)</td><td>congelada</td></tr>
+          <tr><td>Volatilização (Na₂O, B₂O₃, PbO)</td><td>importante</td><td>na superfície (polimento a fogo)</td><td>desprezível</td></tr>
+          <tr><td>Troca iônica Na⁺ ⇄ K⁺, H⁺</td><td>trivial</td><td>rápida, mas a rede relaxa a tensão</td><td>lenta, porém útil: têmpera, lixiviação</td></tr>
+          <tr><td>Corrosão de refratários</td><td>central na vida do forno</td><td>moderada</td><td>não se aplica</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside class="bond">
+      <h3>Ligação e polarizabilidade</h3>
+      <div class="sub">Propriedades químicas</div>
+      <p>Hidrolisar uma ponte Si–O–Si é um <b>ataque nucleofílico</b>: o OH⁻ (ou a água) se aproxima do silício, que precisa aceitar temporariamente um quinto ligante. Tudo o que deixa o silício mais "exposto" e a ponte mais tensionada facilita o ataque. Os NBO tornam o tetraedro mais rico em elétrons, mais básico e mais polarizável, e oferecem um ponto de entrada para os prótons. Cátions de campo alto (Al³⁺, Zr⁴⁺, Ti⁴⁺) formam ligações mais covalentes com o oxigênio e protegem o vizinho; cátions de campo baixo (K⁺, Cs⁺) são trocados com facilidade, e o K⁺, por ser maior que o H₃O⁺, ainda deixa a superfície sob tração quando sai, o que a trinca e acelera a corrosão.</p>
+      <p>Na mobilidade, a ligação também decide: um íon alcalino ligado a NBO por uma ligação iônica fraca e não direcional salta entre sítios sem romper nada, por isso continua móvel no vidro. Os formadores, presos por ligações covalentes fortes, só se movem quando a rede inteira flui, e por isso sua difusão segue a viscosidade.</p>
+      <table>
+        <thead><tr><th>Mudança</th><th>Durabilidade em água</th><th>Por quê</th></tr></thead>
+        <tbody>
+          <tr><td>+ Na₂O, K₂O</td><td>↓↓</td><td>abre a rede e traz íons trocáveis</td></tr>
+          <tr><td>Li → Na → K</td><td>↓</td><td>íon maior, ligação mais fraca, tensão de troca</td></tr>
+          <tr><td>+ CaO, MgO</td><td>↑</td><td>bloqueiam caminhos de difusão</td></tr>
+          <tr><td>+ 2–3 % Al₂O₃</td><td>↑↑</td><td>AlO₄⁻ consome NBO</td></tr>
+          <tr><td>+ ZrO₂</td><td>↑↑ (em álcali)</td><td>campo alto, ligação Zr–O forte</td></tr>
+          <tr><td>+ B₂O₃ em excesso</td><td>↓</td><td>fases ricas em boro solúveis</td></tr>
+          <tr><td>+ P₂O₅ (fosfatos)</td><td>em geral ↓</td><td>P–O–P hidrolisa facilmente; ↑ com Al₂O₃</td></tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Troca de cadeiras</b>Na água, os prótons entram no vidro e trocam de lugar com os íons de sódio, que saem. É uma troca lenta, porque cada novo par precisa atravessar a fila dos que já trocaram (por isso cresce com √t). Em solução muito básica, a água deixa de trocar cadeiras e começa a desmontar a própria arquibancada: a rede se dissolve.</p>
+        <p class="analogy"><b>O mesmo jogo em câmera lenta</b>No forno, os átomos se movem como pessoas numa praça: tudo se mistura em minutos. Abaixo de T<sub>g</sub>, a rede vira uma estátua; só os íons pequenos, como o sódio e a água, ainda passeiam, devagar. Por isso o vidro frio reage só na superfície.</p>
+        <p>Um pouco de alumina na garrafa, uma superfície sem sódio e pouca água parada fazem um vidro durar séculos.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== 5. FOTOFÍSICAS ===================== -->
+  <section class="chapter" id="fotofisicas">
+    <div class="ch-head">
+      <div class="ch-num">Capítulo 5</div>
+      <h2>Propriedades fotofísicas</h2>
+      <p class="ch-lede">O que acontece depois que um íon absorve um fóton: emitir luz, virar calor, passar a energia adiante ou mudar o próprio vidro. É a porta de entrada para a luminescência, tema da próxima parte.</p>
+    </div>
+
+    <div class="prose">
+      <h3>Absorver, relaxar, emitir</h3>
+      <p>Um íon num vidro que absorve um fóton vai para um estado excitado. Dali, ele pode voltar ao fundamental por três caminhos: emitindo um fóton (taxa radiativa A), entregando a energia à rede na forma de vibrações (taxa não radiativa W, quase sempre por emissão de vários fônons) ou passando a energia para outro íon (transferência de energia). O tempo de vida medido é τ = 1/(A + W + W<sub>TE</sub>), e a fração de excitações que vira luz é a eficiência quântica.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">η = A / (A + W<sub>mp</sub> + W<sub>TE</sub>)   ·   τ = 1/(A + W<sub>mp</sub> + W<sub>TE</sub>)<span class="lbl">eficiência quântica e tempo de vida do nível emissor</span></div>
+      <p class="means"><b>O que mede:</b> quantos fótons saem por fóton absorvido. <b>Por que importa:</b> num amplificador de fibra, num laser de Nd ou num fósforo de LED, η decide se o dispositivo funciona. E η não é propriedade só do íon: A depende da simetria e da covalência do sítio, W depende das vibrações da matriz, e W<sub>TE</sub> depende da concentração e da distribuição dos íons. Os três são propriedades do vidro.</p>
+    </div>
+    <div class="prose">
+      <p>As transições dos íons que interessam se dividem em três famílias, com comportamentos opostos diante da matriz:</p>
+      <ul>
+        <li><b>f–f dos lantanídeos trivalentes</b> (Nd³⁺, Er³⁺, Eu³⁺, Tb³⁺): proibidas pela regra de Laporte e só parcialmente permitidas pela mistura com estados de paridade oposta que um sítio sem centro de inversão provoca. São fracas, finas e lentas (τ de 0,1 a 10 ms). A posição das linhas quase não muda com a matriz, porque os 4f estão blindados; as intensidades, sim, e são descritas pelos parâmetros de Judd–Ofelt Ω₂, Ω₄, Ω₆. O Ω₂ é sensível à assimetria e à covalência do sítio.</li>
+        <li><b>5d → 4f</b> (Ce³⁺, Eu²⁺): permitidas, intensas, largas e rápidas (ns a µs). O orbital 5d não é blindado e interage fortemente com os ligantes, por isso a cor da emissão depende muito da matriz.</li>
+        <li><b>d–d dos metais de transição</b> (Cr³⁺, Mn²⁺, Ni²⁺): largas e dependentes do campo ligante. Em vidros, costumam ter eficiência baixa, porque a distribuição de sítios e o forte acoplamento com as vibrações abrem caminhos não radiativos.</li>
+      </ul>
+
+      <h3>A lei do gap de energia</h3>
+      <p>Para um íon terra-rara descer de um nível para o de baixo sem emitir luz, a rede precisa absorver a diferença de energia ΔE na forma de fônons. Como a maior energia de fônon de uma matriz é ħω<sub>máx</sub>, são necessários pelo menos p = ΔE/ħω<sub>máx</sub> fônons ao mesmo tempo. Processos de ordem p mais alta são exponencialmente menos prováveis, e daí vem uma das regras mais úteis da fotônica de vidros.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">W<sub>mp</sub>(T) = B e<sup>−α ΔE</sup> [1 − e<sup>−ħω/k<sub>B</sub>T</sup>]<sup>−p</sup>,   p = ΔE / ħω<span class="lbl">lei do gap de energia (Riseberg–Moos; parâmetros de Layne, Lowdermilk e Weber para vidros óxidos)</span></div>
+      <p class="means"><b>O que mede:</b> a taxa com que um nível perde energia para a rede. <b>Sentido físico:</b> B e α são característicos de cada matriz, e ħω é a energia do estiramento mais rápido do formador (B–O ~1400 cm⁻¹, P–O ~1200, Si–O ~1100, Ge–O ~900, Te–O ~700, Zr–F ~500). O fator entre colchetes conta os fônons térmicos já presentes e faz W crescer com a temperatura. Em resumo: <b>matrizes de átomos pesados e ligações fracas vibram devagar, precisam de mais fônons para cobrir o mesmo gap e desperdiçam menos energia</b>.</p>
+    </div>
+
+    <figure class="figure" data-module="energygap">
+      <div class="fig-head">
+        <h4>Calculadora da lei do gap: quem emite e quem esquenta</h4>
+        <span class="cap">Parâmetros B, α e ħω de Layne, Lowdermilk e Weber (1977) para os óxidos e de Shinn et al. (1983) para o fluoreto. ΔE e taxas radiativas típicas de cada nível. A animação mostra, para a matriz escolhida, a fração de eventos que termina em luz ou em fônons.</span>
+      </div>
+      <div class="fig-body">
+        <div class="fig-grid">
+          <div class="canvas-box h-320"><canvas id="eg-plot" aria-label="Taxa de relaxação multifônon contra o gap para seis matrizes"></canvas></div>
+          <div class="controls">
+            <div class="ctl"><label for="eg-tr">Nível emissor</label><select id="eg-tr"></select></div>
+            <div class="ctl"><label for="eg-host">Matriz da animação</label><select id="eg-host"></select></div>
+            <div class="ctl"><label for="eg-T">Temperatura <output id="eg-T-v"></output></label><input type="range" id="eg-T" min="10" max="700" step="5" value="300"></div>
+            <div class="canvas-box h-200"><canvas id="eg-ladder" aria-label="Animação de um nível emissor que decai por fóton ou por cascata de fônons"></canvas></div>
+          </div>
+        </div>
+        <div class="table-wrap" style="margin-top:14px">
+          <table class="data-table">
+            <thead><tr><th>Matriz</th><th class="num">ħω (cm⁻¹)</th><th class="num">fônons p</th><th class="num">W<sub>mp</sub> (s⁻¹)</th><th class="num">η</th></tr></thead>
+            <tbody id="eg-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Os resultados explicam escolhas tecnológicas inteiras. O nível ⁴I₁₃/₂ do Er³⁺ (1,53 µm) tem gap de ~6500 cm⁻¹: até no borato ele emite com eficiência, e por isso a sílica serve como matriz do amplificador de fibra. Já o ¹G₄ do Pr³⁺ (1,3 µm), com gap de ~3000 cm⁻¹, praticamente não emite em óxidos e só funciona em fluoretos ou calcogenetos. Escolha o ⁴I₁₁/₂ do Er³⁺, o nível de bombeio a 980 nm: na sílica ele decai quase todo por fônons para o ⁴I₁₃/₂, e isso é bom, porque é o que alimenta a inversão de população. Num fluoreto, ele vive mais e pode emitir em 2,7 µm.</p>
+      <p>Dois desperdiçadores ficam fora do gráfico, mas são tão importantes quanto ele. O primeiro é o <b>OH</b>: sua vibração de ~3600 cm⁻¹ é muito mais energética que qualquer fônon da rede, e dois quanta de OH cobrem o gap de 6500 cm⁻¹ do Er³⁺. Por isso os vidros para fotônica são secos com cuidado (e o flúor, de novo, ajuda). O segundo é a <b>concentração</b>: íons terra-rara próximos trocam energia entre si e a levam até um defeito ou impureza (supressão por concentração). Em sílica pura os terras-raras tendem a se aglomerar; co-dopar com Al₂O₃ ou P₂O₅ cria sítios de solvatação que os mantêm separados, o que é feito em todas as fibras dopadas com Er.</p>
+
+      <h3>A matriz muda a cor: Eu³⁺, Eu²⁺, Ce³⁺ e Tb³⁺</h3>
+      <p>As linhas f–f do Eu³⁺ são um sensor da vizinhança. A transição ⁵D₀ → ⁷F₁ (~591 nm) é de dipolo magnético e quase não muda com a matriz; a ⁵D₀ → ⁷F₂ (~612 nm) é de dipolo elétrico "hipersensível" e cresce muito quando o sítio perde simetria ou a ligação fica mais covalente. A razão R = I(⁷F₂)/I(⁷F₁) é usada como medida rápida de assimetria: perto de 1–2 em fluoretos, de sítios mais simétricos, e de 3 a 6 em silicatos, fosfatos e teluritos. Já o Eu²⁺ e o Ce³⁺ emitem da configuração 4fⁿ⁻¹5d, e o nível 5d desce quanto mais polarizáveis e covalentes são os ligantes (o <span class="term">efeito nefelauxético</span>, ou deslocamento do centroide) e quanto maior o desdobramento do campo cristalino. A basicidade óptica Λ que apareceu no extra do capítulo 2 resume os dois efeitos.</p>
+    </div>
+    <div class="eqx">
+      <div class="eq">E<sub>em</sub> ≈ E<sub>íon livre</sub> − D(A) − ΔS,   D(A) ≈ ε<sub>c</sub> + ε<sub>cfs</sub>/r(A) − 0,23 eV<span class="lbl">rebaixamento do 5d na matriz A (modelo de Dorenbos): deslocamento do centroide ε<sub>c</sub>, desdobramento do campo cristalino ε<sub>cfs</sub> (r(A) ≈ 1,7–2,4) e deslocamento de Stokes ΔS</span></div>
+      <p class="means"><b>O que diz:</b> a mesma transição de um íon livre (no Ce³⁺, ~6,1 eV; no Eu²⁺, ~4,2 eV) é puxada para baixo pela matriz. O termo ε<sub>c</sub> cresce com a polarizabilidade dos ânions vizinhos, ou seja, com a mesma grandeza que aumenta o índice de refração e diminui o gap. <b>Na prática:</b> Ce³⁺ emite no UV em fluoretos e no azul em vidros muito básicos; Eu²⁺ vai do violeta (fluoretos) ao verde-amarelo (aluminossilicatos de Ca, vidros de alta basicidade).</p>
+    </div>
+
+    <figure class="figure" data-module="emission">
+      <div class="fig-head">
+        <h4>Linhas finas contra bandas largas: espectros de emissão por matriz</h4>
+        <span class="cap">Formas espectrais esquemáticas. Eu³⁺: posições das linhas ⁵D₀ → ⁷F<sub>J</sub>, com a razão R aumentando com a assimetria e a basicidade. Eu²⁺ e Ce³⁺: banda gaussiana em energia cuja posição desce linearmente com Λ (ajuste ilustrativo das tendências da literatura). A cor é calculada pelas funções CIE.</span>
+      </div>
+      <div class="fig-body">
+        <div class="seg" id="em-ion" role="group" aria-label="Íon" style="margin-bottom:14px"></div>
+        <div class="fig-grid">
+          <div class="canvas-box h-320"><canvas id="em-canvas" aria-label="Espectro de emissão do íon escolhido"></canvas></div>
+          <div class="controls">
+            <div class="canvas-box h-200"><canvas id="em-sw" aria-label="Cor da emissão"></canvas></div>
+            <div class="ctl"><label for="em-L">Matriz (basicidade óptica) <output id="em-L-v"></output></label><input type="range" id="em-L" min="0.42" max="0.85" step="0.01" value="0.58"></div>
+            <div class="ctl"><label for="em-d">Distorção do sítio <output id="em-d-v"></output></label><input type="range" id="em-d" min="0" max="1" step="0.01" value="0.4"></div>
+            <div class="readouts">
+              <div class="readout"><div class="k" id="em-k">–</div><div class="v" id="em-v">–</div></div>
+              <div class="readout"><div class="k">Tipo de transição</div><div class="v" id="em-kind" style="font-size:18px">–</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h3>Quando a luz muda o vidro</h3>
+      <p>Algumas propriedades fotofísicas não terminam na emissão: a energia absorvida rearranja o próprio vidro. O Handbook trata esses fenômenos como <span class="term">fotossensibilidade</span>.</p>
+      <ul>
+        <li><b>Solarização</b>: UV intenso transfere elétrons entre íons polivalentes (Mn²⁺ + Fe³⁺ → Mn³⁺ + Fe²⁺), e o vidro escurece ou fica roxo. Em vidros ópticos com Fe e As, aparece um tom âmbar.</li>
+        <li><b>Vidros fotossensíveis</b> (Stookey): Ce³⁺ absorve UV e libera um elétron que reduz Ag⁺ ou Au⁺ a metal; um tratamento térmico posterior junta os átomos em núcleos que cristalizam a matriz só nas regiões expostas. É a nucleação controlada da Parte 2 com uma máscara de luz, e permite gravar canais e furos com ácido.</li>
+        <li><b>Fotocromismo</b>: o mesmo princípio, mas reversível. Vem a seguir.</li>
+        <li><b>Escrita com luz</b>: a sílica dopada com GeO₂ muda de índice sob UV (redes de Bragg em fibras), e pulsos de femtossegundo focalizados criam guias de onda e marcações dentro de qualquer vidro transparente.</li>
+      </ul>
+      <p>Nos vidros fotocrômicos de Armistead e Stookey (1964), um borossilicato contém cristalitos de AgCl ou AgBr de ~10 nm, sensibilizados com um pouco de Cu⁺. Como os cristalitos são muito menores que o comprimento de onda, o vidro é transparente. O UV cria pares elétron–buraco no haleto; o elétron reduz Ag⁺ e forma aglomerados de prata que absorvem em todo o visível, e o buraco é capturado pelo Cu⁺. No escuro, o processo se inverte. O ponto-chave é que tudo acontece <b>dentro</b> de um cristalito isolado pela matriz vítrea: o cloro não escapa, e o ciclo pode se repetir milhões de vezes, ao contrário do filme fotográfico.</p>
+    </div>
+
+    <figure class="figure" data-module="photochromic">
+      <div class="fig-head">
+        <h4>Clipe: uma lente fotocrômica escurece e clareia</h4>
+        <span class="cap">Cinética esquemática: escurecimento com constante de ~1 s e clareamento ~2,5× mais lento (no vidro real, segundos a minutos, e o clareamento acelera com a temperatura).</span>
+      </div>
+      <div class="fig-body">
+        <div class="clip" id="pc-clip">
+          <div class="canvas-box" style="aspect-ratio: 16 / 7"><canvas id="pc-canvas" aria-label="Animação de uma lente fotocrômica, de um cristalito de cloreto de prata e da curva de transmitância"></canvas></div>
+        </div>
+      </div>
+    </figure>
+
+    <aside class="bond">
+      <h3>Ligação e polarizabilidade</h3>
+      <div class="sub">Propriedades fotofísicas</div>
+      <p><b>Fônons</b>: a energia de fônon máxima é a frequência de Szigeti do estiramento mais forte da rede. Ligações fortes entre átomos leves (B–O, P–O) vibram rápido e "comem" estados excitados; ligações fracas entre átomos pesados (Te–O, Zr–F, Ge–S) vibram devagar e deixam os íons brilhar. É a mesma regra que empurra a borda IV para longe.</p>
+      <p><b>Intensidade radiativa</b>: uma transição f–f só ganha força quando o sítio é assimétrico e a ligação, covalente o bastante para misturar estados de paridade oposta. Matrizes com ânions polarizáveis (NBO, Te, Bi, Pb) dão Ω₂ grande, R grande e taxas radiativas maiores, enquanto fluoretos dão sítios mais simétricos e iônicos.</p>
+      <p><b>Posição das bandas 5d</b>: cresce o rebaixamento do 5d (e a emissão vai para o vermelho) com a polarizabilidade e a covalência dos ligantes, a mesma grandeza resumida por Λ, por n e pelo gap. O compromisso aparece em toda parte: as matrizes de fônons baixos e alta polarizabilidade, ótimas para emitir, costumam ser as menos duráveis, menos rígidas e com T<sub>g</sub> mais baixa (teluritos, calcogenetos, fluoretos). Escolher uma matriz é escolher em que ponto dessa troca ficar.</p>
+      <table>
+        <thead><tr><th>Matriz</th><th>ħω<sub>máx</sub> (cm⁻¹)</th><th>Para o Er³⁺ em 1,5 µm</th><th>Custo</th></tr></thead>
+        <tbody>
+          <tr><td>Borato</td><td>~1400</td><td>bom, mas níveis superiores apagados</td><td>baixa durabilidade (higroscópico)</td></tr>
+          <tr><td>Fosfato</td><td>~1200</td><td>alta solubilidade de terras-raras</td><td>durabilidade moderada</td></tr>
+          <tr><td>Silicato / sílica</td><td>~1100</td><td>padrão das fibras</td><td>terras-raras aglomeram sem Al</td></tr>
+          <tr><td>Germanato</td><td>~900</td><td>melhor para níveis de gap médio</td><td>GeO₂ é caro</td></tr>
+          <tr><td>Telurito</td><td>~700</td><td>banda larga, alta η</td><td>T<sub>g</sub> baixa, n alto</td></tr>
+          <tr><td>Fluoreto</td><td>~500</td><td>níveis de gap pequeno emitem</td><td>frágil, pouco durável</td></tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <aside class="simple">
+      <div><h3>Em poucas palavras</h3><div class="sub">Versão simplificada, com analogias</div></div>
+      <div class="body">
+        <p class="analogy"><b>Descer a escada ou pular</b>Um íon excitado está no alto de uma escada. Ele pode pular de uma vez (emitir luz) ou descer degrau por degrau (cada degrau é um fônon, ou seja, calor). Em matrizes de degraus altos, como o borato, descer é rápido e quase nada brilha; em matrizes de degraus baixos, como teluritos e fluoretos, a escada é longa demais e o íon prefere pular.</p>
+        <p class="analogy"><b>Linhas e manchas</b>Os elétrons 4f dos terras-raras estão escondidos dentro do átomo, como uma vela dentro de uma lanterna: a cor é sempre a mesma. Os elétrons 5d do Eu²⁺ e do Ce³⁺ estão do lado de fora e "sentem" os vizinhos: em cada vidro, a cor muda.</p>
+        <p>Óculos fotocrômicos são vidros com cristaizinhos de cloreto de prata que viram, por alguns segundos, filme fotográfico reversível.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== SÍNTESE ===================== -->
+  <section id="sintese" style="margin-top:56px">
+    <div class="ch-head">
+      <div class="ch-num">Síntese</div>
+      <h2>Uma tabela para a página inteira</h2>
+      <p class="ch-lede">O que acontece com cada propriedade quando se mexe em cada uma das três variáveis estruturais.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table synth">
+        <thead><tr><th>Propriedade</th><th>Rede mais conectada (menos NBO)</th><th>Cátions de campo alto</th><th>Íons mais polarizáveis</th><th>F no lugar de O</th></tr></thead>
+        <tbody>
+          <tr><td>η, T<sub>g</sub></td><td>↑</td><td>↑</td><td>↓ (vidros longos)</td><td>↓</td></tr>
+          <tr><td>Expansão α</td><td>↓</td><td>↓</td><td>↑</td><td>↑</td></tr>
+          <tr><td>Índice n, dispersão</td><td>↓</td><td>≈ / ↑</td><td>↑↑</td><td>↓↓</td></tr>
+          <tr><td>Borda UV</td><td>← (mais UV)</td><td>≈ (TC se d/f vazio)</td><td>→ visível</td><td>← UV de vácuo</td></tr>
+          <tr><td>Borda IV</td><td>← (ligações fortes)</td><td>←</td><td>→ (íons pesados)</td><td>→</td></tr>
+          <tr><td>Densidade</td><td>↓</td><td>↑</td><td>↑ (íons pesados)</td><td>↑ (fluoretos pesados)</td></tr>
+          <tr><td>Módulo E, dureza</td><td>↑</td><td>↑</td><td>↓</td><td>↓</td></tr>
+          <tr><td>Durabilidade</td><td>↑</td><td>↑</td><td>↓</td><td>↓ (em geral)</td></tr>
+          <tr><td>Energia de fônon</td><td>↑</td><td>↑</td><td>↓</td><td>↓</td></tr>
+          <tr><td>η quântica de terras-raras</td><td>↓</td><td>↓</td><td>↑</td><td>↑ (e menos OH)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="prose">
+      <p>Leia as colunas de baixo para cima e o padrão aparece: o que faz um vidro forte, durável e de alta temperatura (rede conectada, ligações fortes, íons pequenos) é o oposto do que faz um vidro de índice alto, de janela IV larga e de luminescência eficiente (íons pesados e polarizáveis, ligações macias). O projeto de um vidro de verdade é quase sempre uma negociação entre essas duas listas.</p>
+    </div>
+  </section>
+
+  <section id="referencias" style="margin-top:56px">
+    <h3>Referências principais</h3>
+    <ol class="refs">
+      <li>Varshneya, A. K.; Mauro, J. C. <em>Fundamentals of Inorganic Glasses</em>, 3ª ed. Elsevier (2019): cap. 6 (aditividade), 7 (densidade e volume molar; Tab. 7.2), 8 (elasticidade; Tab. 8.1), 9 (viscosidade; Tab. 9.1), 10 (expansão térmica; Tabs. 10.1–10.2), 11–12 (calor específico e condutividade térmica), 17 (durabilidade química), 18 (resistência e tenacidade; Tab. 18.1) e 19 (propriedades ópticas; Tab. 19.1).</li>
+      <li>Musgraves, J. D.; Hu, J.; Calvez, L. (eds.) <em>Springer Handbook of Glass</em>. Springer (2019), Parte A: capítulos sobre viscosidade, óptica linear, propriedades mecânicas, cores em vidros (de Ligny &amp; Möncke), fotossensibilidade e durabilidade química.</li>
+      <li>Catálogo de propriedades de vidros Corning (0080, 0010, 1720, 7740, 7913, 7940): pontos fixos de viscosidade, densidade, módulo de Young, Poisson e índice.</li>
+      <li>Malitson, I. H. Interspecimen comparison of the refractive index of fused silica. <em>J. Opt. Soc. Am.</em> 55, 1205 (1965); catálogo óptico Schott (N-BK7, N-SF11, N-FK51A).</li>
+      <li>Dimitrov, V.; Sakka, S. Electronic oxide polarizability and optical basicity of simple oxides. <em>J. Appl. Phys.</em> 79, 1736 (1996); Duffy, J. A. Optical basicity: a practical acid-base theory for oxides and oxyanions. <em>J. Chem. Educ.</em> 73, 1138 (1996).</li>
+      <li>Mott, N. F.; Davis, E. A. <em>Electronic Processes in Non-Crystalline Materials</em>, 2ª ed. Oxford (1979): bordas ópticas e caudas de Urbach.</li>
+      <li>Imaoka, M. et al. <em>Yogyo Kyokaishi</em> 79, 164 (1971): módulos de Young de vidros Na₂O–B₂O₃–SiO₂. Dell, W. J.; Bray, P. J.; Xiao, S. Z. <em>J. Non-Cryst. Solids</em> 58, 1 (1983).</li>
+      <li>Makishima, A.; Mackenzie, J. D. Direct calculation of Young's modulus of glass. <em>J. Non-Cryst. Solids</em> 12, 35 (1973).</li>
+      <li>Hench, L. L.; Clark, D. E. Physical chemistry of glass surfaces. <em>J. Non-Cryst. Solids</em> 28, 83 (1978); Lanford, W. A. et al. <em>J. Non-Cryst. Solids</em> 33, 249 (1979).</li>
+      <li>Layne, C. B.; Lowdermilk, W. H.; Weber, M. J. Multiphonon relaxation of rare-earth ions in oxide glasses. <em>Phys. Rev. B</em> 16, 10 (1977); Shinn, M. D. et al. <em>Phys. Rev. B</em> 27, 6635 (1983).</li>
+      <li>Dorenbos, P. The 5d level positions of the trivalent lanthanides in inorganic compounds. <em>J. Lumin.</em> 91, 155 (2000).</li>
+      <li>Armistead, W. H.; Stookey, S. D. Photochromic silicate glasses sensitized by silver halides. <em>Science</em> 144, 150 (1964).</li>
+      <li>Wyman, C.; Sloan, P.-P.; Shirley, P. Simple analytic approximations to the CIE XYZ color matching functions. <em>J. Comput. Graph. Tech.</em> 2, 1 (2013): usadas para calcular as cores.</li>
+    </ol>
+
+    <div class="next">
+      <div>
+        <h3>Próxima parte: luminescência</h3>
+        <p>Com a lei do gap, a basicidade óptica e o redox em mãos, a Parte 4 vai mergulhar nos níveis de energia dos lantanídeos e dos metais de transição em vidros: absorção, emissão, transferência de energia e conversão ascendente.</p>
+      </div>
+      <canvas id="next-canvas" aria-hidden="true"></canvas>
+    </div>
+  </section>
+  </main>
+</div>
+
+<footer>
+  Vidros &amp; Luminescência · Parte 3: Propriedades dos vidros óxidos. Simulações didáticas: os modelos são simplificados e os valores numéricos são típicos ou ilustrativos, salvo quando a fonte é indicada.
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

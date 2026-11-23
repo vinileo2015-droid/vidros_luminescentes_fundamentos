@@ -19,6 +19,26 @@ const loaders = {
   optics: () => import('./sections/optics.js'),
   heating: () => import('./sections/heating.js'),
   angell: () => import('./sections/angell.js'),
+  // Parte 3
+  viscref: () => import('./sections/viscref.js'),
+  anharm: () => import('./sections/anharm.js'),
+  expansion: () => import('./sections/expansion.js'),
+  shock: () => import('./sections/shock.js'),
+  radk: () => import('./sections/radk.js'),
+  dispersion: () => import('./sections/dispersion.js'),
+  window: () => import('./sections/window.js'),
+  colors: () => import('./sections/colors.js'),
+  scatter: () => import('./sections/scatter.js'),
+  mobands: () => import('./sections/mobands.js'),
+  density: () => import('./sections/density.js'),
+  elastic: () => import('./sections/elastic.js'),
+  griffith: () => import('./sections/griffith.js'),
+  tempering: () => import('./sections/tempering.js'),
+  leach: () => import('./sections/leach.js'),
+  reactivity: () => import('./sections/reactivity.js'),
+  energygap: () => import('./sections/energygap.js'),
+  emission: () => import('./sections/emission.js'),
+  photochromic: () => import('./sections/photochromic.js'),
 };
 
 const io = new IntersectionObserver((entries) => {
@@ -48,6 +68,9 @@ if (document.getElementById('hero-canvas')) import('./sections/hero.js').then((m
 
 // Hero da Parte 2
 if (document.getElementById('p2-hero-canvas')) import('./sections/p2hero.js').then((m) => m.init()).catch((e) => console.error(e));
+
+// Hero da Parte 3
+if (document.getElementById('p3-hero-canvas')) import('./sections/p3hero.js').then((m) => m.init()).catch((e) => console.error(e));
 
 // Próxima parte: pequeno brilho luminescente
 if (document.getElementById('next-canvas')) import('./sections/next.js').then((m) => m.init()).catch((e) => console.error(e));
